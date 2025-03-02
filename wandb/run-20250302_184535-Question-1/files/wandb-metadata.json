@@ -1,0 +1,31 @@
+{
+  "os":  "Windows-11-10.0.26100-SP0",
+  "python":  "CPython 3.12.1",
+  "startedAt":  "2025-03-02T13:15:35.840066Z",
+  "program":  "c:\\Users\\singh\\OneDrive\\Documents\\GitHub\\DA6401_Assignment-01\\Fashion_MNIST_dataset_images.py",
+  "codePath":  "Fashion_MNIST_dataset_images.py",
+  "git":  {
+    "remote":  "https://github.com/Sonalikasingh17/DA6401_Assignment-01.git",
+    "commit":  "214ae5ea362aba59c26d196512aba191bf4a72be"
+  },
+  "email":  "singhsonalika5@gmail.com",
+  "root":  "C:\\Users\\singh\\OneDrive\\Documents\\GitHub\\DA6401_Assignment-01",
+  "host":  "DESKTOP-JJ3VBIC",
+  "executable":  "C:\\Users\\singh\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+  "codePathLocal":  "Fashion_MNIST_dataset_images.py",
+  "cpu_count":  4,
+  "cpu_count_logical":  8,
+  "disk":  {
+    "/":  {
+      "total":  "403003969536",
+      "used":  "137876250624"
+    }
+  },
+  "memory":  {
+    "total":  "17006346240"
+  },
+  "cpu":  {
+    "count":  4,
+    "countLogical":  8
+  }
+}

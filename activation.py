@@ -57,3 +57,5 @@ def activation_function(pre_activation_vector, context):
     else:
         # Error handling
         return None
+    
+    #all done

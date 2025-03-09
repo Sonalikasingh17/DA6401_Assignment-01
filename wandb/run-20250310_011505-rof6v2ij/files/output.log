@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\train.py", line 298, in <module>
+    train()
+  File "c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\train.py", line 277, in train
+    round(run.config.learning_rate, 4) + str(run.config.loss))
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'float' and 'str'

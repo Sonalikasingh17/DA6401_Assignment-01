@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\train.py", line 299, in <module>
+    train()
+  File "c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\train.py", line 293, in train
+    master(epochs=run.config.epochs, batch=run.config.batch_size, output_dim=10,
+  File "c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\train.py", line 235, in master
+    train_model(datapoints=x_train, labels=y_train, batch=batch, epochs=epochs, opt=opt,
+TypeError: train_model() got an unexpected keyword argument 'augment'

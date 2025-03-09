@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\train.py", line 309, in <module>
+    train()
+  File "c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\train.py", line 303, in train
+    master(epochs=run.config.epochs, batch=run.config.batch_size, output_dim=10,
+  File "c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\train.py", line 245, in master
+    train_model(datapoints=x_train, labels=y_train, batch=batch, epochs=epochs, opt=opt,
+  File "c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\train.py", line 157, in train_model
+    opt.descent(network=network,  layer_gradient=layer_gradient)
+  File "c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\optimiser.py", line 17, in descent
+    network[i]['weight'] = network[i]['weight'] - ((self.eta / self.lrc) * layer_gradient[i]['weight']) - (self.eta * self.weight_decay * network[i]['weight'])
+                                                                           ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices

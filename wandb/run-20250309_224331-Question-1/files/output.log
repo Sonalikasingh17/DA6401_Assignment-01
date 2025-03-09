@@ -1,0 +1,181 @@
+Requirement already satisfied: keras in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (3.6.0)
+
+[notice] A new release of pip is available: 24.2 -> 25.0.1
+Requirement already satisfied: absl-py in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from keras) (2.1.0)
+[notice] To update, run: python.exe -m pip install --upgrade pip
+Requirement already satisfied: numpy in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from keras) (1.26.3)
+Requirement already satisfied: rich in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from keras) (13.9.4)
+Requirement already satisfied: namex in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from keras) (0.0.8)
+Requirement already satisfied: h5py in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from keras) (3.12.1)
+Requirement already satisfied: optree in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from keras) (0.13.0)
+Requirement already satisfied: ml-dtypes in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from keras) (0.4.1)
+Requirement already satisfied: packaging in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from keras) (24.1)
+Note: you may need to restart the kernel to use updated packages.Requirement already satisfied: typing-extensions>=4.5.0 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from optree->keras) (4.12.2)
+
+Requirement already satisfied: markdown-it-py>=2.2.0 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from rich->keras) (3.0.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in c:\users\singh\appdata\roaming\python\python312\site-packages (from rich->keras) (2.18.0)
+Requirement already satisfied: mdurl~=0.1 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from markdown-it-py>=2.2.0->rich->keras) (0.1.2)
+
+[notice] A new release of pip is available: 24.2 -> 25.0.1
+Requirement already satisfied: tensorflow in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (2.18.0)
+[notice] To update, run: python.exe -m pip install --upgrade pip
+Requirement already satisfied: tensorflow-intel==2.18.0 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow) (2.18.0)
+Requirement already satisfied: absl-py>=1.0.0 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (2.1.0)
+Requirement already satisfied: astunparse>=1.6.0 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (1.6.3)
+Requirement already satisfied: flatbuffers>=24.3.25 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (24.3.25)
+Requirement already satisfied: gast!=0.5.0,!=0.5.1,!=0.5.2,>=0.2.1 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (0.6.0)
+Requirement already satisfied: google-pasta>=0.1.1 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (0.2.0)
+Requirement already satisfied: libclang>=13.0.0 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (18.1.1)
+Requirement already satisfied: opt-einsum>=2.3.2 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (3.4.0)
+Requirement already satisfied: packaging in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (24.1)
+Requirement already satisfied: protobuf!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,<6.0.0dev,>=3.20.3 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (5.28.3)
+Requirement already satisfied: requests<3,>=2.21.0 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (2.32.3)
+Requirement already satisfied: setuptools in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (75.3.0)
+Requirement already satisfied: six>=1.12.0 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (1.16.0)
+Requirement already satisfied: termcolor>=1.1.0 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (2.5.0)
+Requirement already satisfied: typing-extensions>=3.6.6 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (4.12.2)
+Requirement already satisfied: wrapt>=1.11.0 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (1.16.0)
+Requirement already satisfied: grpcio<2.0,>=1.24.3 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (1.67.1)
+Requirement already satisfied: tensorboard<2.19,>=2.18 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (2.18.0)
+Requirement already satisfied: keras>=3.5.0 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (3.6.0)
+Requirement already satisfied: numpy<2.1.0,>=1.26.0 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (1.26.3)
+Requirement already satisfied: h5py>=3.11.0 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (3.12.1)
+Note: you may need to restart the kernel to use updated packages.Requirement already satisfied: ml-dtypes<0.5.0,>=0.4.0 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (0.4.1)
+
+Requirement already satisfied: wheel<1.0,>=0.23.0 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from astunparse>=1.6.0->tensorflow-intel==2.18.0->tensorflow) (0.44.0)
+Requirement already satisfied: rich in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from keras>=3.5.0->tensorflow-intel==2.18.0->tensorflow) (13.9.4)
+Requirement already satisfied: namex in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from keras>=3.5.0->tensorflow-intel==2.18.0->tensorflow) (0.0.8)
+Requirement already satisfied: optree in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from keras>=3.5.0->tensorflow-intel==2.18.0->tensorflow) (0.13.0)
+Requirement already satisfied: charset-normalizer<4,>=2 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from requests<3,>=2.21.0->tensorflow-intel==2.18.0->tensorflow) (3.3.2)
+Requirement already satisfied: idna<4,>=2.5 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from requests<3,>=2.21.0->tensorflow-intel==2.18.0->tensorflow) (3.10)
+Requirement already satisfied: urllib3<3,>=1.21.1 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from requests<3,>=2.21.0->tensorflow-intel==2.18.0->tensorflow) (2.2.3)
+Requirement already satisfied: certifi>=2017.4.17 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from requests<3,>=2.21.0->tensorflow-intel==2.18.0->tensorflow) (2024.8.30)
+Requirement already satisfied: markdown>=2.6.8 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorboard<2.19,>=2.18->tensorflow-intel==2.18.0->tensorflow) (3.7)
+Requirement already satisfied: tensorboard-data-server<0.8.0,>=0.7.0 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorboard<2.19,>=2.18->tensorflow-intel==2.18.0->tensorflow) (0.7.2)
+Requirement already satisfied: werkzeug>=1.0.1 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorboard<2.19,>=2.18->tensorflow-intel==2.18.0->tensorflow) (3.1.1)
+Requirement already satisfied: MarkupSafe>=2.1.1 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from werkzeug>=1.0.1->tensorboard<2.19,>=2.18->tensorflow-intel==2.18.0->tensorflow) (2.1.5)
+Requirement already satisfied: markdown-it-py>=2.2.0 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from rich->keras>=3.5.0->tensorflow-intel==2.18.0->tensorflow) (3.0.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in c:\users\singh\appdata\roaming\python\python312\site-packages (from rich->keras>=3.5.0->tensorflow-intel==2.18.0->tensorflow) (2.18.0)
+Requirement already satisfied: mdurl~=0.1 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from markdown-it-py>=2.2.0->rich->keras>=3.5.0->tensorflow-intel==2.18.0->tensorflow) (0.1.2)
+Requirement already satisfied: tensorflow in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (2.18.0)
+
+[notice] A new release of pip is available: 24.2 -> 25.0.1
+Requirement already satisfied: tensorflow-intel==2.18.0 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow) (2.18.0)
+[notice] To update, run: python.exe -m pip install --upgrade pip
+Requirement already satisfied: absl-py>=1.0.0 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (2.1.0)
+Requirement already satisfied: astunparse>=1.6.0 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (1.6.3)
+Requirement already satisfied: flatbuffers>=24.3.25 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (24.3.25)
+Requirement already satisfied: gast!=0.5.0,!=0.5.1,!=0.5.2,>=0.2.1 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (0.6.0)
+Requirement already satisfied: google-pasta>=0.1.1 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (0.2.0)
+Requirement already satisfied: libclang>=13.0.0 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (18.1.1)
+Requirement already satisfied: opt-einsum>=2.3.2 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (3.4.0)
+Requirement already satisfied: packaging in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (24.1)
+Requirement already satisfied: protobuf!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,<6.0.0dev,>=3.20.3 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (5.28.3)
+Requirement already satisfied: requests<3,>=2.21.0 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (2.32.3)
+Requirement already satisfied: setuptools in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (75.3.0)
+Requirement already satisfied: six>=1.12.0 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (1.16.0)
+Requirement already satisfied: termcolor>=1.1.0 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (2.5.0)
+Requirement already satisfied: typing-extensions>=3.6.6 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (4.12.2)
+Requirement already satisfied: wrapt>=1.11.0 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (1.16.0)
+Requirement already satisfied: grpcio<2.0,>=1.24.3 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (1.67.1)
+Requirement already satisfied: tensorboard<2.19,>=2.18 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (2.18.0)
+Requirement already satisfied: keras>=3.5.0 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (3.6.0)
+Requirement already satisfied: numpy<2.1.0,>=1.26.0 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (1.26.3)
+Requirement already satisfied: h5py>=3.11.0 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (3.12.1)
+Requirement already satisfied: ml-dtypes<0.5.0,>=0.4.0 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorflow-intel==2.18.0->tensorflow) (0.4.1)
+Requirement already satisfied: wheel<1.0,>=0.23.0 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from astunparse>=1.6.0->tensorflow-intel==2.18.0->tensorflow) (0.44.0)
+Requirement already satisfied: rich in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from keras>=3.5.0->tensorflow-intel==2.18.0->tensorflow) (13.9.4)
+Requirement already satisfied: namex in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from keras>=3.5.0->tensorflow-intel==2.18.0->tensorflow) (0.0.8)
+Requirement already satisfied: optree in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from keras>=3.5.0->tensorflow-intel==2.18.0->tensorflow) (0.13.0)
+Requirement already satisfied: charset-normalizer<4,>=2 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from requests<3,>=2.21.0->tensorflow-intel==2.18.0->tensorflow) (3.3.2)
+Requirement already satisfied: idna<4,>=2.5 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from requests<3,>=2.21.0->tensorflow-intel==2.18.0->tensorflow) (3.10)
+Requirement already satisfied: urllib3<3,>=1.21.1 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from requests<3,>=2.21.0->tensorflow-intel==2.18.0->tensorflow) (2.2.3)
+Requirement already satisfied: certifi>=2017.4.17 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from requests<3,>=2.21.0->tensorflow-intel==2.18.0->tensorflow) (2024.8.30)
+Requirement already satisfied: markdown>=2.6.8 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorboard<2.19,>=2.18->tensorflow-intel==2.18.0->tensorflow) (3.7)
+Requirement already satisfied: tensorboard-data-server<0.8.0,>=0.7.0 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorboard<2.19,>=2.18->tensorflow-intel==2.18.0->tensorflow) (0.7.2)
+Requirement already satisfied: werkzeug>=1.0.1 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from tensorboard<2.19,>=2.18->tensorflow-intel==2.18.0->tensorflow) (3.1.1)
+Requirement already satisfied: MarkupSafe>=2.1.1 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from werkzeug>=1.0.1->tensorboard<2.19,>=2.18->tensorflow-intel==2.18.0->tensorflow) (2.1.5)
+Requirement already satisfied: markdown-it-py>=2.2.0 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from rich->keras>=3.5.0->tensorflow-intel==2.18.0->tensorflow) (3.0.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in c:\users\singh\appdata\roaming\python\python312\site-packages (from rich->keras>=3.5.0->tensorflow-intel==2.18.0->tensorflow) (2.18.0)
+Requirement already satisfied: mdurl~=0.1 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from markdown-it-py>=2.2.0->rich->keras>=3.5.0->tensorflow-intel==2.18.0->tensorflow) (0.1.2)
+Note: you may need to restart the kernel to use updated packages.
+
+[notice] A new release of pip is available: 24.2 -> 25.0.1
+Requirement already satisfied: keras in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (3.6.0)
+[notice] To update, run: python.exe -m pip install --upgrade pip
+Requirement already satisfied: absl-py in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from keras) (2.1.0)
+Requirement already satisfied: numpy in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from keras) (1.26.3)
+Requirement already satisfied: rich in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from keras) (13.9.4)
+Requirement already satisfied: namex in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from keras) (0.0.8)
+Requirement already satisfied: h5py in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from keras) (3.12.1)
+Requirement already satisfied: optree in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from keras) (0.13.0)
+Requirement already satisfied: ml-dtypes in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from keras) (0.4.1)
+Requirement already satisfied: packaging in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from keras) (24.1)
+Requirement already satisfied: typing-extensions>=4.5.0 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from optree->keras) (4.12.2)
+Requirement already satisfied: markdown-it-py>=2.2.0 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from rich->keras) (3.0.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in c:\users\singh\appdata\roaming\python\python312\site-packages (from rich->keras) (2.18.0)Note: you may need to restart the kernel to use updated packages.
+Requirement already satisfied: mdurl~=0.1 in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (from markdown-it-py>=2.2.0->rich->keras) (0.1.2)
+  error: subprocess-exited-with-error
+
+Requirement already satisfied: keras in c:\users\singh\appdata\local\programs\python\python312\lib\site-packages (3.6.0)
+
+Collecting package
+  × python setup.py egg_info did not run successfully.
+  Downloading package-0.1.1.tar.gz (13 kB)
+  │ exit code: 1
+  Preparing metadata (setup.py): started
+  ╰─> [7 lines of output]
+Note: you may need to restart the kernel to use updated packages.  Preparing metadata (setup.py): finished with status 'error'
+      Traceback (most recent call last):
+        File "<string>", line 2, in <module>
+        File "<pip-setuptools-caller>", line 34, in <module>
+        File "C:\Users\singh\AppData\Local\Temp\pip-install-yq07n139\package_0ae7be6e0e4e4200818d1c961bb52b7b\setup.py", line 4
+          print """
+          ^^^^^^^^^
+      SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+      [end of output]
+
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+
+[notice] A new release of pip is available: 24.2 -> 25.0.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+error: metadata-generation-failed
+
+× Encountered error while generating package metadata.
+╰─> See above for output.
+
+note: This is an issue with the package mentioned above, not pip.
+hint: See above for details.
+ERROR: Could not find a version that satisfies the requirement imagedatagenerator (from versions: none)
+
+Note: you may need to restart the kernel to use updated packages.
+
+[notice] A new release of pip is available: 24.2 -> 25.0.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+ERROR: No matching distribution found for imagedatagenerator
+usage: ipykernel_launcher.py [-h] [-wp WANDB_PROJECT]
+                             [-d {mnist,fashion_mnist}] [-e EPOCHS]
+                             [-b BATCH_SIZE]
+                             [-l {mean_squared_error,cross_entropy}]
+                             [-o {sgd,momentum,nag,rmsprop,adam,nadam}]
+                             [-lr LEARNING_RATE] [-m MOMENTUM] [-beta BETA]
+                             [-beta1 BETA1] [-beta2 BETA2] [-eps EPSILON]
+                             [-w_d WEIGHT_DECAY] [-w_i {random,Xavier}]
+                             [-nhl NUM_LAYERS] [-sz HIDDEN_SIZE]
+                             [-a {identity,sigmoid,tanh,ReLU}]
+ipykernel_launcher.py: error: unrecognized arguments: --f=c:\Users\singh\AppData\Roaming\jupyter\runtime\kernel-v36d58d1ab0a9d196e28415325fa3bfcf1216da4ba.json
+C:\Users\singh\AppData\Roaming\Python\Python312\site-packages\IPython\core\interactiveshell.py:3585: UserWarning: To exit: use 'exit', 'quit', or Ctrl-D.
+  warn("To exit: use 'exit', 'quit', or Ctrl-D.", stacklevel=1)
+usage: ipykernel_launcher.py [-h] [-wp WANDB_PROJECT]
+                             [-d {mnist,fashion_mnist}] [-e EPOCHS]
+                             [-b BATCH_SIZE]
+                             [-l {mean_squared_error,cross_entropy}]
+                             [-o {sgd,momentum,nag,rmsprop,adam,nadam}]
+                             [-lr LEARNING_RATE] [-m MOMENTUM] [-beta BETA]
+                             [-beta1 BETA1] [-beta2 BETA2] [-eps EPSILON]
+                             [-w_d WEIGHT_DECAY] [-w_i {random,Xavier}]
+                             [-nhl NUM_LAYERS] [-sz HIDDEN_SIZE]
+                             [-a {identity,sigmoid,tanh,ReLU}]
+ipykernel_launcher.py: error: unrecognized arguments: --f=c:\Users\singh\AppData\Roaming\jupyter\runtime\kernel-v36d58d1ab0a9d196e28415325fa3bfcf1216da4ba.json
+C:\Users\singh\AppData\Roaming\Python\Python312\site-packages\IPython\core\interactiveshell.py:3585: UserWarning: To exit: use 'exit', 'quit', or Ctrl-D.
+  warn("To exit: use 'exit', 'quit', or Ctrl-D.", stacklevel=1)

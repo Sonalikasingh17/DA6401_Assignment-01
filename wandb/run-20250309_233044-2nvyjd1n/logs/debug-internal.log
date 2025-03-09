@@ -1,0 +1,15 @@
+{"time":"2025-03-09T23:30:44.0882691+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"C:\\Users\\singh\\OneDrive\\Documents\\GitHub\\DA6401_Assignment-01\\wandb\\run-20250309_233044-2nvyjd1n\\logs\\debug-core.log"}
+{"time":"2025-03-09T23:30:44.205636+05:30","level":"INFO","msg":"created new stream","id":"2nvyjd1n"}
+{"time":"2025-03-09T23:30:44.205636+05:30","level":"INFO","msg":"stream: started","id":"2nvyjd1n"}
+{"time":"2025-03-09T23:30:44.205636+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"2nvyjd1n"}
+{"time":"2025-03-09T23:30:44.2061537+05:30","level":"INFO","msg":"handler: started","stream_id":"2nvyjd1n"}
+{"time":"2025-03-09T23:30:44.2061537+05:30","level":"INFO","msg":"sender: started","stream_id":"2nvyjd1n"}
+{"time":"2025-03-09T23:30:44.9283664+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-09T23:30:45.4415917+05:30","level":"INFO","msg":"stream: closing","id":"2nvyjd1n"}
+{"time":"2025-03-09T23:30:45.4415917+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-09T23:30:45.442095+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-09T23:30:47.829252+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-09T23:30:48.1985325+05:30","level":"INFO","msg":"handler: closed","stream_id":"2nvyjd1n"}
+{"time":"2025-03-09T23:30:48.1985325+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"2nvyjd1n"}
+{"time":"2025-03-09T23:30:48.1990391+05:30","level":"INFO","msg":"sender: closed","stream_id":"2nvyjd1n"}
+{"time":"2025-03-09T23:30:48.1990391+05:30","level":"INFO","msg":"stream: closed","id":"2nvyjd1n"}

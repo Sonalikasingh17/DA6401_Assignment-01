@@ -1,0 +1,104 @@
+2025-03-10 00:11:07,979 INFO    MainThread:29068 [wandb_init.py:setup_run_log_directory():647] Logging user logs to c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\wandb\run-20250310_001107-xn5fmply\logs\debug.log
+2025-03-10 00:11:07,979 INFO    MainThread:29068 [wandb_init.py:setup_run_log_directory():648] Logging internal logs to c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\wandb\run-20250310_001107-xn5fmply\logs\debug-internal.log
+2025-03-10 00:11:07,981 INFO    MainThread:29068 [wandb_init.py:init():761] calling init triggers
+2025-03-10 00:11:07,981 INFO    MainThread:29068 [wandb_init.py:init():766] wandb.init called with sweep_config: {}
+config: {'batch_size': 32, 'epoch': 10, 'learning_rate': 0.001, 'total_loss': 'cross_entropy', 'optimiser': 'nag', 'activation': 'relu', 'weight_init': 'xavier', 'layer_1': 128, 'layer_2': 64, 'layer_3': 32, 'weight_decay': 0.0001, '_wandb': {}}
+2025-03-10 00:11:07,981 INFO    MainThread:29068 [wandb_init.py:init():776] wandb.init() called while a run is active
+2025-03-10 00:11:08,326 INFO    MainThread:29068 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-10 00:11:08,328 INFO    MainThread:29068 [wandb_init.py:_pause_backend():564] pausing backend
+2025-03-10 00:11:44,897 INFO    MainThread:29068 [wandb_init.py:_resume_backend():569] resuming backend
+2025-03-10 00:11:44,928 INFO    MainThread:29068 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-10 00:11:44,930 INFO    MainThread:29068 [wandb_init.py:_pause_backend():564] pausing backend
+2025-03-10 00:11:47,042 INFO    MainThread:29068 [wandb_init.py:_resume_backend():569] resuming backend
+2025-03-10 00:11:47,597 INFO    MainThread:29068 [wandb_init.py:setup_run_log_directory():647] Logging user logs to c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\wandb\run-20250310_001147-zvuiofdc\logs\debug.log
+2025-03-10 00:11:47,598 INFO    MainThread:29068 [wandb_init.py:setup_run_log_directory():648] Logging internal logs to c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\wandb\run-20250310_001147-zvuiofdc\logs\debug-internal.log
+2025-03-10 00:11:47,599 INFO    MainThread:29068 [wandb_init.py:init():761] calling init triggers
+2025-03-10 00:11:47,599 INFO    MainThread:29068 [wandb_init.py:init():766] wandb.init called with sweep_config: {}
+config: {'batch_size': 32, 'epoch': 10, 'learning_rate': 0.001, 'total_loss': <function cross_entropy at 0x0000021A95B3E160>, '_wandb': {}}
+2025-03-10 00:11:47,601 INFO    MainThread:29068 [wandb_init.py:init():776] wandb.init() called while a run is active
+2025-03-10 00:11:47,854 INFO    MainThread:29068 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-10 00:11:47,858 INFO    MainThread:29068 [wandb_init.py:_pause_backend():564] pausing backend
+2025-03-10 00:12:17,441 INFO    MainThread:29068 [wandb_init.py:_resume_backend():569] resuming backend
+2025-03-10 00:12:18,120 INFO    MainThread:29068 [wandb_init.py:setup_run_log_directory():647] Logging user logs to c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\wandb\run-20250310_001218-kjaswlel\logs\debug.log
+2025-03-10 00:12:18,122 INFO    MainThread:29068 [wandb_init.py:setup_run_log_directory():648] Logging internal logs to c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\wandb\run-20250310_001218-kjaswlel\logs\debug-internal.log
+2025-03-10 00:12:18,124 INFO    MainThread:29068 [wandb_init.py:init():761] calling init triggers
+2025-03-10 00:12:18,125 INFO    MainThread:29068 [wandb_init.py:init():766] wandb.init called with sweep_config: {}
+config: {'batch_size': 32, 'epoch': 10, 'learning_rate': 0.001, 'total_loss': <function cross_entropy at 0x0000021A95B3E160>, '_wandb': {}}
+2025-03-10 00:12:18,125 INFO    MainThread:29068 [wandb_init.py:init():776] wandb.init() called while a run is active
+2025-03-10 00:12:18,367 INFO    MainThread:29068 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-10 00:12:18,369 INFO    MainThread:29068 [wandb_init.py:_pause_backend():564] pausing backend
+2025-03-10 00:13:20,891 INFO    MainThread:29068 [wandb_init.py:_resume_backend():569] resuming backend
+2025-03-10 00:13:21,302 INFO    MainThread:29068 [wandb_init.py:setup_run_log_directory():647] Logging user logs to c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\wandb\run-20250310_001321-3w5vs9og\logs\debug.log
+2025-03-10 00:13:21,304 INFO    MainThread:29068 [wandb_init.py:setup_run_log_directory():648] Logging internal logs to c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\wandb\run-20250310_001321-3w5vs9og\logs\debug-internal.log
+2025-03-10 00:13:21,304 INFO    MainThread:29068 [wandb_init.py:init():761] calling init triggers
+2025-03-10 00:13:21,306 INFO    MainThread:29068 [wandb_init.py:init():766] wandb.init called with sweep_config: {}
+config: {'batch_size': 32, 'epoch': 10, 'learning_rate': 0.001, 'loss': <function cross_entropy at 0x0000021A95B3E160>, '_wandb': {}}
+2025-03-10 00:13:21,306 INFO    MainThread:29068 [wandb_init.py:init():776] wandb.init() called while a run is active
+2025-03-10 00:13:21,519 INFO    MainThread:29068 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-10 00:13:21,522 INFO    MainThread:29068 [wandb_init.py:_pause_backend():564] pausing backend
+2025-03-10 00:13:46,547 INFO    MainThread:29068 [wandb_init.py:_resume_backend():569] resuming backend
+2025-03-10 00:13:47,139 INFO    MainThread:29068 [wandb_init.py:setup_run_log_directory():647] Logging user logs to c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\wandb\run-20250310_001347-e1apx096\logs\debug.log
+2025-03-10 00:13:47,139 INFO    MainThread:29068 [wandb_init.py:setup_run_log_directory():648] Logging internal logs to c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\wandb\run-20250310_001347-e1apx096\logs\debug-internal.log
+2025-03-10 00:13:47,139 INFO    MainThread:29068 [wandb_init.py:init():761] calling init triggers
+2025-03-10 00:13:47,139 INFO    MainThread:29068 [wandb_init.py:init():766] wandb.init called with sweep_config: {}
+config: {'batch_size': 32, 'epoch': 10, 'learning_rate': 0.001, 'loss': <function cross_entropy at 0x0000021A95B3E160>, '_wandb': {}}
+2025-03-10 00:13:47,139 INFO    MainThread:29068 [wandb_init.py:init():776] wandb.init() called while a run is active
+2025-03-10 00:13:47,387 INFO    MainThread:29068 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-10 00:13:47,389 INFO    MainThread:29068 [wandb_init.py:_pause_backend():564] pausing backend
+2025-03-10 00:14:06,582 INFO    MainThread:29068 [wandb_init.py:_resume_backend():569] resuming backend
+2025-03-10 00:14:06,603 INFO    MainThread:29068 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-10 00:14:06,606 INFO    MainThread:29068 [wandb_init.py:_pause_backend():564] pausing backend
+2025-03-10 00:14:45,517 INFO    MainThread:29068 [wandb_init.py:_resume_backend():569] resuming backend
+2025-03-10 00:14:45,541 INFO    MainThread:29068 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-10 00:14:45,546 INFO    MainThread:29068 [wandb_init.py:_pause_backend():564] pausing backend
+2025-03-10 00:14:45,718 INFO    MainThread:29068 [wandb_init.py:_resume_backend():569] resuming backend
+2025-03-10 00:14:45,723 INFO    MainThread:29068 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-10 00:14:45,731 INFO    MainThread:29068 [wandb_init.py:_pause_backend():564] pausing backend
+2025-03-10 00:14:46,174 INFO    MainThread:29068 [wandb_init.py:_resume_backend():569] resuming backend
+2025-03-10 00:14:46,178 INFO    MainThread:29068 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-10 00:14:46,186 INFO    MainThread:29068 [wandb_init.py:_pause_backend():564] pausing backend
+2025-03-10 00:14:51,767 INFO    MainThread:29068 [wandb_init.py:_resume_backend():569] resuming backend
+2025-03-10 00:14:52,423 INFO    MainThread:29068 [wandb_init.py:setup_run_log_directory():647] Logging user logs to c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\wandb\run-20250310_001452-758eofkc\logs\debug.log
+2025-03-10 00:14:52,425 INFO    MainThread:29068 [wandb_init.py:setup_run_log_directory():648] Logging internal logs to c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\wandb\run-20250310_001452-758eofkc\logs\debug-internal.log
+2025-03-10 00:14:52,425 INFO    MainThread:29068 [wandb_init.py:init():761] calling init triggers
+2025-03-10 00:14:52,427 INFO    MainThread:29068 [wandb_init.py:init():766] wandb.init called with sweep_config: {}
+config: {'_wandb': {}}
+2025-03-10 00:14:52,427 INFO    MainThread:29068 [wandb_init.py:init():776] wandb.init() called while a run is active
+2025-03-10 00:14:52,842 INFO    MainThread:29068 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-10 00:14:52,844 INFO    MainThread:29068 [wandb_init.py:_pause_backend():564] pausing backend
+2025-03-10 00:15:09,200 INFO    MainThread:29068 [wandb_init.py:_resume_backend():569] resuming backend
+2025-03-10 00:15:09,221 INFO    MainThread:29068 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-10 00:15:09,226 INFO    MainThread:29068 [wandb_init.py:_pause_backend():564] pausing backend
+2025-03-10 00:15:09,989 INFO    MainThread:29068 [wandb_init.py:_resume_backend():569] resuming backend
+2025-03-10 00:15:10,559 INFO    MainThread:29068 [wandb_init.py:setup_run_log_directory():647] Logging user logs to c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\wandb\run-20250310_001510-d09gir14\logs\debug.log
+2025-03-10 00:15:10,562 INFO    MainThread:29068 [wandb_init.py:setup_run_log_directory():648] Logging internal logs to c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\wandb\run-20250310_001510-d09gir14\logs\debug-internal.log
+2025-03-10 00:15:10,562 INFO    MainThread:29068 [wandb_init.py:init():761] calling init triggers
+2025-03-10 00:15:10,562 INFO    MainThread:29068 [wandb_init.py:init():766] wandb.init called with sweep_config: {}
+config: {'_wandb': {}}
+2025-03-10 00:15:10,564 INFO    MainThread:29068 [wandb_init.py:init():776] wandb.init() called while a run is active
+2025-03-10 00:15:10,818 INFO    MainThread:29068 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-10 00:15:10,818 INFO    MainThread:29068 [wandb_init.py:_pause_backend():564] pausing backend
+2025-03-10 00:15:29,342 INFO    MainThread:29068 [wandb_init.py:_resume_backend():569] resuming backend
+2025-03-10 00:15:29,769 INFO    MainThread:29068 [wandb_init.py:setup_run_log_directory():647] Logging user logs to c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\wandb\run-20250310_001529-dcc021m1\logs\debug.log
+2025-03-10 00:15:29,771 INFO    MainThread:29068 [wandb_init.py:setup_run_log_directory():648] Logging internal logs to c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\wandb\run-20250310_001529-dcc021m1\logs\debug-internal.log
+2025-03-10 00:15:29,772 INFO    MainThread:29068 [wandb_init.py:init():761] calling init triggers
+2025-03-10 00:15:29,773 INFO    MainThread:29068 [wandb_init.py:init():766] wandb.init called with sweep_config: {}
+config: {'_wandb': {}}
+2025-03-10 00:15:29,773 INFO    MainThread:29068 [wandb_init.py:init():776] wandb.init() called while a run is active
+2025-03-10 00:15:29,917 INFO    MainThread:29068 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-10 00:15:29,917 INFO    MainThread:29068 [wandb_init.py:_pause_backend():564] pausing backend
+2025-03-10 00:15:51,331 INFO    MainThread:29068 [wandb_init.py:_resume_backend():569] resuming backend
+2025-03-10 00:15:51,356 INFO    MainThread:29068 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-10 00:15:51,362 INFO    MainThread:29068 [wandb_init.py:_pause_backend():564] pausing backend
+2025-03-10 00:16:10,321 INFO    MainThread:29068 [wandb_init.py:_resume_backend():569] resuming backend
+2025-03-10 00:16:10,825 INFO    MainThread:29068 [wandb_init.py:setup_run_log_directory():647] Logging user logs to c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\wandb\run-20250310_001610-dmyunxq6\logs\debug.log
+2025-03-10 00:16:10,828 INFO    MainThread:29068 [wandb_init.py:setup_run_log_directory():648] Logging internal logs to c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\wandb\run-20250310_001610-dmyunxq6\logs\debug-internal.log
+2025-03-10 00:16:10,828 INFO    MainThread:29068 [wandb_init.py:init():761] calling init triggers
+2025-03-10 00:16:10,828 INFO    MainThread:29068 [wandb_init.py:init():766] wandb.init called with sweep_config: {}
+config: {'_wandb': {}}
+2025-03-10 00:16:10,831 INFO    MainThread:29068 [wandb_init.py:init():776] wandb.init() called while a run is active
+2025-03-10 00:16:11,115 INFO    MainThread:29068 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-10 00:16:11,119 INFO    MainThread:29068 [wandb_init.py:_pause_backend():564] pausing backend
+2025-03-10 00:16:25,175 INFO    MainThread:29068 [wandb_init.py:_resume_backend():569] resuming backend
+2025-03-10 00:16:25,190 INFO    MainThread:29068 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-10 00:16:25,207 INFO    MainThread:29068 [wandb_init.py:_pause_backend():564] pausing backend

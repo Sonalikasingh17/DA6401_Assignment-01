@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\train.py", line 304, in <module>
+    train()
+  File "c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\train.py", line 298, in train
+    master(epochs=run.config.epochs, batch=run.config.batch_size, output_dim=10,
+  File "c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\train.py", line 240, in master
+    train_model(datapoints=x_train, labels=y_train, batch=batch, epochs=epochs, opt=opt,
+  File "c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\train.py", line 149, in train_model
+    backward_propagation(n, x, y, number_of_datapoint=batch, loss_type=loss_type, clean=clean)
+  File "c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\train.py", line 50, in backward_propagation
+    delta[i]['h'] = h_grad(network=network, delta=delta, layer=i)
+    ~~~~~~~~^^^^^
+IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices

@@ -1,0 +1,50 @@
+usage: ipykernel_launcher.py [-h] [-wp WANDB_PROJECT] [-we WANDB_ENTITY]
+                             [-d {mnist,fashion_mnist}] [-e EPOCHS]
+                             [-b BATCH_SIZE]
+                             [-l {mean_squared_error,cross_entropy}]
+                             [-o {sgd,momentum,nag,rmsprop,adam,nadam}]
+                             [-lr LEARNING_RATE] [-m MOMENTUM] [-beta BETA]
+                             [-beta1 BETA1] [-beta2 BETA2] [-eps EPSILON]
+                             [-w_d WEIGHT_DECAY] [-w_i {random,Xavier}]
+                             [-nhl NUM_LAYERS] [-sz HIDDEN_SIZE]
+                             [-a {identity,sigmoid,tanh,ReLU}]
+ipykernel_launcher.py: error: unrecognized arguments: --f=c:\Users\singh\AppData\Roaming\jupyter\runtime\kernel-v3347ecc9da5ef56e9a08e6b182ff36d6da20dbe79.json
+C:\Users\singh\AppData\Roaming\Python\Python312\site-packages\IPython\core\interactiveshell.py:3585: UserWarning: To exit: use 'exit', 'quit', or Ctrl-D.
+  warn("To exit: use 'exit', 'quit', or Ctrl-D.", stacklevel=1)
+usage: ipykernel_launcher.py [-h] [-wp WANDB_PROJECT] [-we WANDB_ENTITY]
+                             [-d {mnist,fashion_mnist}] [-e EPOCHS]
+                             [-b BATCH_SIZE]
+                             [-l {mean_squared_error,cross_entropy}]
+                             [-o {sgd,momentum,nag,rmsprop,adam,nadam}]
+                             [-lr LEARNING_RATE] [-m MOMENTUM] [-beta BETA]
+                             [-beta1 BETA1] [-beta2 BETA2] [-eps EPSILON]
+                             [-w_d WEIGHT_DECAY] [-w_i {random,Xavier}]
+                             [-nhl NUM_LAYERS] [-sz HIDDEN_SIZE]
+                             [-a {identity,sigmoid,tanh,ReLU}]
+ipykernel_launcher.py: error: unrecognized arguments: --f=c:\Users\singh\AppData\Roaming\jupyter\runtime\kernel-v3347ecc9da5ef56e9a08e6b182ff36d6da20dbe79.json
+C:\Users\singh\AppData\Roaming\Python\Python312\site-packages\IPython\core\interactiveshell.py:3585: UserWarning: To exit: use 'exit', 'quit', or Ctrl-D.
+  warn("To exit: use 'exit', 'quit', or Ctrl-D.", stacklevel=1)
+usage: ipykernel_launcher.py [-h] [-wp WANDB_PROJECT] [-we WANDB_ENTITY]
+                             [-d {mnist,fashion_mnist}] [-e EPOCHS]
+                             [-b BATCH_SIZE]
+                             [-l {mean_squared_error,cross_entropy}]
+                             [-o {sgd,momentum,nag,rmsprop,adam,nadam}]
+                             [-lr LEARNING_RATE] [-m MOMENTUM] [-beta BETA]
+                             [-beta1 BETA1] [-beta2 BETA2] [-eps EPSILON]
+                             [-w_d WEIGHT_DECAY] [-w_i {random,Xavier}]
+                             [-nhl NUM_LAYERS] [-sz HIDDEN_SIZE]
+                             [-a {identity,sigmoid,tanh,ReLU}]
+ipykernel_launcher.py: error: unrecognized arguments: --f=c:\Users\singh\AppData\Roaming\jupyter\runtime\kernel-v3347ecc9da5ef56e9a08e6b182ff36d6da20dbe79.json
+C:\Users\singh\AppData\Roaming\Python\Python312\site-packages\IPython\core\interactiveshell.py:3585: UserWarning: To exit: use 'exit', 'quit', or Ctrl-D.
+  warn("To exit: use 'exit', 'quit', or Ctrl-D.", stacklevel=1)
+usage: ipykernel_launcher.py [-h] [-wp WANDB_PROJECT] [-we WANDB_ENTITY]
+                             [-d {mnist,fashion_mnist}] [-e EPOCHS]
+                             [-b BATCH_SIZE]
+                             [-l {mean_squared_error,cross_entropy}]
+                             [-o {sgd,momentum,nag,rmsprop,adam,nadam}]
+                             [-lr LEARNING_RATE] [-m MOMENTUM] [-beta BETA]
+                             [-beta1 BETA1] [-beta2 BETA2] [-eps EPSILON]
+                             [-w_d WEIGHT_DECAY] [-w_i {random,Xavier}]
+                             [-nhl NUM_LAYERS] [-sz HIDDEN_SIZE]
+                             [-a {identity,sigmoid,tanh,ReLU}]
+ipykernel_launcher.py: error: unrecognized arguments: --f=c:\Users\singh\AppData\Roaming\jupyter\runtime\kernel-v3347ecc9da5ef56e9a08e6b182ff36d6da20dbe79.json

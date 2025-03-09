@@ -22,7 +22,7 @@ def fashion_MNIST():
 				set_labels.append(class_names[y_train[i]])
 				count=count+1
 		else:
-				pass
+			pass
 		if count==10:
 			break
 

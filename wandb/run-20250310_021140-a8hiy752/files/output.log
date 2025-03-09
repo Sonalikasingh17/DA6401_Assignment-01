@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\train.py", line 307, in <module>
+    train()
+  File "c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\train.py", line 301, in train
+    master(epochs=run.config.epochs, batch=run.config.batch_size, output_dim=10,
+  File "c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\train.py", line 243, in master
+    train_model(datapoints=x_train, labels=y_train, batch=batch, epochs=epochs, opt=opt,
+  File "c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\train.py", line 152, in train_model
+    backward_propagation(n, x, y, number_of_datapoint=batch, loss_type=loss_type, clean=clean)
+  File "c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\train.py", line 57, in backward_propagation
+    delta[i]['bias'] = layer_gradient[i]['a']
+                       ~~~~~~~~~~~~~~~~~^^^^^
+KeyError: 'a'

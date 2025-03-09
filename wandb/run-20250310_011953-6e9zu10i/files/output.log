@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "C:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\.conda\Lib\site-packages\wandb\sdk\wandb_config.py", line 165, in __getattr__
+    return self.__getitem__(key)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\.conda\Lib\site-packages\wandb\sdk\wandb_config.py", line 130, in __getitem__
+    return self._items[key]
+           ~~~~~~~~~~~^^^^^
+KeyError: 'layer_1'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\train.py", line 297, in <module>
+    train()
+  File "c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\train.py", line 292, in train
+    opt=opti, weight_init=run.config.weight_init, activation=run.config.activation, layer_1=run.config.layer_1,
+                                                                                            ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\.conda\Lib\site-packages\wandb\sdk\wandb_config.py", line 167, in __getattr__
+    raise AttributeError(
+AttributeError: <class 'wandb.sdk.wandb_config.Config'> object has no attribute 'layer_1'

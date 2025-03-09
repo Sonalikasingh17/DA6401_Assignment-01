@@ -1,0 +1,51 @@
+Type of delta[number_of_layers - 1]: <class 'numpy.ndarray'>
+Contents of delta[number_of_layers - 1]: {'weight': array([[0.4996411 , 0.43469903, 0.86469865, 0.46509022],
+       [0.102239  , 0.81362611, 0.38996968, 0.50166396],
+       [0.59312135, 0.1488095 , 0.87176629, 0.01422872],
+       [0.24065602, 0.14929048, 0.73464168, 0.27828579],
+       [0.36867412, 0.66798111, 0.61011174, 0.6758662 ],
+       [0.45212051, 0.6698754 , 0.08795267, 0.06370787],
+       [0.22737867, 0.96011995, 0.53460044, 0.53201474],
+       [0.83328228, 0.44729849, 0.3122034 , 0.12427126],
+       [0.58873   , 0.14451016, 0.70491112, 0.09768879],
+       [0.14240293, 0.05523595, 0.14793983, 0.67137145]]), 'bias': array([[0.],
+       [0.],
+       [0.],
+       [0.],
+       [0.],
+       [0.],
+       [0.],
+       [0.],
+       [0.],
+       [0.]]), 'h': array([[0.84495156],
+       [0.7906308 ],
+       [0.77226087],
+       [0.74550961],
+       [0.84850113],
+       [0.70803466],
+       [0.83948689],
+       [0.77223681],
+       [0.75854289],
+       [0.6841178 ]]), 'a': array([[1.69554171],
+       [1.32873193],
+       [1.2211216 ],
+       [1.07480494],
+       [1.72289327],
+       [0.88585794],
+       [1.65441526],
+       [1.22098479],
+       [1.14470746],
+       [0.77276079]]), 'context': 'sigmoid'}
+Traceback (most recent call last):
+  File "c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\train.py", line 302, in <module>
+    train()
+  File "c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\train.py", line 296, in train
+    master(epochs=run.config.epochs, batch=run.config.batch_size, output_dim=10,
+  File "c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\train.py", line 238, in master
+    train_model(datapoints=x_train, labels=y_train, batch=batch, epochs=epochs, opt=opt,
+  File "c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\train.py", line 147, in train_model
+    backward_propagation(n, x, y, number_of_datapoint=batch, loss_type=loss_type, clean=clean)
+  File "c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\train.py", line 44, in backward_propagation
+    delta[number_of_layers - 1]['h'] = output_grad(network[number_of_layers - 1]['h'], y,
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices

@@ -1,0 +1,15 @@
+{"time":"2025-03-10T02:07:07.3128978+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"C:\\Users\\singh\\OneDrive\\Documents\\GitHub\\DA6401_Assignment-01\\wandb\\run-20250310_020707-gyvybuft\\logs\\debug-core.log"}
+{"time":"2025-03-10T02:07:07.4678487+05:30","level":"INFO","msg":"created new stream","id":"gyvybuft"}
+{"time":"2025-03-10T02:07:07.4685029+05:30","level":"INFO","msg":"stream: started","id":"gyvybuft"}
+{"time":"2025-03-10T02:07:07.4685029+05:30","level":"INFO","msg":"handler: started","stream_id":"gyvybuft"}
+{"time":"2025-03-10T02:07:07.4685029+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"gyvybuft"}
+{"time":"2025-03-10T02:07:07.4685029+05:30","level":"INFO","msg":"sender: started","stream_id":"gyvybuft"}
+{"time":"2025-03-10T02:07:07.9476635+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-10T02:07:08.500447+05:30","level":"INFO","msg":"stream: closing","id":"gyvybuft"}
+{"time":"2025-03-10T02:07:08.500447+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-10T02:07:08.501361+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-10T02:07:10.7550619+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-10T02:07:11.0486913+05:30","level":"INFO","msg":"handler: closed","stream_id":"gyvybuft"}
+{"time":"2025-03-10T02:07:11.0486913+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"gyvybuft"}
+{"time":"2025-03-10T02:07:11.0486913+05:30","level":"INFO","msg":"sender: closed","stream_id":"gyvybuft"}
+{"time":"2025-03-10T02:07:11.0493173+05:30","level":"INFO","msg":"stream: closed","id":"gyvybuft"}

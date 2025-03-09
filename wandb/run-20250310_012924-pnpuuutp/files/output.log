@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\train.py", line 296, in <module>
+    train()
+  File "c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\train.py", line 289, in train
+    master(epochs=run.config.epochs, batch=run.config.batch_size, output_dim=10,
+TypeError: master() missing 2 required positional arguments: 'layer_2' and 'layer_3'

@@ -1,0 +1,15 @@
+{"time":"2025-03-10T02:23:08.8034487+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"C:\\Users\\singh\\OneDrive\\Documents\\GitHub\\DA6401_Assignment-01\\wandb\\run-20250310_022308-pah948hr\\logs\\debug-core.log"}
+{"time":"2025-03-10T02:23:08.927193+05:30","level":"INFO","msg":"created new stream","id":"pah948hr"}
+{"time":"2025-03-10T02:23:08.927193+05:30","level":"INFO","msg":"stream: started","id":"pah948hr"}
+{"time":"2025-03-10T02:23:08.9278255+05:30","level":"INFO","msg":"sender: started","stream_id":"pah948hr"}
+{"time":"2025-03-10T02:23:08.9278255+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"pah948hr"}
+{"time":"2025-03-10T02:23:08.927193+05:30","level":"INFO","msg":"handler: started","stream_id":"pah948hr"}
+{"time":"2025-03-10T02:23:09.3306506+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-10T02:23:09.8660092+05:30","level":"INFO","msg":"stream: closing","id":"pah948hr"}
+{"time":"2025-03-10T02:23:09.8660092+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-10T02:23:09.8670819+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-10T02:23:12.1007135+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-10T02:23:12.4201727+05:30","level":"INFO","msg":"handler: closed","stream_id":"pah948hr"}
+{"time":"2025-03-10T02:23:12.4201727+05:30","level":"INFO","msg":"sender: closed","stream_id":"pah948hr"}
+{"time":"2025-03-10T02:23:12.4201727+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"pah948hr"}
+{"time":"2025-03-10T02:23:12.4206779+05:30","level":"INFO","msg":"stream: closed","id":"pah948hr"}

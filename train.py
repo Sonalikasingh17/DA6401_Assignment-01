@@ -8,8 +8,7 @@ from activation import *
 from keras.datasets import fashion_mnist
 
 
-""" get training and sting vectors
-    Number of Training Images = 60000
+""" Number of Training Images = 60000
     Number of Testing Images = 10000 """
 
 (x_train, y_train), (x_test, y_test) = fashion_mnist.load_data()
@@ -22,6 +21,8 @@ y_train.shape[0]
 # layer_gradient is its copy
 network = []
 layer_gradient = []
+
+
 
 delta = []  # store layer_gradient w.r.t a single datapoint
 # Stores the cumulative loss for each update step (timestep = 1 parameter update).
@@ -39,10 +40,18 @@ def forward_propagation(n, x):
 
 
 def backward_propagation(number_of_layers, x, y, number_of_datapoint, loss_type, clean=False):
+    # layer_gradient = [{} for _ in range(number_of_layers)]  # Correct initialization
+    layer_gradient = [{'h': 0, 'a': 0, 'weight': 0, 'bias': 0} for _ in range(number_of_layers)]
+
+    if isinstance(delta[number_of_layers - 1], np.ndarray):
+        delta[number_of_layers - 1] = dict()  # Convert to an empty dictionary
+
     delta[number_of_layers - 1]['h'] = output_grad(network[number_of_layers - 1]['h'], y,
                                                                 loss_type=loss_type)
     delta[number_of_layers - 1]['a'] = last_grad(network[number_of_layers - 1]['h'], y)
     for i in range(number_of_layers - 2, -1, -1):
+        if isinstance(delta[i], np.ndarray):
+            delta[i] = dict()  # Convert to an empty dictionary
         delta[i]['h'] = h_grad(network=network, delta=delta, layer=i)
         delta[i]['a'] = a_grad(network=network, delta=delta, layer=i)
     for i in range(number_of_layers - 1, -1, -1):
@@ -145,7 +154,7 @@ def train_model(datapoints, batch, epochs, labels, opt, loss_type):
                 backward_propagation(n, x, y, number_of_datapoint=batch, loss_type=loss_type, clean=clean)
                 clean = False
 
-            opt.descent(network=network, layer_gradient=layer_gradient)
+            opt.descent(network=network,  gradient=gradient)
 
         # for wandb logging
         validation_result = evaluate_model(number_of_layer=n, x_val=x_val, y_val=y_val,
@@ -205,7 +214,7 @@ def add_network_layer(number_of_neurons, context, weight_init, input_dim=None):
 
 
 def master(batch, epochs, output_dim, activation, opt, layer_1, layer_2, layer_3, weight_init='xavier',loss_type='cross_entropy',
-           augment=None):
+           ):
     
     """ Initializes the number of input features per data point as 784,  
     since each image in the dataset is a 28x28 grayscale image (28 × 28 = 784 pixels).  
@@ -226,20 +235,57 @@ def master(batch, epochs, output_dim, activation, opt, layer_1, layer_2, layer_3
     add_network_layer(number_of_neurons=output_dim, context='sigmoid', weight_init=weight_init)
 
     """Duplicating the model structure to store gradients during backpropagation."""
+    
+    
+    layer_gradient = [np.copy(layer) for layer in network]  
 
-    layer_gradient = {key: np.copy(value) for key, value in network.items()}
-    delta = {key: np.copy(value) for key, value in network.items()}
+    # layer_gradient = [np.copy(value) for value in network]
+    delta = [np.copy(layer) for layer in network] 
+    
     train_model(datapoints=x_train, labels=y_train, batch=batch, epochs=epochs, opt=opt,
-        loss_type=loss_type,augment=augment)
+        loss_type=loss_type)
     return network
+
+import argparse
+import wandb
+
+# Argument Parser
+parser = argparse.ArgumentParser(description="Train a neural network with specified hyperparameters.")
+
+# Add arguments
+# parser.add_argument("-wp", "--wandb_project", type=str, default="Fashion-MNIST-Images", help="Project name for WandB.")
+# parser.add_argument("-we", "--wandb_entity", type=str, default="myname", help="Entity name for WandB.")
+parser.add_argument("-d", "--dataset", type=str, choices=["mnist", "fashion_mnist"], default="fashion_mnist", help="Dataset choice.")
+parser.add_argument("-e", "--epochs", type=int, default=1, help="Number of training epochs.")
+parser.add_argument("-b", "--batch_size", type=int, default=4, help="Batch size for training.")
+parser.add_argument("-l", "--loss", type=str, choices=["mean_squared_error", "cross_entropy"], default="cross_entropy", help="Loss function.")
+parser.add_argument("-o", "--optimiser", type=str, choices=["sgd", "momentum", "nag", "rmsprop", "adam", "nadam"], default="sgd", help="Optimiser choice.")
+parser.add_argument("-lr", "--learning_rate", type=float, default=0.1, help="Learning rate.")
+parser.add_argument("-m", "--momentum", type=float, default=0.5, help="Momentum for optimisers.")
+parser.add_argument("-beta", "--beta", type=float, default=0.5, help="Beta for RMSProp optimiser.")
+parser.add_argument("-beta1", "--beta1", type=float, default=0.5, help="Beta1 for Adam/Nadam.")
+parser.add_argument("-beta2", "--beta2", type=float, default=0.5, help="Beta2 for Adam/Nadam.")
+parser.add_argument("-eps", "--epsilon", type=float, default=0.000001, help="Epsilon for optimizers.")
+parser.add_argument("-w_d", "--weight_decay", type=float, default=0.0, help="Weight decay for optimizers.")
+parser.add_argument("-w_i", "--weight_init", type=str, choices=["random", "Xavier"], default="random", help="Weight initialization method.")
+parser.add_argument("-nhl", "--num_layers", type=int, default=1, help="Number of hidden layers.")
+parser.add_argument("-sz", "--hidden_size", type=int, default=4, help="Hidden layer size.")
+parser.add_argument("-a", "--activation", type=str, choices=["identity", "sigmoid", "tanh", "ReLU"], default="sigmoid", help="Activation function.")
+
+# Parse arguments
+args = parser.parse_args()
+
 
 
 def train():
-    run = wandb.init(project="Fashion-MNIST-Images")
+    run = wandb.init(
+    project= "Fashion_MNIST_Images",
+    # entity=args.wandb_entity,
+    config=vars(args)  # Converts argparse namespace to dictionary
+)
     opti = None
     wandb.run.name = 'bs_' + str(run.config.batch_size) + '_act_' + run.config.activation + '_opt_' + str(
-        run.config.optimiser) + '_ini_' + str(run.config.weight_init) + '_epoch' + str(run.config.epoch) + '_lr_' + str(
-        round(run.config.learning_rate, 4) + str(run.config.total_loss))
+        run.config.optimiser) + '_ini_' + str(run.config.weight_init) + '_epochs' + str(run.config.epochs) + '_lr_' + str(round(run.config.learning_rate, 4)) + str(run.config.loss)
     if run.config.optimiser == 'nag':
         opti = NAG(layers=4, eta=run.config.learning_rate, gamma=.90, weight_decay=run.config.weight_decay)
     elif run.config.optimiser == 'rmsprop':
@@ -254,6 +300,10 @@ def train():
     elif run.config.optimiser == 'nadam':
         opti = NADAM(layers=4, eta=run.config.learning_rate, weight_decay=run.config.weight_decay)
 
-    master(epochs=run.config.epoch, batch=run.config.batch_size, output_dim=10,
-           opt=opti, weight_init=run.config.weight_init, activation=run.config.activation, layer_1=run.config.layer_1,
-           layer_3=run.config.layer_3, layer_2=run.config.layer_2, loss_type=run.config.total_loss, augment=100)
+    master(epochs=run.config.epochs, batch=run.config.batch_size, output_dim=10,
+           opt=opti, weight_init=run.config.weight_init, activation=run.config.activation, layer_1=run.config.num_layers,
+           layer_3=run.config.hidden_size, layer_2=run.config.hidden_size, loss_type=run.config.loss)
+    
+ 
+if __name__ == "__main__":
+    train()

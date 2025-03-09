@@ -1,17 +1,16 @@
-"""This file will contain various methods for calculation of loss functions"""
 import numpy as np
 
-
-# calculate cross entropy
-def cross_entropy(label, softmax_output):
-    # as we have only one true label, we have simplified the function for faster calculation.
-    if softmax_output[label] < 10 ** -8:
+def cross_entropy(label, y_pred):
+    if y_pred[label] < 10 ** -8:
         return -np.log(10 ** -8)
-    return -np.log(softmax_output[label])
+    return -np.log(y_pred[label])
 
 
-def squared_error(label, softmax_output):
-    true_vector = np.zeros_like(softmax_output)
-    true_vector[label] = 1
-    size = float(len(softmax_output))
-    return np.array([(np.linalg.norm(true_vector - softmax_output) ** 2) / size]).reshape((1, 1))
+def squared_error(label, y_pred):
+    y_true = np.zeros_like(y_pred)
+    y_true[label] = 1
+    size = float(len(y_pred))
+    return np.array([(np.linalg.norm(y_true - y_pred) ** 2) / size]).reshape((1, 1))
+
+
+

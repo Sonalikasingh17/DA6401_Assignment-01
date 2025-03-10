@@ -1,0 +1,16 @@
+{"time":"2025-03-10T11:39:33.6528459+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.7","symlink path":"c:\\Users\\singh\\OneDrive\\Documents\\GitHub\\DA6401_Assignment-01\\wandb\\run-20250310_113933-gdjsdl4p\\logs\\debug-core.log"}
+{"time":"2025-03-10T11:39:33.7975203+05:30","level":"INFO","msg":"created new stream","id":"gdjsdl4p"}
+{"time":"2025-03-10T11:39:33.7975203+05:30","level":"INFO","msg":"stream: started","id":"gdjsdl4p"}
+{"time":"2025-03-10T11:39:33.7993548+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"gdjsdl4p"}
+{"time":"2025-03-10T11:39:33.7993548+05:30","level":"INFO","msg":"handler: started","stream_id":"gdjsdl4p"}
+{"time":"2025-03-10T11:39:33.8005876+05:30","level":"INFO","msg":"sender: started","stream_id":"gdjsdl4p"}
+{"time":"2025-03-10T11:39:34.2696276+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-10T11:39:34.8879575+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-10T11:39:34.8884641+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-10T11:39:35.8949954+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"creating run","runtime_seconds":0.3246324}],"total_operations":1}}
+{"time":"2025-03-10T11:39:36.8640526+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-10T11:39:38.200478+05:30","level":"INFO","msg":"stream: closing","id":"gdjsdl4p"}
+{"time":"2025-03-10T11:39:38.200478+05:30","level":"INFO","msg":"handler: closed","stream_id":"gdjsdl4p"}
+{"time":"2025-03-10T11:39:38.200478+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"gdjsdl4p"}
+{"time":"2025-03-10T11:39:38.200478+05:30","level":"INFO","msg":"sender: closed","stream_id":"gdjsdl4p"}
+{"time":"2025-03-10T11:39:38.200478+05:30","level":"INFO","msg":"stream: closed","id":"gdjsdl4p"}

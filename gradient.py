@@ -45,17 +45,17 @@ def last_grad(y_hat, label):
 
 
 # calculation of gradient w.r.t 'a_i's (activation function sigmoid) after h_i
-def sigmoid_grad(post_activation):
-    return np.multiply(post_activation, 1 - post_activation)
+def sigmoid_derivative(activation):
+    return np.multiply(activation, 1 -activation)
 
 
 # calculation of gradient w.r.t 'a_i's (activation function tanh) after h_i
-def tanh_grad(post_activation):
-    return 1 - np.power(post_activation, 2)
+def tanh_derivative(activation):
+    return 1 - np.power(activation, 2)
 
 
 # calculation of gradient w.r.t 'a_i''s (activation function relu) after h_i
-def relu_grad(pre_activation_vector):
+def relu_derivative(pre_activation_vector):
     grad = np.copy(pre_activation_vector)
     # making +ve and 0 component 1
     grad[grad >= 0] = 1
@@ -67,11 +67,11 @@ def relu_grad(pre_activation_vector):
 def a_grad(network, delta, layer):
     # Gradient w.r.t  a_i's (pre_activation)
     if network[layer]['context'] == 'sigmoid':
-        active_grad_ = sigmoid_grad(network[layer]['h'])
+        active_grad_ = sigmoid_derivative(network[layer]['h'])
     elif network[layer]['context'] == 'tanh':
-        active_grad_ = tanh_grad(network[layer]['h'])
+        active_grad_ = tanh_derivative(network[layer]['h'])
     elif network[layer]['context'] == 'relu':
-        active_grad_ = relu_grad(network[layer]['a'])
+        active_grad_ = relu_derivative(network[layer]['a'])
 
     grad_value = np.multiply(delta[layer]['h'], active_grad_)
     norm = np.linalg.norm(grad_value)

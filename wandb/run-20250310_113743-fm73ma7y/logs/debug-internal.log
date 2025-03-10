@@ -1,0 +1,16 @@
+{"time":"2025-03-10T11:37:43.5191818+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.7","symlink path":"c:\\Users\\singh\\OneDrive\\Documents\\GitHub\\DA6401_Assignment-01\\wandb\\run-20250310_113743-fm73ma7y\\logs\\debug-core.log"}
+{"time":"2025-03-10T11:37:44.358988+05:30","level":"INFO","msg":"created new stream","id":"fm73ma7y"}
+{"time":"2025-03-10T11:37:44.358988+05:30","level":"INFO","msg":"stream: started","id":"fm73ma7y"}
+{"time":"2025-03-10T11:37:44.358988+05:30","level":"INFO","msg":"handler: started","stream_id":"fm73ma7y"}
+{"time":"2025-03-10T11:37:44.358988+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"fm73ma7y"}
+{"time":"2025-03-10T11:37:44.3593564+05:30","level":"INFO","msg":"sender: started","stream_id":"fm73ma7y"}
+{"time":"2025-03-10T11:37:44.8436809+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-10T11:37:45.6133208+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-10T11:37:45.6141456+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-10T11:37:46.6253506+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":0.0247214}],"total_operations":1}}
+{"time":"2025-03-10T11:37:47.5805642+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-10T11:37:48.9376588+05:30","level":"INFO","msg":"stream: closing","id":"fm73ma7y"}
+{"time":"2025-03-10T11:37:48.9376588+05:30","level":"INFO","msg":"handler: closed","stream_id":"fm73ma7y"}
+{"time":"2025-03-10T11:37:48.9376588+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"fm73ma7y"}
+{"time":"2025-03-10T11:37:48.9376588+05:30","level":"INFO","msg":"sender: closed","stream_id":"fm73ma7y"}
+{"time":"2025-03-10T11:37:48.9419144+05:30","level":"INFO","msg":"stream: closed","id":"fm73ma7y"}

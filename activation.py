@@ -1,42 +1,30 @@
 import numpy as np
-import math
 
 
-def sigmoid_element_wise(vector_component):
-    if vector_component >= 0:
-        return 1 / (1 + math.exp(-vector_component))
-    else:
-        return math.exp(vector_component) / (math.exp(vector_component) + 1)
-
-def sigmoid(pre_activation_vector):
-    activated_vector = np.empty_like(pre_activation_vector)  # create a vector of same shape as input
-    for i, elem in np.ndenumerate(pre_activation_vector):
-        activated_vector[i] = sigmoid_element_wise(elem)
-    return activated_vector
+def sigmoid(z):
+    return 1.0 / (1 + np.exp(-(z)))
 
 
-def relu(pre_activation_vector):
-    act = np.copy(pre_activation_vector)
-    act[act < 0] = 0               # get the position of vector that is -ve and make them 0
-    return act
+def tanh(z):
+    return np.tanh(z)
 
 
-def tanh(pre_activation_vector):
-    act = np.copy(pre_activation_vector)
-    act = np.tanh(act)  
-    return act
+def relu(z):
+    return np.maximum(0.001, z) 
 
 
-def activation_function(pre_activation_vector, context):
-    if context == 'sigmoid':
-        return sigmoid(pre_activation_vector)
-    elif context == 'tanh':
-        return tanh(pre_activation_vector)
-    elif context == 'relu':
-        return relu(pre_activation_vector)
-    else:
-        return None  # Error handling
 
+
+
+def der_sigmoid(z):
+    #return sigmoid(z)*(1 - sigmoid(z))
+    return  (1.0 / (1 + np.exp(-(z))))*(1 -  1.0 / (1 + np.exp(-(z))))
+
+def der_tanh(z):
+    return 1 - np.tanh(z) ** 2
+
+def der_relu(z):
+    return (z>0)*1 + (z<0)*0.001 
 
 
 

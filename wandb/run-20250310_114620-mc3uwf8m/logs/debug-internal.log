@@ -1,0 +1,16 @@
+{"time":"2025-03-10T11:46:20.2497006+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.7","symlink path":"c:\\Users\\singh\\OneDrive\\Documents\\GitHub\\DA6401_Assignment-01\\wandb\\run-20250310_114620-mc3uwf8m\\logs\\debug-core.log"}
+{"time":"2025-03-10T11:46:20.4109706+05:30","level":"INFO","msg":"created new stream","id":"mc3uwf8m"}
+{"time":"2025-03-10T11:46:20.4149859+05:30","level":"INFO","msg":"stream: started","id":"mc3uwf8m"}
+{"time":"2025-03-10T11:46:20.4154454+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"mc3uwf8m"}
+{"time":"2025-03-10T11:46:20.4159573+05:30","level":"INFO","msg":"handler: started","stream_id":"mc3uwf8m"}
+{"time":"2025-03-10T11:46:20.4184207+05:30","level":"INFO","msg":"sender: started","stream_id":"mc3uwf8m"}
+{"time":"2025-03-10T11:46:20.8666124+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-10T11:46:21.3930749+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-10T11:46:21.3935797+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-10T11:46:22.4053073+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"creating run","runtime_seconds":0.2876689}],"total_operations":1}}
+{"time":"2025-03-10T11:46:23.4220455+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-10T11:46:24.7828103+05:30","level":"INFO","msg":"stream: closing","id":"mc3uwf8m"}
+{"time":"2025-03-10T11:46:24.7828103+05:30","level":"INFO","msg":"handler: closed","stream_id":"mc3uwf8m"}
+{"time":"2025-03-10T11:46:24.7828103+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"mc3uwf8m"}
+{"time":"2025-03-10T11:46:24.7828103+05:30","level":"INFO","msg":"sender: closed","stream_id":"mc3uwf8m"}
+{"time":"2025-03-10T11:46:24.7833158+05:30","level":"INFO","msg":"stream: closed","id":"mc3uwf8m"}

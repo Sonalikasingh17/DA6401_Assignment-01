@@ -110,3 +110,6 @@
 {"time":"2025-03-10T00:16:11.1279153+05:30","level":"INFO","msg":"Pausing system monitor"}
 {"time":"2025-03-10T00:16:25.178861+05:30","level":"INFO","msg":"Resuming system monitor"}
 {"time":"2025-03-10T00:16:25.2100825+05:30","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-03-10T03:37:34.2730394+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/singhsonalika5-indian-institute-of-technology-madras/Fashion-MNIST-Images/qr10clma/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T03:37:36.4791557+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/singhsonalika5-indian-institute-of-technology-madras/Fashion-MNIST-Images/qr10clma/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-10T09:45:12.6284361+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/singhsonalika5-indian-institute-of-technology-madras/Fashion-MNIST-Images/qr10clma/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}

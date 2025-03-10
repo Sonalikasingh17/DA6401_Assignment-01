@@ -1,0 +1,16 @@
+{"time":"2025-03-10T11:38:55.0803777+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.7","symlink path":"c:\\Users\\singh\\OneDrive\\Documents\\GitHub\\DA6401_Assignment-01\\wandb\\run-20250310_113855-mvqukjps\\logs\\debug-core.log"}
+{"time":"2025-03-10T11:38:55.2163156+05:30","level":"INFO","msg":"created new stream","id":"mvqukjps"}
+{"time":"2025-03-10T11:38:55.2163156+05:30","level":"INFO","msg":"stream: started","id":"mvqukjps"}
+{"time":"2025-03-10T11:38:55.2163156+05:30","level":"INFO","msg":"sender: started","stream_id":"mvqukjps"}
+{"time":"2025-03-10T11:38:55.2163156+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"mvqukjps"}
+{"time":"2025-03-10T11:38:55.2171334+05:30","level":"INFO","msg":"handler: started","stream_id":"mvqukjps"}
+{"time":"2025-03-10T11:38:55.6794155+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-10T11:38:56.4992728+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-10T11:38:56.5016639+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-10T11:38:57.5124236+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":0.0383454}],"total_operations":1}}
+{"time":"2025-03-10T11:38:58.4803349+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-10T11:38:59.8629501+05:30","level":"INFO","msg":"stream: closing","id":"mvqukjps"}
+{"time":"2025-03-10T11:38:59.8709194+05:30","level":"INFO","msg":"handler: closed","stream_id":"mvqukjps"}
+{"time":"2025-03-10T11:38:59.8709194+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"mvqukjps"}
+{"time":"2025-03-10T11:38:59.8709194+05:30","level":"INFO","msg":"sender: closed","stream_id":"mvqukjps"}
+{"time":"2025-03-10T11:38:59.8709194+05:30","level":"INFO","msg":"stream: closed","id":"mvqukjps"}

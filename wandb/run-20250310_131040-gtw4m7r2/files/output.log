@@ -1,0 +1,2 @@
+c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\activation.py:5: RuntimeWarning: overflow encountered in exp
+  return 1.0 / (1 + np.exp(-(z)))

@@ -1,0 +1,15 @@
+{"time":"2025-03-10T10:06:47.9218069+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"C:\\Users\\singh\\OneDrive\\Documents\\GitHub\\DA6401_Assignment-01\\wandb\\run-20250310_100647-boluoios\\logs\\debug-core.log"}
+{"time":"2025-03-10T10:06:48.0415981+05:30","level":"INFO","msg":"created new stream","id":"boluoios"}
+{"time":"2025-03-10T10:06:48.0415981+05:30","level":"INFO","msg":"stream: started","id":"boluoios"}
+{"time":"2025-03-10T10:06:48.0421177+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"boluoios"}
+{"time":"2025-03-10T10:06:48.0421177+05:30","level":"INFO","msg":"handler: started","stream_id":"boluoios"}
+{"time":"2025-03-10T10:06:48.0421177+05:30","level":"INFO","msg":"sender: started","stream_id":"boluoios"}
+{"time":"2025-03-10T10:06:48.411553+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-10T10:06:48.7865682+05:30","level":"INFO","msg":"stream: closing","id":"boluoios"}
+{"time":"2025-03-10T10:06:48.7865682+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-10T10:06:48.7870841+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-10T10:06:50.4529894+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-10T10:06:50.7485914+05:30","level":"INFO","msg":"handler: closed","stream_id":"boluoios"}
+{"time":"2025-03-10T10:06:50.7485914+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"boluoios"}
+{"time":"2025-03-10T10:06:50.7485914+05:30","level":"INFO","msg":"sender: closed","stream_id":"boluoios"}
+{"time":"2025-03-10T10:06:50.7490976+05:30","level":"INFO","msg":"stream: closed","id":"boluoios"}

@@ -1,0 +1,16 @@
+{"time":"2025-03-10T13:07:21.4687737+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.7","symlink path":"c:\\Users\\singh\\OneDrive\\Documents\\GitHub\\DA6401_Assignment-01\\wandb\\run-20250310_130721-ghyibun0\\logs\\debug-core.log"}
+{"time":"2025-03-10T13:07:21.6225101+05:30","level":"INFO","msg":"created new stream","id":"ghyibun0"}
+{"time":"2025-03-10T13:07:21.6225101+05:30","level":"INFO","msg":"stream: started","id":"ghyibun0"}
+{"time":"2025-03-10T13:07:21.6225101+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"ghyibun0"}
+{"time":"2025-03-10T13:07:21.6230977+05:30","level":"INFO","msg":"handler: started","stream_id":"ghyibun0"}
+{"time":"2025-03-10T13:07:21.6230977+05:30","level":"INFO","msg":"sender: started","stream_id":"ghyibun0"}
+{"time":"2025-03-10T13:07:22.0423574+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-10T13:18:05.0716929+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-10T13:18:05.074344+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-10T13:18:06.0852358+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.3945276,"progress":"583B/583B"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.3945276,"progress":"198B/198B"},{"desc":"uploading config.yaml","runtime_seconds":0.1100467,"progress":"934B/934B"}],"total_operations":3}}
+{"time":"2025-03-10T13:18:07.0630966+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-10T13:18:08.4198498+05:30","level":"INFO","msg":"stream: closing","id":"ghyibun0"}
+{"time":"2025-03-10T13:18:08.4198498+05:30","level":"INFO","msg":"handler: closed","stream_id":"ghyibun0"}
+{"time":"2025-03-10T13:18:08.4198498+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"ghyibun0"}
+{"time":"2025-03-10T13:18:08.4214953+05:30","level":"INFO","msg":"sender: closed","stream_id":"ghyibun0"}
+{"time":"2025-03-10T13:18:08.4234906+05:30","level":"INFO","msg":"stream: closed","id":"ghyibun0"}

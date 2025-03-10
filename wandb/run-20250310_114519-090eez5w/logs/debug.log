@@ -1,0 +1,37 @@
+2025-03-10 11:45:19,859 INFO    Thread-97 (_run_job):37748 [wandb_setup.py:_flush():67] Current SDK version is 0.19.7
+2025-03-10 11:45:19,861 INFO    Thread-97 (_run_job):37748 [wandb_setup.py:_flush():67] Configure stats pid to 37748
+2025-03-10 11:45:19,861 INFO    Thread-97 (_run_job):37748 [wandb_setup.py:_flush():67] Loading settings from C:\Users\singh\.config\wandb\settings
+2025-03-10 11:45:19,861 INFO    Thread-97 (_run_job):37748 [wandb_setup.py:_flush():67] Loading settings from c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\wandb\settings
+2025-03-10 11:45:19,861 INFO    Thread-97 (_run_job):37748 [wandb_setup.py:_flush():67] Loading settings from environment variables
+2025-03-10 11:45:19,863 INFO    Thread-97 (_run_job):37748 [wandb_init.py:setup_run_log_directory():647] Logging user logs to c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\wandb\run-20250310_114519-090eez5w\logs\debug.log
+2025-03-10 11:45:19,863 INFO    Thread-97 (_run_job):37748 [wandb_init.py:setup_run_log_directory():648] Logging internal logs to c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\wandb\run-20250310_114519-090eez5w\logs\debug-internal.log
+2025-03-10 11:45:19,863 INFO    Thread-97 (_run_job):37748 [wandb_init.py:monkeypatch_ipython():599] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x000001E82FF90B30>
+2025-03-10 11:45:19,863 INFO    Thread-97 (_run_job):37748 [wandb_init.py:init():761] calling init triggers
+2025-03-10 11:45:19,863 INFO    Thread-97 (_run_job):37748 [wandb_init.py:init():766] wandb.init called with sweep_config: {'activation': 'TANH', 'batch_size': 16, 'initializer': 'RANDOM', 'learning_rate': 0.0001, 'max_epochs': 5, 'num_hidden_neurons': 32, 'num_layers': 3, 'optimizer': 'NADAM', 'weight_decay': 0.5}
+config: {'max_epochs': 5, 'num_hidden_layers': 3, 'num_hidden_neurons': 32, 'weight_decay': 0, 'learning_rate': 0.001, 'optimizer': 'MGD', 'batch_size': 16, 'activation': 'TANH', 'initializer': 'XAVIER', 'loss': 'CROSS', '_wandb': {}}
+2025-03-10 11:45:19,863 INFO    Thread-97 (_run_job):37748 [wandb_init.py:init():784] starting backend
+2025-03-10 11:45:19,866 INFO    Thread-97 (_run_job):37748 [wandb_init.py:init():788] sending inform_init request
+2025-03-10 11:45:19,871 INFO    Thread-97 (_run_job):37748 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=spawn, using: spawn
+2025-03-10 11:45:19,881 INFO    Thread-97 (_run_job):37748 [wandb_init.py:init():803] backend started and connected
+2025-03-10 11:45:19,895 INFO    Thread-97 (_run_job):37748 [wandb_run.py:_config_callback():1261] config_cb None None {'activation': 'TANH', 'batch_size': 16, 'initializer': 'RANDOM', 'learning_rate': 0.0001, 'max_epochs': 5, 'num_hidden_neurons': 32, 'num_layers': 3, 'optimizer': 'NADAM', 'weight_decay': 0.5}
+2025-03-10 11:45:19,897 INFO    Thread-97 (_run_job):37748 [wandb_run.py:_label_probe_notebook():1204] probe notebook
+2025-03-10 11:45:19,897 INFO    Thread-97 (_run_job):37748 [wandb_run.py:_label_probe_notebook():1214] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2025-03-10 11:45:19,899 INFO    Thread-97 (_run_job):37748 [wandb_init.py:init():896] updated telemetry
+2025-03-10 11:45:19,899 INFO    Thread-97 (_run_job):37748 [wandb_init.py:init():920] communicating run to backend with 90.0 second timeout
+2025-03-10 11:45:20,446 INFO    Thread-97 (_run_job):37748 [wandb_init.py:init():995] starting run threads in backend
+2025-03-10 11:45:20,951 INFO    Thread-97 (_run_job):37748 [wandb_run.py:_console_start():2377] atexit reg
+2025-03-10 11:45:20,952 INFO    Thread-97 (_run_job):37748 [wandb_run.py:_redirect():2227] redirect: wrap_raw
+2025-03-10 11:45:20,953 INFO    Thread-97 (_run_job):37748 [wandb_run.py:_redirect():2292] Wrapping output streams.
+2025-03-10 11:45:20,953 INFO    Thread-97 (_run_job):37748 [wandb_run.py:_redirect():2317] Redirects installed.
+2025-03-10 11:45:20,954 INFO    Thread-97 (_run_job):37748 [wandb_init.py:init():1037] run started, returning control to user process
+2025-03-10 11:45:20,955 INFO    Thread-97 (_run_job):37748 [wandb_run.py:_finish():2112] finishing run singhsonalika5-indian-institute-of-technology-madras/Fashion_MNIST_Images/090eez5w
+2025-03-10 11:45:20,957 ERROR   Thread-97 (_run_job):37748 [jupyter.py:save_history():450] Run pip install nbformat to save notebook history
+2025-03-10 11:45:20,957 INFO    Thread-97 (_run_job):37748 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-10 11:45:20,957 INFO    Thread-97 (_run_job):37748 [wandb_init.py:_jupyter_teardown():581] cleaning up jupyter logic
+2025-03-10 11:45:20,958 INFO    Thread-97 (_run_job):37748 [wandb_run.py:_atexit_cleanup():2342] got exitcode: 0
+2025-03-10 11:45:20,959 INFO    Thread-97 (_run_job):37748 [wandb_run.py:_restore():2324] restore
+2025-03-10 11:45:20,960 INFO    Thread-97 (_run_job):37748 [wandb_run.py:_restore():2330] restore done
+2025-03-10 11:45:24,476 INFO    MsgRouterThr:37748 [mailbox.py:close():115] Closing mailbox, abandoning 1 handles.
+2025-03-10 11:45:24,477 INFO    Thread-97 (_run_job):37748 [wandb_run.py:_footer_history_summary_info():3958] rendering history
+2025-03-10 11:45:24,477 INFO    Thread-97 (_run_job):37748 [wandb_run.py:_footer_history_summary_info():3990] rendering summary
+2025-03-10 11:45:24,478 INFO    Thread-97 (_run_job):37748 [wandb_run.py:_footer_sync_info():3919] logging synced files

@@ -1,0 +1,16 @@
+{"time":"2025-03-10T11:37:54.3834044+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.7","symlink path":"c:\\Users\\singh\\OneDrive\\Documents\\GitHub\\DA6401_Assignment-01\\wandb\\run-20250310_113754-hda2dlcn\\logs\\debug-core.log"}
+{"time":"2025-03-10T11:37:54.5182251+05:30","level":"INFO","msg":"created new stream","id":"hda2dlcn"}
+{"time":"2025-03-10T11:37:54.5188659+05:30","level":"INFO","msg":"stream: started","id":"hda2dlcn"}
+{"time":"2025-03-10T11:37:54.5193671+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"hda2dlcn"}
+{"time":"2025-03-10T11:37:54.5202661+05:30","level":"INFO","msg":"sender: started","stream_id":"hda2dlcn"}
+{"time":"2025-03-10T11:37:54.5202661+05:30","level":"INFO","msg":"handler: started","stream_id":"hda2dlcn"}
+{"time":"2025-03-10T11:37:55.0092364+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-10T11:37:55.5858044+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-10T11:37:55.5872053+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-10T11:37:56.5973052+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"creating run","runtime_seconds":0.3810587}],"total_operations":1}}
+{"time":"2025-03-10T11:37:57.8320423+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-10T11:37:59.202162+05:30","level":"INFO","msg":"stream: closing","id":"hda2dlcn"}
+{"time":"2025-03-10T11:37:59.202162+05:30","level":"INFO","msg":"handler: closed","stream_id":"hda2dlcn"}
+{"time":"2025-03-10T11:37:59.2031746+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"hda2dlcn"}
+{"time":"2025-03-10T11:37:59.2031746+05:30","level":"INFO","msg":"sender: closed","stream_id":"hda2dlcn"}
+{"time":"2025-03-10T11:37:59.2031746+05:30","level":"INFO","msg":"stream: closed","id":"hda2dlcn"}

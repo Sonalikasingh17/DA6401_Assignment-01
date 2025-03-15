@@ -1,0 +1,11 @@
+c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\train.py:10: RuntimeWarning: overflow encountered in exp
+  return 1.0 / (1 + np.exp(-(x)))
+c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\train.py:87: RuntimeWarning: divide by zero encountered in log
+  return np.mean([-true_labels[i] * np.log(predicted_labels[i]) for i in range(len(predicted_labels))])
+c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\train.py:87: RuntimeWarning: invalid value encountered in multiply
+  return np.mean([-true_labels[i] * np.log(predicted_labels[i]) for i in range(len(predicted_labels))])
+Epoch: 0, Loss: nan, Training Accuracy: 0.10, Validation Accuracy: 0.10, Time: 32.23, Learning Rate: 6.400e+01
+Epoch: 1, Loss: 4.068e+01, Training Accuracy: 0.10, Validation Accuracy: 0.10, Time: 30.95, Learning Rate: 6.400e+01
+Epoch: 2, Loss: 4.069e+01, Training Accuracy: 0.10, Validation Accuracy: 0.10, Time: 32.81, Learning Rate: 6.400e+01
+Epoch: 3, Loss: 4.069e+01, Training Accuracy: 0.10, Validation Accuracy: 0.10, Time: 36.04, Learning Rate: 6.400e+01
+Epoch: 4, Loss: 4.060e+01, Training Accuracy: 0.10, Validation Accuracy: 0.10, Time: 36.48, Learning Rate: 6.400e+01

@@ -1,0 +1,18 @@
+{"time":"2025-03-15T16:22:04.8849707+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"C:\\Users\\singh\\OneDrive\\Documents\\GitHub\\DA6401_Assignment-01\\wandb\\run-20250315_162204-zgiif7fn\\logs\\debug-core.log"}
+{"time":"2025-03-15T16:22:04.9999624+05:30","level":"INFO","msg":"created new stream","id":"zgiif7fn"}
+{"time":"2025-03-15T16:22:04.9999624+05:30","level":"INFO","msg":"stream: started","id":"zgiif7fn"}
+{"time":"2025-03-15T16:22:04.9999624+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"zgiif7fn"}
+{"time":"2025-03-15T16:22:04.9999624+05:30","level":"INFO","msg":"handler: started","stream_id":"zgiif7fn"}
+{"time":"2025-03-15T16:22:04.9999624+05:30","level":"INFO","msg":"sender: started","stream_id":"zgiif7fn"}
+{"time":"2025-03-15T16:22:05.9840263+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-15T16:25:29.2480593+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/singhsonalika5-indian-institute-of-technology-madras/Fashion_MNIST_Images/zgiif7fn/file_stream\": read tcp 192.168.25.107:55260->35.186.228.49:443: wsarecv: An existing connection was forcibly closed by the remote host."}
+{"time":"2025-03-15T16:25:57.1746016+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/singhsonalika5-indian-institute-of-technology-madras/Fashion_MNIST_Images/zgiif7fn/file_stream\": read tcp 192.168.25.107:55313->35.186.228.49:443: wsarecv: An existing connection was forcibly closed by the remote host."}
+{"time":"2025-03-15T16:28:40.008315+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-15T16:28:40.0088221+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-15T16:28:41.0257553+05:30","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-03-15T16:28:41.8120713+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-15T16:28:45.0354406+05:30","level":"INFO","msg":"stream: closing","id":"zgiif7fn"}
+{"time":"2025-03-15T16:28:45.0354406+05:30","level":"INFO","msg":"handler: closed","stream_id":"zgiif7fn"}
+{"time":"2025-03-15T16:28:45.0354406+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"zgiif7fn"}
+{"time":"2025-03-15T16:28:45.0354406+05:30","level":"INFO","msg":"sender: closed","stream_id":"zgiif7fn"}
+{"time":"2025-03-15T16:28:45.0359836+05:30","level":"INFO","msg":"stream: closed","id":"zgiif7fn"}

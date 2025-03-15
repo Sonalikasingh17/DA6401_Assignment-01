@@ -1,0 +1,22 @@
+{"time":"2025-03-15T15:53:57.4866327+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"C:\\Users\\singh\\OneDrive\\Documents\\GitHub\\DA6401_Assignment-01\\wandb\\run-20250315_155357-uxkm8mmj\\logs\\debug-core.log"}
+{"time":"2025-03-15T15:53:57.5999787+05:30","level":"INFO","msg":"created new stream","id":"uxkm8mmj"}
+{"time":"2025-03-15T15:53:57.5999787+05:30","level":"INFO","msg":"stream: started","id":"uxkm8mmj"}
+{"time":"2025-03-15T15:53:57.5999787+05:30","level":"INFO","msg":"handler: started","stream_id":"uxkm8mmj"}
+{"time":"2025-03-15T15:53:57.5999787+05:30","level":"INFO","msg":"sender: started","stream_id":"uxkm8mmj"}
+{"time":"2025-03-15T15:53:57.5999787+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"uxkm8mmj"}
+{"time":"2025-03-15T15:53:58.8494378+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-15T15:57:50.7898689+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-15T15:57:50.790393+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-15T15:57:51.8046973+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":1.0159473}],"total_operations":1}}
+{"time":"2025-03-15T15:58:04.6115353+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-15T15:58:16.8787243+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/singhsonalika5-indian-institute-of-technology-madras/Fashion_MNIST_Images/uxkm8mmj/file_stream\": unexpected EOF"}
+{"time":"2025-03-15T15:58:49.2683641+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/singhsonalika5-indian-institute-of-technology-madras/Fashion_MNIST_Images/uxkm8mmj/file_stream\": EOF"}
+{"time":"2025-03-15T15:58:52.4786772+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading history steps 4-4, summary, console lines 10-10","runtime_seconds":51.2398835,"error_status":"retrying: Post \"https://api.wandb.ai/files/singhsonalika5-indian-institute-of-technology-madras/Fashion_MNIST_Images/uxkm8mmj/file_stream\": EOF"}],"total_operations":1}}
+{"time":"2025-03-15T15:59:15.1601051+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/singhsonalika5-indian-institute-of-technology-madras/Fashion_MNIST_Images/uxkm8mmj/file_stream\": dial tcp 35.186.228.49:443: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond."}
+{"time":"2025-03-15T15:59:45.1022493+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/singhsonalika5-indian-institute-of-technology-madras/Fashion_MNIST_Images/uxkm8mmj/file_stream\": dial tcp 35.186.228.49:443: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond."}
+{"time":"2025-03-15T15:59:52.9101068+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading history steps 4-4, summary, console lines 10-10","runtime_seconds":111.6713131,"error_status":"retrying: Post \"https://api.wandb.ai/files/singhsonalika5-indian-institute-of-technology-madras/Fashion_MNIST_Images/uxkm8mmj/file_stream\": dial tcp 35.186.228.49:443: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond."}],"total_operations":1}}
+{"time":"2025-03-15T16:00:06.7749342+05:30","level":"INFO","msg":"stream: closing","id":"uxkm8mmj"}
+{"time":"2025-03-15T16:00:06.7749342+05:30","level":"INFO","msg":"handler: closed","stream_id":"uxkm8mmj"}
+{"time":"2025-03-15T16:00:06.7749342+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"uxkm8mmj"}
+{"time":"2025-03-15T16:00:06.7749342+05:30","level":"INFO","msg":"sender: closed","stream_id":"uxkm8mmj"}
+{"time":"2025-03-15T16:00:06.7749342+05:30","level":"INFO","msg":"stream: closed","id":"uxkm8mmj"}

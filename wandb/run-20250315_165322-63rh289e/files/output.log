@@ -1,0 +1,6 @@
+Epoch: 0, Loss: nan, Training Accuracy: 0.10, Validation Accuracy: 0.10, Time: 105.79, Learning Rate: 1.600e+01
+Epoch: 1, Loss: 2.798e+01, Training Accuracy: 0.10, Validation Accuracy: 0.10, Time: 157.90, Learning Rate: 1.600e+01
+[34m[1mwandb[0m: Network error (ConnectionError), entering retry loop.
+Epoch: 2, Loss: 2.810e+01, Training Accuracy: 0.10, Validation Accuracy: 0.10, Time: 168.99, Learning Rate: 1.600e+01
+Epoch: 3, Loss: 2.806e+01, Training Accuracy: 0.10, Validation Accuracy: 0.10, Time: 161.28, Learning Rate: 1.600e+01
+Epoch: 4, Loss: 2.797e+01, Training Accuracy: 0.10, Validation Accuracy: 0.10, Time: 141.14, Learning Rate: 1.600e+01

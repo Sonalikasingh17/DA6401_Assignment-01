@@ -1,0 +1,1 @@
+{"_timestamp":1.7420375836689243e+09,"_runtime":703.8826082,"_step":4,"loss":0.06945378768600469,"training_accuracy":0.10211111111111111,"validation_accuracy":0.7738333333333334,"epoch":4,"_wandb":{"runtime":703}}

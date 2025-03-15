@@ -774,7 +774,7 @@ def train():
         training_loss, training_accuracy, validation_accuracy, predictions = NN.optimizer(
         NN.max_epochs, NN.num_train, NN.batch_size, NN.learning_rate)
     
-wandb.agent(sweep_id, train, count= 20)
+wandb.agent(sweep_id, train, count= 30)
 
 
 

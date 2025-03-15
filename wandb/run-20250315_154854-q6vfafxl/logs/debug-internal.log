@@ -1,0 +1,18 @@
+{"time":"2025-03-15T15:48:54.9522839+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"C:\\Users\\singh\\OneDrive\\Documents\\GitHub\\DA6401_Assignment-01\\wandb\\run-20250315_154854-q6vfafxl\\logs\\debug-core.log"}
+{"time":"2025-03-15T15:48:55.0731156+05:30","level":"INFO","msg":"created new stream","id":"q6vfafxl"}
+{"time":"2025-03-15T15:48:55.0731156+05:30","level":"INFO","msg":"stream: started","id":"q6vfafxl"}
+{"time":"2025-03-15T15:48:55.0731156+05:30","level":"INFO","msg":"handler: started","stream_id":"q6vfafxl"}
+{"time":"2025-03-15T15:48:55.0731156+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"q6vfafxl"}
+{"time":"2025-03-15T15:48:55.0736609+05:30","level":"INFO","msg":"sender: started","stream_id":"q6vfafxl"}
+{"time":"2025-03-15T15:49:00.2406604+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-15T15:52:05.1227025+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-15T15:52:05.1232065+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-15T15:52:06.1336434+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading data","runtime_seconds":4.627361},{"desc":"updating run config","runtime_seconds":1.0120509}],"total_operations":2}}
+{"time":"2025-03-15T15:52:09.3045825+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-15T15:53:06.6111482+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading history steps 4-4, summary, console lines 4-4","runtime_seconds":53.7860312}],"total_operations":1}}
+{"time":"2025-03-15T15:53:49.9056304+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/singhsonalika5-indian-institute-of-technology-madras/Fashion_MNIST_Images/q6vfafxl/file_stream\": read tcp 192.168.25.107:53254->35.186.228.49:443: wsarecv: An existing connection was forcibly closed by the remote host."}
+{"time":"2025-03-15T15:53:53.0405284+05:30","level":"INFO","msg":"stream: closing","id":"q6vfafxl"}
+{"time":"2025-03-15T15:53:53.0405284+05:30","level":"INFO","msg":"handler: closed","stream_id":"q6vfafxl"}
+{"time":"2025-03-15T15:53:53.0405284+05:30","level":"INFO","msg":"sender: closed","stream_id":"q6vfafxl"}
+{"time":"2025-03-15T15:53:53.0405284+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"q6vfafxl"}
+{"time":"2025-03-15T15:53:53.0411954+05:30","level":"INFO","msg":"stream: closed","id":"q6vfafxl"}

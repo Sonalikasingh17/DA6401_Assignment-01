@@ -1,0 +1,6 @@
+Epoch: 0, Loss: 9.177e-02, Training Accuracy: 0.10, Validation Accuracy: 0.80, Time: 177.37, Learning Rate: 1.000e-04
+Epoch: 1, Loss: 5.354e-02, Training Accuracy: 0.10, Validation Accuracy: 0.82, Time: 179.75, Learning Rate: 1.000e-04
+Epoch: 2, Loss: 4.719e-02, Training Accuracy: 0.10, Validation Accuracy: 0.83, Time: 186.90, Learning Rate: 1.000e-04
+[34m[1mwandb[0m: Network error (SSLError), entering retry loop.
+Epoch: 3, Loss: 4.416e-02, Training Accuracy: 0.10, Validation Accuracy: 0.84, Time: 175.46, Learning Rate: 1.000e-04
+Epoch: 4, Loss: 4.223e-02, Training Accuracy: 0.10, Validation Accuracy: 0.85, Time: 183.32, Learning Rate: 1.000e-04

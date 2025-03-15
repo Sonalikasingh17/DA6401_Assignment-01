@@ -1,333 +1,588 @@
 import numpy as np
-import math
-import copy
+import wandb
+import time
 
+# Optimizers
+def sgd(self, epochs, length_dataset, learning_rate, weight_decay=0):
 
-class SimpleGradientDescent:
-    def __init__(self, eta, layers, weight_decay=0.0):
-        self.eta = eta     # here eta = learning rate
-        self.layers = layers
-        self.step_count = 1
-        self.lrc = 1.0     # lrc = learning rate count
-        self.weight_decay = weight_decay
+    # Implements Stochastic Gradient Descent (SGD) for training the neural network.
+    
+    # Arguments:
+    #     : epochs - Number of training epochs
+    #     : length_dataset - Number of training samples to use
+    #     : learning_rate - Step size for weight updates
+    #     : weight_decay - Regularization parameter (default: 0)
+    
+    # Returns:
+    #     : training_loss - List of loss values over epochs
+    #     : training_accuracy - List of training accuracies
+    #     : validation_accuracy - List of validation accuracies
+    #     : final_predictions - Model predictions after training
+    
 
-  
-    def descent(self, network, gradient):
-        for i in range(self.layers):
-            network[i]['weight'] = network[i]['weight'] - ((self.eta / self.lrc) * gradient[i][
-                'weight']) - (self.eta * self.weight_decay * network[i]['weight'])
-            network[i]['bias'] -= ((self.eta / self.lrc) * gradient[i]['bias'])
-        self.step_count += 1
-        if self.step_count % 10 == 0:
-            self.lrc += 1.0
+        training_loss = []
+        training_accuracy = []
+        validation_accuracy = []
+    
+        num_layers = len(self.layer_structure)
 
+        X_train = self.train_data[:, :length_dataset]
+        Y_train = self.train_labels[:, :length_dataset]
 
+        for epoch in range(epochs):
+            start_time = time.time()
+        
+            indices = np.arange(length_dataset)
+            np.random.shuffle(indices)
+            X_train = X_train[:, indices].reshape(self.input_size, length_dataset)
+            Y_train = Y_train[:, indices].reshape(self.num_classes, length_dataset)
+        
+            batch_loss = []
+        
+            weight_updates = {str(l + 1): np.zeros_like(self.weights[str(l + 1)]) for l in range(num_layers - 1)}
+            bias_updates = {str(l + 1): np.zeros_like(self.biases[str(l + 1)]) for l in range(num_layers - 1)}
 
-class MomentumGradientDescent:
-    def __init__(self, eta, layers, gamma, weight_decay=0.0):
-        self.eta = eta   # here eta = learning rate
-        self.gamma = gamma
-        self.layers = layers
-        self.step_count = 1
-        self.lrc = 1.0
-        self.momentum = None
-        self.weight_decay = weight_decay
+            for i in range(length_dataset):
+                output, activation_outputs, pre_activations = self.forward_propagation(
+                    X_train[:, i].reshape(self.input_size, 1),
+                    self.weights,
+                    self.biases,
+            )
+                weight_gradients, bias_gradients = self.back_propagation(
+                    output, activation_outputs, pre_activations, Y_train[:, i].reshape(self.num_classes, 1), weight_decay
+            )
 
-    def descent(self, network, gradient):
-        gamma = min(1 - 2 ** (-1 - math.log((self.step_count / 250.0) + 1, 2)), self.gamma)
+                for l in range(num_layers - 1):
+                    weight_updates[str(l + 1)] = weight_gradients[str(l + 1)]
+                    bias_updates[str(l + 1)] = bias_gradients[str(l + 1)]
 
-        if self.momentum is None:
-            self.momentum = copy.deepcopy(gradient)   # copy the structure
-            # initialize momentum
-            for i in range(self.layers):
-                self.momentum[i]['weight'] = (self.eta / self.lrc) * gradient[i]['weight']
-                self.momentum[i]['bias'] = (self.eta / self.lrc) * gradient[i]['bias']
-        else:
-            # update momentum
-            for i in range(self.layers):
-                self.momentum[i]['weight'] = gamma * self.momentum[i]['weight'] + (self.eta / self.lrc) * gradient[i][
-                    'weight']
-                self.momentum[i]['bias'] = gamma * self.momentum[i]['bias'] + (self.eta / self.lrc) * gradient[i][
-                    'bias']
-        # descent
-        for i in range(self.layers):
-            network[i]['weight'] = network[i]['weight'] - self.momentum[i]['weight'] - (
-                        (self.eta / self.lrc) * self.weight_decay * network[i][
-                    'weight'])
-            network[i]['bias'] -= self.momentum[i]['bias']
+                if self.loss_function == "MSE":
+                    batch_loss.append(
+                       self.mean_squared_error(Y_train[:, i].reshape(self.num_classes, 1), output)
+                         + self.l2_regularisation_loss(weight_decay)
+                )
+                elif self.loss_function == "CROSS":
+                    batch_loss.append(
+                    self.cross_entropy_loss(Y_train[:, i].reshape(self.num_classes, 1), output)
+                    + self.l2_regularisation_loss(weight_decay)
+                )
 
-        self.step_count += 1
-        if self.step_count % 10 == 0:
-            self.lrc += 1.0
+                self.weights = {str(l + 1): (self.weights[str(l + 1)] - learning_rate * weight_updates[str(l + 1)])
+                            for l in range(len(self.weights))}
+                self.biases = {str(l + 1): (self.biases[str(l + 1)] - learning_rate * bias_updates[str(l + 1)])
+                           for l in range(len(self.biases))}
 
+            elapsed_time = time.time() - start_time
+        
+            predictions = self.predict(self.train_data, self.num_train)
+        
+            training_loss.append(np.mean(batch_loss))
+            training_accuracy.append(self.compute_accuracy(Y_train, predictions, length_dataset)[0])
+            validation_accuracy.append(self.compute_accuracy(self.num_test, self.predict(self.num_train, self.num_val), self.num_val)[0])
+        
+            print(
+                "Epoch: %d, Loss: %.3e, Training Accuracy: %.2f, Validation Accuracy: %.2f, Time: %.2f, Learning Rate: %.3e"
+                % (
+                epoch,
+                training_loss[epoch],
+                training_accuracy[epoch],
+                validation_accuracy[epoch],
+                elapsed_time,
+                learning_rate,
+            )
+        )
 
-class NAG:
-    def __init__(self, eta, layers, gamma, weight_decay=0.0):
-        self.eta = eta    # here eta = learning rate
-        self.gamma = gamma
-        self.layers = layers
-        self.step_count = 1
-        self.momentum = None
-        self.lrc = 1.0
-        self.weight_decay = weight_decay
+            wandb.log({'loss': np.mean(batch_loss),
+                   'training_accuracy': training_accuracy[epoch],
+                   'validation_accuracy': validation_accuracy[epoch],
+                   'epoch': epoch})
 
-    # Function for lookahead. Call this before forward propagation.
-    def lookahead(self, network):
-        # when no momentum has been generated yet.
-        if self.momentum is None:
-            pass
-        else:
-            # updating the gradient using momentum
-            for i in range(self.layers):
-                network[i]['weight'] -= self.gamma * self.momentum[i]['weight']
-                network[i]['bias'] -= self.gamma * self.momentum[i]['bias']
+        return training_loss, training_accuracy, validation_accuracy, predictions
+
+   
+def mgd(self, epochs, length_dataset, batch_size, learning_rate, weight_decay=0):
+    
+    # Implements Mini-Batch Gradient Descent (MGD) for training the neural network.
+
+    # Arguments:
+    #     epochs : Number of training epochs.
+    #     length_dataset : Number of training samples to use.
+    #     batch_size : Mini-batch size for gradient updates.
+    #     learning_rate : Step size for weight updates.
+    #     weight_decay : Regularization parameter (default: 0).
+
+    # Returns:
+    #     training_loss, training_accuracy, validation_accuracy, final_predictions
+      
+    
+        MOMENTUM = 0.9
+        training_loss = []
+        training_accuracy = []
+        validation_accuracy = []
+
+        num_layers = len(self.layer_structure)
+
+        X_train = self.train_data[:, :length_dataset]
+        Y_train = self.train_labels[:, :length_dataset]
+
+        prev_velocity_w = {str(l + 1): np.zeros_like(self.weights[str(l + 1)]) for l in range(num_layers - 1)}
+        prev_velocity_b = {str(l + 1): np.zeros_like(self.biases[str(l + 1)]) for l in range(num_layers - 1)}
+
+        num_points_seen = 0
+
+        for epoch in range(epochs):
+            start_time = time.time()
+
+            indices = np.arange(length_dataset)
+            np.random.shuffle(indices)
+            X_train = X_train[:, indices].reshape(self.input_size, length_dataset)
+            Y_train = Y_train[:, indices].reshape(self.num_classes, length_dataset)
+
+            batch_loss = []
+
+            weight_updates = {str(l + 1): np.zeros_like(self.weights[str(l + 1)]) for l in range(num_layers - 1)}
+            bias_updates = {str(l + 1): np.zeros_like(self.biases[str(l + 1)]) for l in range(num_layers - 1)}
+
+            for i in range(length_dataset):
+                output, activation_outputs, pre_activations = self.forward_propagation(
+                    X_train[:, i].reshape(self.input_size, 1),
+                    self.weights,
+                    self.biases,
+            )
+                weight_gradients, bias_gradients = self.back_propagation(
+                    output, activation_outputs, pre_activations, Y_train[:, i].reshape(self.num_classes, 1)
+            )
+
+                for l in range(num_layers - 1):
+                    weight_updates[str(l + 1)] += weight_gradients[str(l + 1)]
+                    bias_updates[str(l + 1)] += bias_gradients[str(l + 1)]
+
+                if self.loss_function == "MSE":
+                    batch_loss.append(
+                        self.mean_squared_error(Y_train[:, i].reshape(self.num_classes, 1), output)
+                        + self.l2_regularisation_loss(weight_decay)
+                )
+                elif self.loss_function == "CROSS":
+                    batch_loss.append(
+                        self.cross_entropy_loss(Y_train[:, i].reshape(self.num_classes, 1), output)
+                        + self.l2_regularisation_loss(weight_decay)
+                )
+
+                num_points_seen += 1
+
+                if num_points_seen % batch_size == 0:
+                    velocity_w = {
+                       str(l + 1): MOMENTUM * prev_velocity_w[str(l + 1)] + learning_rate * weight_updates[str(l + 1)] / batch_size
+                       for l in range(num_layers - 1)
+                }
+                    velocity_b = {
+                       str(l + 1): MOMENTUM * prev_velocity_b[str(l + 1)] + learning_rate * bias_updates[str(l + 1)] / batch_size
+                        for l in range(num_layers - 1)
+                }
+
+                    self.weights = {str(l + 1): self.weights[str(l + 1)] - velocity_w[str(l + 1)] for l in range(num_layers - 1)}
+                    self.biases = {str(l + 1): self.biases[str(l + 1)] - velocity_b[str(l + 1)] for l in range(num_layers - 1)}
+
+                    prev_velocity_w = velocity_w
+                    prev_velocity_b = velocity_b
+
+                    # Reset batch gradients
+                    weight_updates = {str(l + 1): np.zeros_like(self.weights[str(l + 1)]) for l in range(num_layers - 1)}
+                    bias_updates = {str(l + 1): np.zeros_like(self.biases[str(l + 1)]) for l in range(num_layers - 1)}
+
+            elapsed_time = time.time() - start_time
+
+            predictions = self.predict(self.train_data, self.num_train)
+
+            training_loss.append(np.mean(batch_loss))
+            training_accuracy.append(self.compute_accuracy(Y_train, predictions, length_dataset)[0])
+            validation_accuracy.append(self.compute_accuracy(self.test_labels, self.predict(self.test_data, self.num_test), self.num_test)[0])
+
+            print(
+            "Epoch: %d, Loss: %.3e, Training Accuracy: %.2f, Validation Accuracy: %.2f, Time: %.2f, Learning Rate: %.3e"
+            % (
+                epoch,
+                training_loss[epoch],
+                training_accuracy[epoch],
+                validation_accuracy[epoch],
+                elapsed_time,
+                learning_rate,
+            )
+        )
+
+            wandb.log({
+            'loss': np.mean(batch_loss),
+            'training_accuracy': training_accuracy[epoch],
+            'validation_accuracy': validation_accuracy[epoch],
+            'epoch': epoch
+        })
+
+        return training_loss, training_accuracy, validation_accuracy, predictions
+    
+def ngd(self, epochs, length_dataset, batch_size, learning_rate, weight_decay=0):
+    
+    # Implements Nesterov Accelerated Gradient (NGD) for training the neural network.
+
+    # Arguments:
+    #     epochs : Number of training epochs.
+    #     length_dataset: Number of training samples to use.
+    #     batch_size : Mini-batch size for gradient updates.
+    #     learning_rate: Step size for weight updates.
+    #     weight_decay : Regularization parameter (default: 0).
+
+    # Returns:
+    #     training_loss, training_accuracy, validation_accuracy, final_predictions
+    
+        GAMMA = 0.9
+    
+        X_train = self.train_data[:, :length_dataset]
+        Y_train = self.train_labels[:, :length_dataset]
+
+        training_loss = []
+        training_accuracy = []
+        validation_accuracy = []
+    
+        num_layers = len(self.layer_structure)
+    
+        prev_velocity_w = {str(l + 1): np.zeros_like(self.weights[str(l + 1)]) for l in range(num_layers - 1)}
+        prev_velocity_b = {str(l + 1): np.zeros_like(self.biases[str(l + 1)]) for l in range(num_layers - 1)}
+    
+        num_points_seen = 0
+        for epoch in range(epochs):
+            start_time = time.time()
+        
+            indices = np.arange(length_dataset)
+            np.random.shuffle(indices)
+            X_train = X_train[:, indices].reshape(self.input_size, length_dataset)
+            Y_train = Y_train[:, indices].reshape(self.num_classes, length_dataset)
+
+            batch_loss = []
+        
+            weight_updates = {str(l + 1): np.zeros_like(self.weights[str(l + 1)]) for l in range(num_layers - 1)}
+            bias_updates = {str(l + 1): np.zeros_like(self.biases[str(l + 1)]) for l in range(num_layers - 1)}
+        
+            velocity_w = {str(l + 1): GAMMA * prev_velocity_w[str(l + 1)] for l in range(num_layers - 1)}
+            velocity_b = {str(l + 1): GAMMA * prev_velocity_b[str(l + 1)] for l in range(num_layers - 1)}
+        
+            for i in range(length_dataset):
+                winter = {str(l + 1): self.weights[str(l + 1)] - velocity_w[str(l + 1)] for l in range(num_layers - 1)}
+                binter = {str(l + 1): self.biases[str(l + 1)] - velocity_b[str(l + 1)] for l in range(num_layers - 1)}
+            
+                output, activation_outputs, pre_activations = self.forward_propagation(
+                    X_train[:, i].reshape(self.input_size, 1), winter, binter)
+                weight_gradients, bias_gradients = self.back_propagation(
+                    output, activation_outputs, pre_activations, Y_train[:, i].reshape(self.num_classes, 1))
+            
+                for l in range(num_layers - 1):
+                    weight_updates[str(l + 1)] += weight_gradients[str(l + 1)]
+                    bias_updates[str(l + 1)] += bias_gradients[str(l + 1)]
+            
+                if self.loss_function == "MSE":
+                    batch_loss.append(
+                    self.mean_squared_error(Y_train[:, i].reshape(self.num_classes, 1), output)
+                    + self.l2_regularisation_loss(weight_decay)
+                )
+                elif self.loss_function == "CROSS":
+                    batch_loss.append(
+                    self.cross_entropy_loss(Y_train[:, i].reshape(self.num_classes, 1), output)
+                    + self.l2_regularisation_loss(weight_decay)
+                )
+            
+                num_points_seen += 1
+            
+                if num_points_seen % batch_size == 0:
+                    velocity_w = {
+                        str(l + 1): GAMMA * prev_velocity_w[str(l + 1)] + learning_rate * weight_updates[str(l + 1)] / batch_size
+                        for l in range(num_layers - 1)
+                }
+                velocity_b = {
+                    str(l + 1): GAMMA * prev_velocity_b[str(l + 1)] + learning_rate * bias_updates[str(l + 1)] / batch_size
+                    for l in range(num_layers - 1)
+                }
+                
+                self.weights = {str(l + 1): self.weights[str(l + 1)] - velocity_w[str(l + 1)] for l in range(num_layers - 1)}
+                self.biases = {str(l + 1): self.biases[str(l + 1)] - velocity_b[str(l + 1)] for l in range(num_layers - 1)}
+                
+                prev_velocity_w = velocity_w
+                prev_velocity_b = velocity_b
+                
+                weight_updates = {str(l + 1): np.zeros_like(self.weights[str(l + 1)]) for l in range(num_layers - 1)}
+                bias_updates = {str(l + 1): np.zeros_like(self.biases[str(l + 1)]) for l in range(num_layers - 1)}
+        
+            elapsed_time = time.time() - start_time
+            predictions = self.predict(self.train_data, self.num_train)
+        
+            training_loss.append(np.mean(batch_loss))
+            training_accuracy.append(self.compute_accuracy(Y_train, predictions, length_dataset)[0])
+            validation_accuracy.append(self.compute_accuracy(self.test_labels, self.predict(self.     test_data, self.num_test), self.num_test)[0])
+        
+            print(
+            "Epoch: %d, Loss: %.3e, Training Accuracy: %.2f, Validation Accuracy: %.2f, Time: %.2f, Learning Rate: %.3e"
+            % (
+                epoch,
+                training_loss[epoch],
+                training_accuracy[epoch],
+                validation_accuracy[epoch],
+                elapsed_time,
+                learning_rate
+            )
+        )
+        
+            wandb.log({
+            'loss': np.mean(batch_loss),
+            'training_accuracy': training_accuracy[epoch],
+            'validation_accuracy': validation_accuracy[epoch],
+            'epoch': epoch
+        })
+        
+        return training_loss, training_accuracy, validation_accuracy, predictions
 
     
-    def descent(self, network, gradient):
-
-        # descent
-        for i in range(self.layers):
-            network[i]['weight'] = network[i]['weight'] - ((self.eta / self.lrc) * gradient[i][
-                'weight']) - ((self.eta / self.lrc) * self.weight_decay * network[i]['weight'])
-            network[i]['bias'] -= self.eta * gradient[i]['bias']
-
-        gamma = min(1 - 2 ** (-1 - math.log((self.step_count / 250.0) + 1, 2)), self.gamma)
-
-        # Generating momentum for the next time step next
-
-        if self.momentum is None:
-            # copy the structure
-            self.momentum = copy.deepcopy(gradient)
-            # initialize momentum
-            for i in range(self.layers):
-                self.momentum[i]['weight'] = (self.eta / self.lrc) * gradient[i]['weight']
-                self.momentum[i]['bias'] = (self.eta / self.lrc) * gradient[i]['bias']
-        else:
-            # update momentum
-            for i in range(self.layers):
-                self.momentum[i]['weight'] = gamma * self.momentum[i]['weight'] + ((self.eta / self.lrc) * gradient[i][
-                    'weight'])
-                self.momentum[i]['bias'] = gamma * self.momentum[i]['bias'] + (
-                            (self.eta / self.lrc) * gradient[i]['bias'])
-
-        self.step_count += 1
-        if self.step_count % 10 == 0:
-            self.lrc += 1.0
-
-
-
-
-
-class RMSProp:
-    def __init__(self, eta, layers, beta, weight_decay=0.0):
-        self.eta = eta            # here eta learning rate
-        self.beta = beta          # beta is decay parameter for denominator
-        self.layers = layers
-        self.step_count = 1
-        self.epsilon = 0.001
-        # Implementing update rule for RMSProp
-        self.update = None
-        self.weight_decay = weight_decay
-
-  
-    def descent(self, network, gradient):
-
-        # Generating update for the next time step
-        if self.update is None:
-            # copy the structure
-            self.update = copy.deepcopy(gradient)
-            # initialize update at time step 1 assuming that update at time step 0 is 0
-            for i in range(self.layers):
-                self.update[i]['weight'] = (1 - self.beta) * (gradient[i]['weight']) ** 2
-                self.update[i]['bias'] = (1 - self.beta) * (gradient[i]['bias']) ** 2
-        else:
-            for i in range(self.layers):
-                self.update[i]['weight'] = self.beta * self.update[i]['weight'] + (1 - self.beta) * (gradient[i][
-                    'weight']) ** 2
-                self.update[i]['bias'] = self.beta * self.update[i]['bias'] + (1 - self.beta) * (
-                    gradient[i]['bias']) ** 2
-        # Now use the update rule for RMSProp
-        for i in range(self.layers):
-            network[i]['weight'] = network[i]['weight'] - np.multiply(
-                (self.eta / np.sqrt(self.update[i]['weight'] + self.epsilon)),
-                gradient[i]['weight']) - self.weight_decay * network[i]['weight']
-            network[i]['bias'] = network[i]['bias'] - np.multiply(
-                (self.eta / np.sqrt(self.update[i]['bias'] + self.epsilon)), gradient[i]['bias'])
-
-        self.step_count += 1
-
-
-
-
-
-class ADAM:
-    def __init__(self, eta, layers, weight_decay=0.0, beta1=0.9, beta2=0.999, eps=1e-8):
-        # learning rate
-        self.eta = eta
-        self.beta1 = beta1
-        self.beta2 = beta2
-        
-        self.layers = layers   
-        self.step_count = 1
-
-        # first moment vector m_t: defined as a decaying mean over the previous gradients
-        self.momentum = None
-        self.t_momentum = None
-        # second moment vector v_t
-        self.second_momentum = None
-        self.t_second_momentum = None
-       
-        self.eps = eps
-        
-        self.weight_decay = weight_decay
-
+def rmsProp(self, epochs, length_dataset, batch_size, learning_rate, weight_decay=0): 
     
-    def descent(self, network, gradient):
+    # Implements RMSProp optimizer for training the neural network.
 
-        if self.momentum is None:
-            # copy the structure
-            self.momentum = copy.deepcopy(gradient)
-            self.second_momentum = copy.deepcopy(gradient)
-            for i in range(self.layers):
-                # first momentum initialization
-                self.momentum[i]['weight'][:] = np.zeros_like(gradient[i]['weight'])
-                self.momentum[i]['bias'][:] = np.zeros_like(gradient[i]['bias'])
-                # second momentum initialization
-                self.second_momentum[i]['weight'][:] = np.zeros_like(gradient[i]['weight'])
-                self.second_momentum[i]['bias'][:] = np.zeros_like(gradient[i]['bias'])
-            self.t_momentum = copy.deepcopy(self.momentum)
-            self.t_second_momentum = copy.deepcopy(self.second_momentum)
+    # Arguments:
+    #     epochs : Number of training epochs.
+    #     length_dataset : Number of training samples to use.
+    #     batch_size: Mini-batch size for gradient updates.
+    #     learning_rate : Step size for weight updates.
+    #     weight_decay: Regularization parameter (default: 0).
 
-        for i in range(self.layers):
-            # Updating biased first moment estimate: Moving average of gradients
-            self.momentum[i]['weight'] = self.beta1 * self.momentum[i]['weight'] + (1 - self.beta1) * gradient[i][
-                'weight']
-            self.momentum[i]['bias'] = self.beta1 * self.momentum[i]['bias'] + (1 - self.beta1) * gradient[i]['bias'
-            ]
-            # Updating biased second raw moment estimate: rate adjusting parameter update similar to RMSProp
-            self.second_momentum[i]['weight'] = self.beta2 * self.second_momentum[i]['weight'] + (
-                    1 - self.beta2) * np.power(gradient[i][
-                                                   'weight'], 2)
-            self.second_momentum[i]['bias'] = self.beta2 * self.second_momentum[i]['bias'] + (
-                    1 - self.beta2) * np.power(gradient[i]['bias'
-                                               ], 2)
-        # bias correction
-        for i in range(self.layers):
-            self.t_momentum[i]['weight'][:] = (1 / (1 - (self.beta1 ** self.step_count))) * self.momentum[i]['weight']
-            self.t_momentum[i]['bias'][:] = (1 / (1 - (self.beta1 ** self.step_count))) * self.momentum[i]['bias']
+    # Returns:
+    #     training_loss, training_accuracy, validation_accuracy, final_predictions
+    
 
-            self.t_second_momentum[i]['weight'][:] = (1 / (1 - (self.beta2 ** self.step_count))) * self.second_momentum[i][
-                'weight']
-            self.t_second_momentum[i]['bias'][:] = (1 / (1 - (self.beta2 ** self.step_count))) * self.second_momentum[i][
-                'bias']
+        EPSILON = 1e-8
+        BETA = 0.9
 
-        # the descent
-        for i in range(self.layers):
-            # temporary variable for calculation
-            temp = np.sqrt(self.t_second_momentum[i]['weight'])
-            # adding epsilon to square root of temp
-            temp_eps = temp + self.eps
-            # inverse 
-            temp_inv = 1 / temp_eps
-            # Now, Perform descent: Update rule for weight along with l2 regularisation
-            network[i]['weight'] = network[i]['weight'] - self.eta * (
-                np.multiply(temp_inv, self.t_momentum[i]['weight'])) - (
-                                               self.eta * self.weight_decay * network[i]['weight'])
+        X_train = self.train_data[:, :length_dataset]
+        Y_train = self.train_labels[:, :length_dataset]
 
-            # Doing same thing for bias
-            # temporary variable for calculation
-            temp = np.sqrt(self.t_second_momentum[i]['bias'])
-            # adding epsilon to square root of temp
-            temp_eps = temp + self.eps
-            # inverse 
-            temp_inv = 1 / temp_eps
-            # Now, Perform descent for weight
-            network[i]['bias'] -= self.eta * np.multiply(temp_inv, self.t_momentum[i]['bias'])
+        training_loss = []
+        training_accuracy = []
+        validation_accuracy = []
+    
+        num_layers = len(self.layer_structure)
 
-        self.step_count += 1
+        v_w = {str(l + 1): np.zeros_like(self.weights[str(l + 1)]) for l in range(num_layers - 1)}
+        v_b = {str(l + 1): np.zeros_like(self.biases[str(l + 1)]) for l in range(num_layers - 1)}
 
+        num_points_seen = 0
+        for epoch in range(epochs):
+            start_time = time.time()
 
+            indices = np.arange(length_dataset)
+            np.random.shuffle(indices)
+            X_train = X_train[:, indices].reshape(self.input_size, length_dataset)
+            Y_train = Y_train[:, indices].reshape(self.num_classes, length_dataset)
 
-class NADAM:
-    def __init__(self, eta, layers, weight_decay=0.0, beta1=0.9, beta2=0.999, eps=1e-8):
-        # learning rate
-        self.eta = eta
-        self.beta1 = beta1
-        self.beta2 = beta2
-       
-        self.layers = layers
-        self.step_count = 1
+            batch_loss = []
 
-        # first moment vector m_t: defined as a decaying mean over the previous gradients
-        self.momentum = None
-        # second moment vector v_t
-        self.second_momentum = None
-       
-        self.eps = eps
-        self.weight_decay = weight_decay
+            weight_updates = {str(l + 1): np.zeros_like(self.weights[str(l + 1)]) for l in range(num_layers - 1)}
+            bias_updates = {str(l + 1): np.zeros_like(self.biases[str(l + 1)]) for l in range(num_layers - 1)}
 
+            for i in range(length_dataset):
+                output, activation_outputs, pre_activations = self.forward_propagation(
+                    X_train[:, i].reshape(self.input_size, 1), self.weights, self.biases)
+                
+                weight_gradients, bias_gradients = self.back_propagation(
+                    output, activation_outputs, pre_activations, Y_train[:, i].reshape(self.num_classes, 1))
 
-    def descent(self, network, gradient):
+                for l in range(num_layers - 1):
+                    weight_updates[str(l + 1)] += weight_gradients[str(l + 1)]
+                    bias_updates[str(l + 1)] += bias_gradients[str(l + 1)]
 
-        if self.momentum is None:
-            # copy the structure
-            self.momentum = copy.deepcopy(gradient)
-            self.second_momentum = copy.deepcopy(gradient)
-            # initialize momentums
-            for i in range(self.layers):
-                # first momentum initialization
-                self.momentum[i]['weight'] = (1 - self.beta1) * gradient[i]['weight']
-                self.momentum[i]['bias'] = (1 - self.beta1) * gradient[i]['bias']
-                # second momentum initialization
-                self.second_momentum[i]['weight'] = (1 - self.beta2) * np.power(gradient[i]['weight'], 2)
-                self.second_momentum[i]['bias'] = (1 - self.beta2) * np.power(gradient[i]['bias'], 2)
-        else:
-            for i in range(self.layers):
-                # Updating biased first moment estimate: Moving average of gradients
-                self.momentum[i]['weight'] = self.beta1 * self.momentum[i]['weight'] + (1 - self.beta1) * \
-                                             gradient[i][
-                                                 'weight']
-                self.momentum[i]['bias'] = self.beta1 * self.momentum[i]['bias'] + (1 - self.beta1) * gradient[i][
-                    'bias'
-                ]
-                # Updating biased second raw moment estimate: rate adjusting parameter update similar to RMSProp
-                self.second_momentum[i]['weight'] = self.beta2 * self.second_momentum[i]['weight'] + (
-                        1 - self.beta2) * np.power(gradient[i][
-                                                       'weight'], 2)
-                self.second_momentum[i]['bias'] = self.beta2 * self.second_momentum[i]['bias'] + (
-                        1 - self.beta2) * np.power(gradient[i]['bias'
-                                                   ], 2)
-        # bias correction
-        m_t_hat = copy.deepcopy(self.momentum)
-        v_t_hat = copy.deepcopy(self.second_momentum)
-        for i in range(self.layers):
-            m_t_hat[i]['weight'] = (self.beta1 / (1 - (self.beta1 ** self.step_count))) * self.momentum[i][
-                'weight'] + ((1 - self.beta1) / (1 - (self.beta1 ** self.step_count))) * gradient[i]['weight']
-            m_t_hat[i]['bias'] = (self.beta1 / (1 - (self.beta1 ** self.step_count))) * self.momentum[i]['bias'] + (
-                    (1 - self.beta1) / (1 - (self.beta1 ** self.step_count))) * gradient[i]['bias']
+                if self.loss_function == "MSE":
+                    batch_loss.append(
+                    self.mean_squared_error(Y_train[:, i].reshape(self.num_classes, 1), output)
+                    + self.l2_regularisation_loss(weight_decay)
+                )
+                elif self.loss_function == "CROSS":
+                    batch_loss.append(
+                    self.cross_entropy_loss(Y_train[:, i].reshape(self.num_classes, 1), output)
+                    + self.l2_regularisation_loss(weight_decay)
+                )
 
-            v_t_hat[i]['weight'] = (self.beta2 / (1 - (self.beta2 ** self.step_count))) * \
-                                   self.second_momentum[i][
-                                       'weight']
-            v_t_hat[i]['bias'] = (self.beta2 / (1 - (self.beta2 ** self.step_count))) * self.second_momentum[i][
-                'bias']
+                num_points_seen += 1
 
-        # the descent
-        for i in range(self.layers):
-            # temporary variable for calculation
-            temp = np.sqrt(self.second_momentum[i]['weight'] + self.eps)
-            # inverse 
-            temp_inv = 1 / temp
-            # Now, Perform descent for weight
-            network[i]['weight'] = network[i]['weight'] - self.eta * (
-                np.multiply(temp_inv, m_t_hat[i]['weight'])) - (self.eta * self.weight_decay * network[i]['weight'])
+                if num_points_seen % batch_size == 0:
+                    v_w = {
+                        str(l + 1): BETA * v_w[str(l + 1)] + (1 - BETA) * (weight_updates[str(l + 1)] / batch_size) ** 2
+                        for l in range(num_layers - 1)
+                }
+                    v_b = {
+                        str(l + 1): BETA * v_b[str(l + 1)] + (1 - BETA) * (bias_updates[str(l + 1)] / batch_size) ** 2
+                        for l in range(num_layers - 1)
+                }
 
-            #  Doing same for bias
-            # temporary variable for calculation
-            temp = np.sqrt(self.second_momentum[i]['bias']) + self.eps
-            # inverse 
-            temp_inv = 1 / temp
-            # Now, Perform descent for weight
-            network[i]['bias'] -= self.eta * np.multiply(temp_inv, v_t_hat[i]['bias'])
+                    self.weights = {
+                        str(l + 1): self.weights[str(l + 1)] - (learning_rate / np.sqrt(v_w[str(l + 1)] + EPSILON)) * weight_updates[str(l + 1)] / batch_size
+                        for l in range(num_layers - 1)
+                }
+                    self.biases = {
+                        str(l + 1): self.biases[str(l + 1)] - (learning_rate / np.sqrt(v_b[str(l + 1)] + EPSILON)) * bias_updates[str(l + 1)] / batch_size
+                        for l in range(num_layers - 1)
+                }
 
-        self.step_count += 1
+                    weight_updates = {str(l + 1): np.zeros_like(self.weights[str(l + 1)]) for l in range(num_layers - 1)}
+                    bias_updates = {str(l + 1): np.zeros_like(self.biases[str(l + 1)]) for l in range(num_layers - 1)}
+
+            elapsed_time = time.time() - start_time
+            predictions = self.predict(self.train_data, self.num_train)
+
+            training_loss.append(np.mean(batch_loss))
+            training_accuracy.append(self.compute_accuracy(Y_train, predictions, length_dataset)[0])
+            validation_accuracy.append(self.compute_accuracy(self.test_labels, self.predict(self.test_data, self.num_test), self.num_test)[0])
+
+            print(
+            "Epoch: %d, Loss: %.3e, Training Accuracy: %.2f, Validation Accuracy: %.2f, Time: %.2f, Learning Rate: %.3e"
+            % (
+                epoch,
+                training_loss[epoch],
+                training_accuracy[epoch],
+                validation_accuracy[epoch],
+                elapsed_time,
+                learning_rate
+            )
+                )
+
+            wandb.log({
+            'loss': np.mean(batch_loss),
+            'training_accuracy': training_accuracy[epoch],
+            'validation_accuracy': validation_accuracy[epoch],
+            'epoch': epoch
+               })
+
+        return training_loss, training_accuracy, validation_accuracy, predictions
+    
+def adam(self, epochs, length_dataset, batch_size, learning_rate, weight_decay=0):
+        
+        # Implements the Adam optimizer for training the neural network.
+
+        # Arguments:
+        #     epochs : Number of training epochs.
+        #     length_dataset : Number of training samples to use.
+        #     batch_size: Mini-batch size for gradient updates.
+        #     learning_rate : Step size for weight updates.
+        #     weight_decay : Regularization parameter (default: 0).
+
+        # Returns:
+        #     training_loss, training_accuracy, validation_accuracy, final_predictions
+    
+        
+        EPSILON = 1e-8
+        BETA1, BETA2 = 0.9, 0.99
+
+        X_train = self.train_data[:, :length_dataset]
+        Y_train = self.train_labels[:, :length_dataset]
+
+        training_loss = []
+        training_accuracy = []
+        validation_accuracy = []
+        
+        num_layers = len(self.layer_structure)
+
+        # Initialize first and second moment estimates
+        m_w = {str(l + 1): np.zeros_like(self.weights[str(l + 1)]) for l in range(num_layers - 1)}
+        m_b = {str(l + 1): np.zeros_like(self.biases[str(l + 1)]) for l in range(num_layers - 1)}
+
+        v_w = {str(l + 1): np.zeros_like(self.weights[str(l + 1)]) for l in range(num_layers - 1)}
+        v_b = {str(l + 1): np.zeros_like(self.biases[str(l + 1)]) for l in range(num_layers - 1)}
+
+        num_points_seen = 0
+        for epoch in range(epochs):
+            start_time = time.time()
+
+            indices = np.arange(length_dataset)
+            np.random.shuffle(indices)
+            X_train = X_train[:, indices].reshape(self.input_size, length_dataset)
+            Y_train = Y_train[:, indices].reshape(self.num_classes, length_dataset)
+
+            batch_loss = []
+
+            weight_updates = {str(l + 1): np.zeros_like(self.weights[str(l + 1)]) for l in range(num_layers - 1)}
+            bias_updates = {str(l + 1): np.zeros_like(self.biases[str(l + 1)]) for l in range(num_layers - 1)}
+
+            for i in range(length_dataset):
+                output, activation_outputs, pre_activations = self.forward_propagation(
+                    X_train[:, i].reshape(self.input_size, 1), self.weights, self.biases)
+                weight_gradients, bias_gradients = self.back_propagation(
+                    output, activation_outputs, pre_activations, Y_train[:, i].reshape(self.num_classes, 1))
+
+                for l in range(num_layers - 1):
+                    weight_updates[str(l + 1)] += weight_gradients[str(l + 1)]
+                    bias_updates[str(l + 1)] += bias_gradients[str(l + 1)]
+
+                if self.loss_function == "MSE":
+                    batch_loss.append(
+                        self.mean_squared_error(Y_train[:, i].reshape(self.num_classes, 1), output)
+                        + self.l2_regularisation_loss(weight_decay)
+                    )
+                elif self.loss_function == "CROSS":
+                    batch_loss.append(
+                        self.cross_entropy_loss(Y_train[:, i].reshape(self.num_classes, 1), output)
+                        + self.l2_regularisation_loss(weight_decay)
+                    )
+
+                num_points_seen += 1
+
+                if num_points_seen % batch_size == 0:
+                    # Compute biased first and second moment estimates
+                    m_w = {str(l + 1): BETA1 * m_w[str(l + 1)] + (1 - BETA1) * (weight_updates[str(l + 1)] / batch_size)
+                        for l in range(num_layers - 1)}
+                    m_b = {str(l + 1): BETA1 * m_b[str(l + 1)] + (1 - BETA1) * (bias_updates[str(l + 1)] / batch_size)
+                        for l in range(num_layers - 1)}
+
+                    v_w = {str(l + 1): BETA2 * v_w[str(l + 1)] + (1 - BETA2) * (weight_updates[str(l + 1)] / batch_size) ** 2
+                        for l in range(num_layers - 1)}
+                    v_b = {str(l + 1): BETA2 * v_b[str(l + 1)] + (1 - BETA2) * (bias_updates[str(l + 1)] / batch_size) ** 2
+                        for l in range(num_layers - 1)}
+
+                    # Bias correction
+                    m_w_hat = {str(l + 1): m_w[str(l + 1)] / (1 - BETA1 ** (epoch + 1)) for l in range(num_layers - 1)}
+                    m_b_hat = {str(l + 1): m_b[str(l + 1)] / (1 - BETA1 ** (epoch + 1)) for l in range(num_layers - 1)}
+
+                    v_w_hat = {str(l + 1): v_w[str(l + 1)] / (1 - BETA2 ** (epoch + 1)) for l in range(num_layers - 1)}
+                    v_b_hat = {str(l + 1): v_b[str(l + 1)] / (1 - BETA2 ** (epoch + 1)) for l in range(num_layers - 1)}
+
+                    # Update weights and biases
+                    self.weights = {
+                        str(l + 1): self.weights[str(l + 1)] - (learning_rate / (np.sqrt(v_w_hat[str(l + 1)] + EPSILON))) * m_w_hat[str(l + 1)]
+                        for l in range(num_layers - 1)
+                    }
+                    self.biases = {
+                        str(l + 1): self.biases[str(l + 1)] - (learning_rate / (np.sqrt(v_b_hat[str(l + 1)] + EPSILON))) * m_b_hat[str(l + 1)]
+                        for l in range(num_layers - 1)
+                    }
+
+                    weight_updates = {str(l + 1): np.zeros_like(self.weights[str(l + 1)]) for l in range(num_layers - 1)}
+                    bias_updates = {str(l + 1): np.zeros_like(self.biases[str(l + 1)]) for l in range(num_layers - 1)}
+
+            elapsed_time = time.time() - start_time
+            predictions = self.predict(self.train_data, self.num_train)
+
+            training_loss.append(np.mean(batch_loss))
+            training_accuracy.append(self.compute_accuracy(Y_train, predictions, length_dataset)[0])
+            validation_accuracy.append(self.compute_accuracy(self.test_labels, self.predict(self.test_data, self.num_test), self.num_test)[0])
+
+            print(
+                "Epoch: %d, Loss: %.3e, Training Accuracy: %.2f, Validation Accuracy: %.2f, Time: %.2f, Learning Rate: %.3e"
+                % (
+                    epoch,
+                    training_loss[epoch],
+                    training_accuracy[epoch],
+                    validation_accuracy[epoch],
+                    elapsed_time,
+                    learning_rate,
+                )
+            )
+
+            wandb.log({
+                'loss': np.mean(batch_loss),
+                'training_accuracy': training_accuracy[epoch],
+                'validation_accuracy': validation_accuracy[epoch],
+                'epoch': epoch
+            })
+
+        return training_loss, training_accuracy, validation_accuracy, predictions

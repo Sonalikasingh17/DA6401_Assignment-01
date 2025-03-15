@@ -1,0 +1,118 @@
+2025-03-15 09:41:23,914 INFO    Thread-211 (_run_job):18712 [wandb_setup.py:_flush():67] Current SDK version is 0.19.7
+2025-03-15 09:41:23,914 INFO    Thread-211 (_run_job):18712 [wandb_setup.py:_flush():67] Configure stats pid to 18712
+2025-03-15 09:41:23,915 INFO    Thread-211 (_run_job):18712 [wandb_setup.py:_flush():67] Loading settings from C:\Users\singh\.config\wandb\settings
+2025-03-15 09:41:23,915 INFO    Thread-211 (_run_job):18712 [wandb_setup.py:_flush():67] Loading settings from c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\wandb\settings
+2025-03-15 09:41:23,915 INFO    Thread-211 (_run_job):18712 [wandb_setup.py:_flush():67] Loading settings from environment variables
+2025-03-15 09:41:23,915 INFO    Thread-211 (_run_job):18712 [wandb_init.py:setup_run_log_directory():647] Logging user logs to c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\wandb\run-20250315_094123-kb64eo68\logs\debug.log
+2025-03-15 09:41:23,917 INFO    Thread-211 (_run_job):18712 [wandb_init.py:setup_run_log_directory():648] Logging internal logs to c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\wandb\run-20250315_094123-kb64eo68\logs\debug-internal.log
+2025-03-15 09:41:23,917 INFO    Thread-211 (_run_job):18712 [wandb_init.py:monkeypatch_ipython():599] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x000001857E7735C0>
+2025-03-15 09:41:23,917 INFO    Thread-211 (_run_job):18712 [wandb_init.py:init():761] calling init triggers
+2025-03-15 09:41:23,917 INFO    Thread-211 (_run_job):18712 [wandb_init.py:init():766] wandb.init called with sweep_config: {'activation_func': 'RELU', 'batch_size': 32, 'epochs': 5, 'hidden_neurons': 64, 'init_method': 'RANDOM', 'layers': 3, 'learning_rate': 0.0001, 'optimizer': 'ADAM', 'weight_decay': 0.0005}
+config: {'max_epochs': 5, 'hidden_layers': 3, 'hidden_neurons': 32, 'weight_decay': 0, 'learning_rate': 0.001, 'optimizer': 'MGD', 'batch_size': 16, 'activation': 'TANH', 'initializer': 'XAVIER', 'loss_function': 'CROSS', '_wandb': {}}
+2025-03-15 09:41:23,918 INFO    Thread-211 (_run_job):18712 [wandb_init.py:init():784] starting backend
+2025-03-15 09:41:23,918 INFO    Thread-211 (_run_job):18712 [wandb_init.py:init():788] sending inform_init request
+2025-03-15 09:41:23,922 INFO    Thread-211 (_run_job):18712 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=spawn, using: spawn
+2025-03-15 09:41:23,924 INFO    Thread-211 (_run_job):18712 [wandb_init.py:init():803] backend started and connected
+2025-03-15 09:41:23,938 INFO    Thread-211 (_run_job):18712 [wandb_run.py:_config_callback():1261] config_cb None None {'activation_func': 'RELU', 'batch_size': 32, 'epochs': 5, 'hidden_neurons': 64, 'init_method': 'RANDOM', 'layers': 3, 'learning_rate': 0.0001, 'optimizer': 'ADAM', 'weight_decay': 0.0005}
+2025-03-15 09:41:23,942 INFO    Thread-211 (_run_job):18712 [wandb_run.py:_label_probe_notebook():1204] probe notebook
+2025-03-15 09:41:23,945 INFO    Thread-211 (_run_job):18712 [wandb_run.py:_label_probe_notebook():1214] Unable to probe notebook: 'charmap' codec can't decode byte 0x81 in position 64477: character maps to <undefined>
+2025-03-15 09:41:23,946 INFO    Thread-211 (_run_job):18712 [wandb_init.py:init():896] updated telemetry
+2025-03-15 09:41:23,948 INFO    Thread-211 (_run_job):18712 [wandb_init.py:init():920] communicating run to backend with 90.0 second timeout
+2025-03-15 09:41:24,578 INFO    Thread-211 (_run_job):18712 [wandb_init.py:init():995] starting run threads in backend
+2025-03-15 09:41:25,145 INFO    Thread-211 (_run_job):18712 [wandb_run.py:_console_start():2377] atexit reg
+2025-03-15 09:41:25,145 INFO    Thread-211 (_run_job):18712 [wandb_run.py:_redirect():2227] redirect: wrap_raw
+2025-03-15 09:41:25,146 INFO    Thread-211 (_run_job):18712 [wandb_run.py:_redirect():2292] Wrapping output streams.
+2025-03-15 09:41:25,146 INFO    Thread-211 (_run_job):18712 [wandb_run.py:_redirect():2317] Redirects installed.
+2025-03-15 09:41:25,146 INFO    Thread-211 (_run_job):18712 [wandb_init.py:init():1037] run started, returning control to user process
+2025-03-15 09:53:55,997 INFO    Thread-198 (_heartbeat):18712 [retry.py:__call__():175] Retry attempt failed:
+Traceback (most recent call last):
+  File "c:\Users\singh\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 466, in _make_request
+    self._validate_conn(conn)
+  File "c:\Users\singh\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 1095, in _validate_conn
+    conn.connect()
+  File "c:\Users\singh\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connection.py", line 730, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\singh\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connection.py", line 909, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File "c:\Users\singh\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\util\ssl_.py", line 469, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\singh\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\util\ssl_.py", line 513, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\singh\AppData\Local\Programs\Python\Python312\Lib\ssl.py", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\singh\AppData\Local\Programs\Python\Python312\Lib\ssl.py", line 1046, in _create
+    self.do_handshake()
+  File "c:\Users\singh\AppData\Local\Programs\Python\Python312\Lib\ssl.py", line 1321, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: EE certificate key too weak (_ssl.c:1000)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\singh\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\singh\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 490, in _make_request
+    raise new_e
+urllib3.exceptions.SSLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: EE certificate key too weak (_ssl.c:1000)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\singh\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "c:\Users\singh\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "c:\Users\singh\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: EE certificate key too weak (_ssl.c:1000)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\singh\AppData\Local\Programs\Python\Python312\Lib\site-packages\wandb\sdk\lib\retry.py", line 134, in __call__
+    result = self._call_fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\singh\AppData\Local\Programs\Python\Python312\Lib\site-packages\wandb\sdk\internal\internal_api.py", line 398, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\singh\AppData\Local\Programs\Python\Python312\Lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\singh\AppData\Local\Programs\Python\Python312\Lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\singh\AppData\Local\Programs\Python\Python312\Lib\site-packages\wandb\sdk\lib\gql_request.py", line 58, in execute
+    request = self.session.post(self.url, **post_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\singh\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\singh\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\singh\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\singh\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\adapters.py", line 698, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: EE certificate key too weak (_ssl.c:1000)')))
+2025-03-15 09:59:37,467 INFO    Thread-211 (_run_job):18712 [wandb_run.py:_finish():2112] finishing run singhsonalika5-indian-institute-of-technology-madras/Fashion_MNIST_Images/kb64eo68
+2025-03-15 09:59:37,472 ERROR   Thread-211 (_run_job):18712 [jupyter.py:save_history():450] Run pip install nbformat to save notebook history
+2025-03-15 09:59:37,472 INFO    Thread-211 (_run_job):18712 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-15 09:59:37,473 INFO    Thread-211 (_run_job):18712 [wandb_init.py:_jupyter_teardown():581] cleaning up jupyter logic
+2025-03-15 09:59:37,473 INFO    Thread-211 (_run_job):18712 [wandb_run.py:_atexit_cleanup():2342] got exitcode: 0
+2025-03-15 09:59:37,474 INFO    Thread-211 (_run_job):18712 [wandb_run.py:_restore():2324] restore
+2025-03-15 09:59:37,476 INFO    Thread-211 (_run_job):18712 [wandb_run.py:_restore():2330] restore done
+2025-03-15 10:05:11,049 INFO    MsgRouterThr:18712 [mailbox.py:close():115] Closing mailbox, abandoning 1 handles.
+2025-03-15 10:05:11,050 INFO    Thread-211 (_run_job):18712 [wandb_run.py:_footer_history_summary_info():3958] rendering history
+2025-03-15 10:05:11,050 INFO    Thread-211 (_run_job):18712 [wandb_run.py:_footer_history_summary_info():3990] rendering summary
+2025-03-15 10:05:11,054 INFO    Thread-211 (_run_job):18712 [wandb_run.py:_footer_sync_info():3919] logging synced files

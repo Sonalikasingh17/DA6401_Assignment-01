@@ -1,0 +1,6 @@
+C:\Users\singh\AppData\Local\Temp\ipykernel_18712\1915783164.py:4: RuntimeWarning: overflow encountered in exp
+  return 1.0 / (1 + np.exp(-(z)))
+C:\Users\singh\AppData\Local\Temp\ipykernel_18712\2078877857.py:66: RuntimeWarning: divide by zero encountered in log
+  return np.mean([-true_labels[i] * np.log(predicted_labels[i]) for i in range(len(predicted_labels))])
+C:\Users\singh\AppData\Local\Temp\ipykernel_18712\2078877857.py:66: RuntimeWarning: invalid value encountered in multiply
+  return np.mean([-true_labels[i] * np.log(predicted_labels[i]) for i in range(len(predicted_labels))])

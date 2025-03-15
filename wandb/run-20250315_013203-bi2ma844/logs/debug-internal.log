@@ -1,0 +1,16 @@
+{"time":"2025-03-15T01:32:03.6649265+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.7","symlink path":"c:\\Users\\singh\\OneDrive\\Documents\\GitHub\\DA6401_Assignment-01\\wandb\\run-20250315_013203-bi2ma844\\logs\\debug-core.log"}
+{"time":"2025-03-15T01:32:03.8110737+05:30","level":"INFO","msg":"created new stream","id":"bi2ma844"}
+{"time":"2025-03-15T01:32:03.8118012+05:30","level":"INFO","msg":"stream: started","id":"bi2ma844"}
+{"time":"2025-03-15T01:32:03.8124499+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"bi2ma844"}
+{"time":"2025-03-15T01:32:03.812977+05:30","level":"INFO","msg":"sender: started","stream_id":"bi2ma844"}
+{"time":"2025-03-15T01:32:03.813987+05:30","level":"INFO","msg":"handler: started","stream_id":"bi2ma844"}
+{"time":"2025-03-15T01:32:04.3357202+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-15T01:32:05.4606765+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-15T01:32:05.462252+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-15T01:32:06.4740634+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading requirements.txt","runtime_seconds":1.2230527,"progress":"2.1KB/2.1KB"},{"desc":"uploading output.log","runtime_seconds":0.2556041},{"desc":"uploading wandb-summary.json","runtime_seconds":0.2556041,"progress":"24B/24B"}],"total_operations":3}}
+{"time":"2025-03-15T01:32:07.5312601+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-15T01:32:08.8749301+05:30","level":"INFO","msg":"stream: closing","id":"bi2ma844"}
+{"time":"2025-03-15T01:32:08.8749301+05:30","level":"INFO","msg":"handler: closed","stream_id":"bi2ma844"}
+{"time":"2025-03-15T01:32:08.8749301+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"bi2ma844"}
+{"time":"2025-03-15T01:32:08.8761138+05:30","level":"INFO","msg":"sender: closed","stream_id":"bi2ma844"}
+{"time":"2025-03-15T01:32:08.8767521+05:30","level":"INFO","msg":"stream: closed","id":"bi2ma844"}

@@ -1,0 +1,48 @@
+{"time":"2025-03-15T09:41:23.9303812+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.7","symlink path":"c:\\Users\\singh\\OneDrive\\Documents\\GitHub\\DA6401_Assignment-01\\wandb\\run-20250315_094123-kb64eo68\\logs\\debug-core.log"}
+{"time":"2025-03-15T09:41:24.0681813+05:30","level":"INFO","msg":"created new stream","id":"kb64eo68"}
+{"time":"2025-03-15T09:41:24.0681813+05:30","level":"INFO","msg":"handler: started","stream_id":"kb64eo68"}
+{"time":"2025-03-15T09:41:24.0688875+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"kb64eo68"}
+{"time":"2025-03-15T09:41:24.0688875+05:30","level":"INFO","msg":"sender: started","stream_id":"kb64eo68"}
+{"time":"2025-03-15T09:41:24.0688875+05:30","level":"INFO","msg":"stream: started","id":"kb64eo68"}
+{"time":"2025-03-15T09:41:24.5987189+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-15T09:53:59.8690271+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.31.134:56011->35.186.228.49:443: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond."}
+{"time":"2025-03-15T09:54:01.666408+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/singhsonalika5-indian-institute-of-technology-madras/Fashion_MNIST_Images/kb64eo68/file_stream\": dial tcp 35.186.228.49:443: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond."}
+{"time":"2025-03-15T09:54:02.2112931+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": remote error: tls: handshake failure"}
+{"time":"2025-03-15T09:54:03.8371224+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/singhsonalika5-indian-institute-of-technology-madras/Fashion_MNIST_Images/kb64eo68/file_stream\": remote error: tls: handshake failure"}
+{"time":"2025-03-15T09:54:06.3324868+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": remote error: tls: handshake failure"}
+{"time":"2025-03-15T09:54:08.2033272+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/singhsonalika5-indian-institute-of-technology-madras/Fashion_MNIST_Images/kb64eo68/file_stream\": remote error: tls: handshake failure"}
+{"time":"2025-03-15T09:54:14.7431581+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": remote error: tls: handshake failure"}
+{"time":"2025-03-15T09:54:16.7299633+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/singhsonalika5-indian-institute-of-technology-madras/Fashion_MNIST_Images/kb64eo68/file_stream\": remote error: tls: handshake failure"}
+{"time":"2025-03-15T09:54:32.1913089+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": remote error: tls: handshake failure"}
+{"time":"2025-03-15T09:54:34.772924+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/singhsonalika5-indian-institute-of-technology-madras/Fashion_MNIST_Images/kb64eo68/file_stream\": remote error: tls: handshake failure"}
+{"time":"2025-03-15T09:55:07.1945751+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/singhsonalika5-indian-institute-of-technology-madras/Fashion_MNIST_Images/kb64eo68/file_stream\": remote error: tls: handshake failure"}
+{"time":"2025-03-15T09:55:07.8394002+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": remote error: tls: handshake failure"}
+{"time":"2025-03-15T09:56:07.2528235+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/singhsonalika5-indian-institute-of-technology-madras/Fashion_MNIST_Images/kb64eo68/file_stream\": remote error: tls: handshake failure"}
+{"time":"2025-03-15T09:56:07.8503036+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": remote error: tls: handshake failure"}
+{"time":"2025-03-15T09:57:07.2893991+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/singhsonalika5-indian-institute-of-technology-madras/Fashion_MNIST_Images/kb64eo68/file_stream\": remote error: tls: handshake failure"}
+{"time":"2025-03-15T09:57:07.8607795+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": remote error: tls: handshake failure"}
+{"time":"2025-03-15T09:58:07.349604+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/singhsonalika5-indian-institute-of-technology-madras/Fashion_MNIST_Images/kb64eo68/file_stream\": remote error: tls: handshake failure"}
+{"time":"2025-03-15T09:58:07.8737983+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": remote error: tls: handshake failure"}
+{"time":"2025-03-15T09:59:07.4115098+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/singhsonalika5-indian-institute-of-technology-madras/Fashion_MNIST_Images/kb64eo68/file_stream\": remote error: tls: handshake failure"}
+{"time":"2025-03-15T09:59:07.9430613+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": remote error: tls: handshake failure"}
+{"time":"2025-03-15T10:00:07.4735379+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/singhsonalika5-indian-institute-of-technology-madras/Fashion_MNIST_Images/kb64eo68/file_stream\": remote error: tls: handshake failure"}
+{"time":"2025-03-15T10:00:07.9644927+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": remote error: tls: handshake failure"}
+{"time":"2025-03-15T10:01:07.5049154+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/singhsonalika5-indian-institute-of-technology-madras/Fashion_MNIST_Images/kb64eo68/file_stream\": remote error: tls: handshake failure"}
+{"time":"2025-03-15T10:01:07.9762881+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": remote error: tls: handshake failure"}
+{"time":"2025-03-15T10:02:07.5313527+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/singhsonalika5-indian-institute-of-technology-madras/Fashion_MNIST_Images/kb64eo68/file_stream\": remote error: tls: handshake failure"}
+{"time":"2025-03-15T10:02:07.9894535+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": remote error: tls: handshake failure"}
+{"time":"2025-03-15T10:03:07.5462822+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/singhsonalika5-indian-institute-of-technology-madras/Fashion_MNIST_Images/kb64eo68/file_stream\": remote error: tls: handshake failure"}
+{"time":"2025-03-15T10:03:07.9982695+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": remote error: tls: handshake failure"}
+{"time":"2025-03-15T10:03:40.7014244+05:30","level":"WARN","msg":"sender: taking a long time","seconds":600.0003062,"work":"WorkRecord(*service_go_proto.Request_StopStatus); Control(local:true  mailbox_slot:\"p8fd8de7nf84\"  connection_id:\"127.0.0.1:56002\")"}
+{"time":"2025-03-15T10:04:07.5747053+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/singhsonalika5-indian-institute-of-technology-madras/Fashion_MNIST_Images/kb64eo68/file_stream\": remote error: tls: handshake failure"}
+{"time":"2025-03-15T10:04:08.0056624+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": remote error: tls: handshake failure"}
+{"time":"2025-03-15T10:05:08.3441689+05:30","level":"INFO","msg":"sender: succeeded after taking longer than expected","seconds":687.6430507,"work":"WorkRecord(*service_go_proto.Request_StopStatus); Control(local:true  mailbox_slot:\"p8fd8de7nf84\"  connection_id:\"127.0.0.1:56002\")"}
+{"time":"2025-03-15T10:05:08.3471893+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-15T10:05:08.3713385+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-15T10:05:08.3718835+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading data","runtime_seconds":0.0277146},{"desc":"updating run config","runtime_seconds":0.0241872}],"total_operations":2}}
+{"time":"2025-03-15T10:05:09.7156588+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-15T10:05:11.062879+05:30","level":"INFO","msg":"stream: closing","id":"kb64eo68"}
+{"time":"2025-03-15T10:05:11.062879+05:30","level":"INFO","msg":"handler: closed","stream_id":"kb64eo68"}
+{"time":"2025-03-15T10:05:11.062879+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"kb64eo68"}
+{"time":"2025-03-15T10:05:11.0636545+05:30","level":"INFO","msg":"sender: closed","stream_id":"kb64eo68"}
+{"time":"2025-03-15T10:05:11.0636545+05:30","level":"INFO","msg":"stream: closed","id":"kb64eo68"}

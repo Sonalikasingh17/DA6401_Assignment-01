@@ -1,0 +1,16 @@
+{"time":"2025-03-15T01:38:27.3782924+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.7","symlink path":"c:\\Users\\singh\\OneDrive\\Documents\\GitHub\\DA6401_Assignment-01\\wandb\\run-20250315_013827-bsw4apto\\logs\\debug-core.log"}
+{"time":"2025-03-15T01:38:27.5367462+05:30","level":"INFO","msg":"created new stream","id":"bsw4apto"}
+{"time":"2025-03-15T01:38:27.5367462+05:30","level":"INFO","msg":"stream: started","id":"bsw4apto"}
+{"time":"2025-03-15T01:38:27.5367462+05:30","level":"INFO","msg":"handler: started","stream_id":"bsw4apto"}
+{"time":"2025-03-15T01:38:27.5367462+05:30","level":"INFO","msg":"sender: started","stream_id":"bsw4apto"}
+{"time":"2025-03-15T01:38:27.5367462+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"bsw4apto"}
+{"time":"2025-03-15T01:38:28.2594182+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-15T01:38:28.8964194+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-15T01:38:28.8977182+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-15T01:38:29.9128236+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":0.2308407}],"total_operations":1}}
+{"time":"2025-03-15T01:38:31.296204+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-15T01:38:32.6845396+05:30","level":"INFO","msg":"stream: closing","id":"bsw4apto"}
+{"time":"2025-03-15T01:38:32.6845396+05:30","level":"INFO","msg":"handler: closed","stream_id":"bsw4apto"}
+{"time":"2025-03-15T01:38:32.6845396+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"bsw4apto"}
+{"time":"2025-03-15T01:38:32.6854825+05:30","level":"INFO","msg":"sender: closed","stream_id":"bsw4apto"}
+{"time":"2025-03-15T01:38:32.6854825+05:30","level":"INFO","msg":"stream: closed","id":"bsw4apto"}

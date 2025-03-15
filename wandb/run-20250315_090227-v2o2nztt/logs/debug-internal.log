@@ -1,0 +1,17 @@
+{"time":"2025-03-15T09:02:27.8420722+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.7","symlink path":"c:\\Users\\singh\\OneDrive\\Documents\\GitHub\\DA6401_Assignment-01\\wandb\\run-20250315_090227-v2o2nztt\\logs\\debug-core.log"}
+{"time":"2025-03-15T09:02:27.9672386+05:30","level":"INFO","msg":"created new stream","id":"v2o2nztt"}
+{"time":"2025-03-15T09:02:27.9672386+05:30","level":"INFO","msg":"stream: started","id":"v2o2nztt"}
+{"time":"2025-03-15T09:02:27.9672386+05:30","level":"INFO","msg":"handler: started","stream_id":"v2o2nztt"}
+{"time":"2025-03-15T09:02:27.9672386+05:30","level":"INFO","msg":"sender: started","stream_id":"v2o2nztt"}
+{"time":"2025-03-15T09:02:27.9672386+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"v2o2nztt"}
+{"time":"2025-03-15T09:02:28.3420072+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-15T09:19:23.4890175+05:30","level":"ERROR","msg":"sender: sendStopStatus: failed to get run stopped status: read tcp 192.168.31.134:55425->35.186.228.49:443: wsarecv: An existing connection was forcibly closed by the remote host."}
+{"time":"2025-03-15T09:23:41.5875095+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-15T09:23:41.5880145+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-15T09:23:42.5997857+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.3165939,"progress":"590B/590B"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.3165939,"progress":"202B/202B"}],"total_operations":2}}
+{"time":"2025-03-15T09:23:43.7132293+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-15T09:23:45.0814069+05:30","level":"INFO","msg":"stream: closing","id":"v2o2nztt"}
+{"time":"2025-03-15T09:23:45.0814069+05:30","level":"INFO","msg":"handler: closed","stream_id":"v2o2nztt"}
+{"time":"2025-03-15T09:23:45.0814069+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"v2o2nztt"}
+{"time":"2025-03-15T09:23:45.083061+05:30","level":"INFO","msg":"sender: closed","stream_id":"v2o2nztt"}
+{"time":"2025-03-15T09:23:45.083061+05:30","level":"INFO","msg":"stream: closed","id":"v2o2nztt"}

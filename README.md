@@ -4,6 +4,9 @@ The wandb report can be found in the following link:
 
 https://wandb.ai/singhsonalika5-indian-institute-of-technology-madras/Fashion-MNIST-Images/reports/DA6401_Assigment-1-Report---VmlldzoxMTY5Nzc5Nw
 
+The Github repo can be found in the following link:
+https://github.com/Sonalikasingh17/DA6401_Assignment-01/tree/main
+
 The problem statement involves building and training a Neural Network from scratch using primarily Numpy package in Python.
 
 ### The code base now has the following features:

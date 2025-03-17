@@ -6,7 +6,7 @@ https://wandb.ai/singhsonalika5-indian-institute-of-technology-madras/Fashion-MN
 
 The problem statement involves building and training a Neural Network from scratch using primarily Numpy package in Python.
 
-The code base now has the following features:
+### The code base now has the following features:
 
 Forward and backward propagation are hard coded using Matrix operations. The weights and biases are stored separately as dictionaries to go hand in hand with the notation used in class.
 A neural network class to instantiate the neural network object for specified set of hyperparameters, namely the number of layers, hidden neurons, activation function, optimizer, weight decay,etc.
@@ -18,7 +18,7 @@ For the hyper parameter optimisation stage, 10% of the randomly shuffled trainin
 
 Once the best configuration is identified with the help of wandb wither using  Bayesian optimisation, the full training dataset is used to train the best model configuration and the test accuracy is calculated. The resulting confusion matrix is plotted therafter.
 
-Code base structure
+### Code base structure
 activations.py - contains all the activation functions and its derivatives.
 
 optimizers.py - all the optimizers are seperately defined for the convenience.
@@ -81,7 +81,7 @@ sweep_config = {
 }
 One can choose to select / modify/omit any of the hyperparameters above in the config dictionary.
 
-Results:
+### Results:
 The neural network implemented, the maximum test accuracy reported was 88.08% on the Fashion MNIST dataset. One of the model configuration chosen to be the best is as follows:
 
 Number of Hidden Layers - 3

@@ -1,0 +1,26 @@
+2025-03-17 22:09:35,912 INFO    MainThread:29204 [wandb_init.py:setup_run_log_directory():647] Logging user logs to C:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\wandb\run-20250317_220935-rkoyaoca\logs\debug.log
+2025-03-17 22:09:35,913 INFO    MainThread:29204 [wandb_init.py:setup_run_log_directory():648] Logging internal logs to C:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\wandb\run-20250317_220935-rkoyaoca\logs\debug-internal.log
+2025-03-17 22:09:35,913 INFO    MainThread:29204 [wandb_init.py:init():761] calling init triggers
+2025-03-17 22:09:35,913 INFO    MainThread:29204 [wandb_init.py:init():766] wandb.init called with sweep_config: {}
+config: {'_wandb': {}}
+2025-03-17 22:09:35,913 INFO    MainThread:29204 [wandb_init.py:init():784] starting backend
+2025-03-17 22:09:35,913 INFO    MainThread:29204 [wandb_init.py:init():788] sending inform_init request
+2025-03-17 22:09:35,923 INFO    MainThread:29204 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=spawn, using: spawn
+2025-03-17 22:09:35,923 INFO    MainThread:29204 [wandb_init.py:init():798] backend started and connected
+2025-03-17 22:09:35,926 INFO    MainThread:29204 [wandb_init.py:init():891] updated telemetry
+2025-03-17 22:09:35,927 INFO    MainThread:29204 [wandb_init.py:init():915] communicating run to backend with 90.0 second timeout
+2025-03-17 22:09:36,582 INFO    MainThread:29204 [wandb_init.py:init():990] starting run threads in backend
+2025-03-17 22:09:36,850 INFO    MainThread:29204 [wandb_run.py:_console_start():2375] atexit reg
+2025-03-17 22:09:36,851 INFO    MainThread:29204 [wandb_run.py:_redirect():2227] redirect: wrap_raw
+2025-03-17 22:09:36,851 INFO    MainThread:29204 [wandb_run.py:_redirect():2292] Wrapping output streams.
+2025-03-17 22:09:36,853 INFO    MainThread:29204 [wandb_run.py:_redirect():2315] Redirects installed.
+2025-03-17 22:09:36,854 INFO    MainThread:29204 [wandb_init.py:init():1032] run started, returning control to user process
+2025-03-17 22:09:36,873 INFO    MainThread:29204 [wandb_run.py:_config_callback():1261] config_cb ('_wandb', 'viz', 'confusion_matrix') {'id': 'wandb/confusion_matrix/v1', 'historyFieldSettings': {'x-axis': '_step', 'key': 'confusion_matrix'}} None
+2025-03-17 22:09:37,250 INFO    MainThread:29204 [wandb_run.py:_config_callback():1261] config_cb ('_wandb', 'visualize', 'my_bar_chart_id') {'panel_type': 'Vega2', 'panel_config': {'panelDefId': 'wandb/bar/v0', 'fieldSettings': {'label': 'Configuration', 'value': 'Test accuracy'}, 'stringSettings': {'title': 'Best Configuration Test Accuracy for Fashion MNIST Classification'}, 'transform': {'name': 'tableWithLeafColNames'}, 'userQuery': {'queryFields': [{'name': 'runSets', 'args': [{'name': 'runSets', 'value': '${runSets}'}], 'fields': [{'name': 'id', 'fields': []}, {'name': 'name', 'fields': []}, {'name': '_defaultColorIndex', 'fields': []}, {'name': 'summaryTable', 'args': [{'name': 'tableKey', 'value': 'my_bar_chart_id_table'}], 'fields': []}]}]}}} None
+2025-03-17 22:09:37,625 INFO    MainThread:29204 [wandb_run.py:_finish():2112] finishing run singhsonalika5-indian-institute-of-technology-madras/Fashion_MNIST_Images/rkoyaoca
+2025-03-17 22:09:37,627 INFO    MainThread:29204 [wandb_run.py:_atexit_cleanup():2340] got exitcode: 0
+2025-03-17 22:09:37,627 INFO    MainThread:29204 [wandb_run.py:_restore():2322] restore
+2025-03-17 22:09:37,627 INFO    MainThread:29204 [wandb_run.py:_restore():2328] restore done
+2025-03-17 22:09:41,842 INFO    MainThread:29204 [wandb_run.py:_footer_history_summary_info():3956] rendering history
+2025-03-17 22:09:41,842 INFO    MainThread:29204 [wandb_run.py:_footer_history_summary_info():3988] rendering summary
+2025-03-17 22:09:41,843 INFO    MainThread:29204 [wandb_run.py:_footer_sync_info():3917] logging synced files

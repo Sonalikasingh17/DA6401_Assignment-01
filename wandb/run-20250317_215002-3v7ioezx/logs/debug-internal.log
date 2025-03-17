@@ -5,3 +5,12 @@
 {"time":"2025-03-17T21:50:02.3067028+05:30","level":"INFO","msg":"handler: started","stream_id":"3v7ioezx"}
 {"time":"2025-03-17T21:50:02.3087112+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"3v7ioezx"}
 {"time":"2025-03-17T21:50:02.8553085+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-17T22:03:30.5917345+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-17T22:03:30.5976078+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-17T22:03:31.6149413+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact run-3v7ioezx-confusion_matrix","runtime_seconds":2.5093579999999998},{"desc":"uploading artifact run-3v7ioezx-confusion_matrix","runtime_seconds":1.4757436},{"desc":"uploading artifact run-3v7ioezx-my_bar_chart_id_table","runtime_seconds":1.0935233},{"desc":"uploading config.yaml","runtime_seconds":0.3770202,"progress":"2.4KB/2.4KB"}],"total_operations":4}}
+{"time":"2025-03-17T22:03:35.6768507+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-17T22:03:36.1738747+05:30","level":"INFO","msg":"stream: closing","id":"3v7ioezx"}
+{"time":"2025-03-17T22:03:36.1738747+05:30","level":"INFO","msg":"handler: closed","stream_id":"3v7ioezx"}
+{"time":"2025-03-17T22:03:36.1738747+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"3v7ioezx"}
+{"time":"2025-03-17T22:03:36.1738747+05:30","level":"INFO","msg":"sender: closed","stream_id":"3v7ioezx"}
+{"time":"2025-03-17T22:03:36.1752512+05:30","level":"INFO","msg":"stream: closed","id":"3v7ioezx"}

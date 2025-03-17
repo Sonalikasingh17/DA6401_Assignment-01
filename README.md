@@ -8,24 +8,36 @@ The problem statement involves building and training a Neural Network from scrat
 
 ### The code base now has the following features:
 
-Forward and backward propagation are hard coded using Matrix operations. The weights and biases are stored separately as dictionaries to go hand in hand with the notation used in class.
-A neural network class to instantiate the neural network object for specified set of hyperparameters, namely the number of layers, hidden neurons, activation function, optimizer, weight decay,etc.
-The optimisers, activations and their gradients are passed through dictionaries configured as attributed within the NeuralNetwork class.
-Activation functions are defined separately in the activations.py file.
+with the notation used in class.
 
+A neural network class is implemented to instantiate the neural network object for a specified set of hyperparameters, namely the number of layers, hidden neurons, activation function, optimizer, weight decay, etc.
 
-For the hyper parameter optimisation stage, 10% of the randomly shuffled training data set  are kept aside for validation for each hyperparameter configuration while the model is trained on the remaining 54000 images from the randomly shuffled training data set.
+The optimizers, activations, and their gradients are passed through dictionaries configured as attributes within the NeuralNetwork class.
 
-Once the best configuration is identified with the help of wandb wither using  Bayesian optimisation, the full training dataset is used to train the best model configuration and the test accuracy is calculated. The resulting confusion matrix is plotted therafter.
+Activation functions are defined separately in the `activations.py` file.
+
+For the hyperparameter optimization stage, 10% of the randomly shuffled training dataset is kept aside for validation for each hyperparameter configuration while the model is trained on the remaining 54,000 images from the randomly shuffled training dataset.
+
+Once the best configuration is identified with the help of wandb, either using Bayesian optimization or other methods, the full training dataset is used to train the best model configuration, and the test accuracy is calculated. The resulting confusion matrix is plotted thereafter.
 
 ### Code base structure
-activations.py - contains all the activation functions and its derivatives.
+- `activations.py`: Contains all the activation functions and their derivatives.
 
-optimizers.py - all the optimizers are seperately defined for the convenience.
+- `optimizers.py`: All the optimizers are separately defined for convenience.
 
-train.py - dataset download, splitting and preprocessing along with training and hyper parameter sweep using wandb agent, the NeuralNetwork class is defined within this file.
+- `train.py`: Handles dataset download, splitting, preprocessing, training, and hyperparameter sweep using the wandb agent. The `NeuralNetwork` class is defined within this file.
 
-Fashion_MNIST_dataset_images.py - data set download and plotting of sample images (Question 01)
+- `Fashion_MNIST_dataset_images.py`: Handles dataset download and plotting of sample images (Question 01).
+
+- `confusion_matrix_plot.py`: Used to plot the confusion matrix for the test dataset predictions.
+
+The confusion matrix is generated using the `sklearn.metrics.confusion_matrix` function. The matrix is then visualized using matplotlib's heatmap functionality for better interpretability.
+
+### Usage:
+- Import the function from this file.
+- Pass the true labels and predicted labels to generate and visualize the confusion matrix.
+- Import the function from this file.
+- Pass the true labels and predicted labels to generate and visualize the confusion matrix.
 
 
 Use the sweep configurations for wandb based on  Bayesian hyperparameter search can be configured in the following manner:
@@ -79,10 +91,10 @@ sweep_config = {
         
     }
 }
-One can choose to select / modify/omit any of the hyperparameters above in the config dictionary.
+One can choose to select and modify any of the hyperparameters above in the config dictionary.
 
 ### Results:
-The neural network implemented, the maximum test accuracy reported was 88.08% on the Fashion MNIST dataset. One of the model configuration chosen to be the best is as follows:
+The neural network implemented, the maximum test accuracy reported was 87.98% on the Fashion MNIST dataset. One of the model configuration chosen to be the best is as follows:
 
 Number of Hidden Layers - 3
 Number of Hidden Neurons - 128
@@ -91,4 +103,4 @@ Activation - Tanh
 Initialisation - Xavier
 Optimiser - ADAM
 Learning Rate - 0.0001
-Batch size - 32
+Batch size - 64

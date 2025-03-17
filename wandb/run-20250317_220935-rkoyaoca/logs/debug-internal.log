@@ -1,0 +1,16 @@
+{"time":"2025-03-17T22:09:35.9251607+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"C:\\Users\\singh\\OneDrive\\Documents\\GitHub\\DA6401_Assignment-01\\wandb\\run-20250317_220935-rkoyaoca\\logs\\debug-core.log"}
+{"time":"2025-03-17T22:09:36.053201+05:30","level":"INFO","msg":"created new stream","id":"rkoyaoca"}
+{"time":"2025-03-17T22:09:36.053201+05:30","level":"INFO","msg":"stream: started","id":"rkoyaoca"}
+{"time":"2025-03-17T22:09:36.053201+05:30","level":"INFO","msg":"handler: started","stream_id":"rkoyaoca"}
+{"time":"2025-03-17T22:09:36.053201+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"rkoyaoca"}
+{"time":"2025-03-17T22:09:36.053201+05:30","level":"INFO","msg":"sender: started","stream_id":"rkoyaoca"}
+{"time":"2025-03-17T22:09:36.5907827+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-17T22:09:37.6293887+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-17T22:09:37.6303012+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-17T22:09:38.635017+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact run-rkoyaoca-confusion_matrix","runtime_seconds":1.1676406},{"desc":"uploading artifact run-rkoyaoca-my_bar_chart_id_table","runtime_seconds":1.047638},{"desc":"uploading output.log","runtime_seconds":0.6809731},{"desc":"uploading config.yaml","runtime_seconds":0.368852,"progress":"2.1KB/2.1KB"}],"total_operations":4}}
+{"time":"2025-03-17T22:09:41.4689864+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-17T22:09:41.8637971+05:30","level":"INFO","msg":"stream: closing","id":"rkoyaoca"}
+{"time":"2025-03-17T22:09:41.8643069+05:30","level":"INFO","msg":"handler: closed","stream_id":"rkoyaoca"}
+{"time":"2025-03-17T22:09:41.8643069+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"rkoyaoca"}
+{"time":"2025-03-17T22:09:41.8643069+05:30","level":"INFO","msg":"sender: closed","stream_id":"rkoyaoca"}
+{"time":"2025-03-17T22:09:41.8683478+05:30","level":"INFO","msg":"stream: closed","id":"rkoyaoca"}

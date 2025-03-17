@@ -1,0 +1,43 @@
+{"time":"2025-03-17T08:35:46.2144488+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.7","symlink path":"c:\\Users\\singh\\OneDrive\\Documents\\GitHub\\DA6401_Assignment-01\\wandb\\run-20250317_083546-s8esvpf6\\logs\\debug-core.log"}
+{"time":"2025-03-17T08:35:46.8033306+05:30","level":"INFO","msg":"created new stream","id":"s8esvpf6"}
+{"time":"2025-03-17T08:35:46.8033306+05:30","level":"INFO","msg":"stream: started","id":"s8esvpf6"}
+{"time":"2025-03-17T08:35:46.8033306+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"s8esvpf6"}
+{"time":"2025-03-17T08:35:46.8033306+05:30","level":"INFO","msg":"handler: started","stream_id":"s8esvpf6"}
+{"time":"2025-03-17T08:35:46.8033306+05:30","level":"INFO","msg":"sender: started","stream_id":"s8esvpf6"}
+{"time":"2025-03-17T08:35:47.2052617+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-17T08:35:50.3713908+05:30","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-03-17T08:36:47.3926065+05:30","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-03-17T08:36:48.0385002+05:30","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-03-17T08:37:01.4817957+05:30","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-03-17T08:37:01.4860785+05:30","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-03-17T08:37:02.1394312+05:30","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-03-17T08:37:02.1854464+05:30","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-03-17T08:37:02.6175261+05:30","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-03-17T08:37:03.3989649+05:30","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-03-17T08:37:58.0723981+05:30","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-03-17T08:37:58.0803024+05:30","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-03-17T08:37:59.0902784+05:30","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-03-17T08:37:59.1021326+05:30","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-03-17T08:37:59.2739362+05:30","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-03-17T08:37:59.2872728+05:30","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-03-17T08:37:59.490667+05:30","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-03-17T08:37:59.5301238+05:30","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-03-17T08:37:59.7277927+05:30","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-03-17T08:37:59.7409083+05:30","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-03-17T08:37:59.9743439+05:30","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-03-17T08:37:59.9862437+05:30","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-03-17T08:38:00.3738587+05:30","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-03-17T08:38:00.3911308+05:30","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-03-17T08:38:00.5097318+05:30","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-03-17T08:38:00.5251264+05:30","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-03-17T08:38:00.7391725+05:30","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-03-17T08:38:00.7485964+05:30","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-03-17T08:38:02.5707387+05:30","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-03-17T08:38:03.4889502+05:30","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-03-17T08:40:48.7271234+05:30","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-03-17T08:40:49.5181812+05:30","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-03-17T11:42:57.6130456+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/singhsonalika5-indian-institute-of-technology-madras/Fashion_MNIST_Images/s8esvpf6/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-17T11:42:59.9662206+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/singhsonalika5-indian-institute-of-technology-madras/Fashion_MNIST_Images/s8esvpf6/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-17T16:05:03.5558684+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/singhsonalika5-indian-institute-of-technology-madras/Fashion_MNIST_Images/s8esvpf6/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-03-17T21:25:04.6197034+05:30","level":"ERROR","msg":"HTTP error","status":404,"method":"POST","url":"https://api.wandb.ai/files/singhsonalika5-indian-institute-of-technology-madras/Fashion_MNIST_Images/s8esvpf6/file_stream"}
+{"time":"2025-03-17T21:25:04.6207346+05:30","level":"ERROR+4","msg":"filestream: fatal error: filestream: failed to upload: 404 Not Found path=files/singhsonalika5-indian-institute-of-technology-madras/Fashion_MNIST_Images/s8esvpf6/file_stream: {\"error\":\"run Fashion_MNIST_Images/s8esvpf6 not found while streaming file\"}"}

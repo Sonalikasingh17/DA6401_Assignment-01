@@ -1,0 +1,16 @@
+{"time":"2025-03-17T04:18:55.7153662+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"C:\\Users\\singh\\OneDrive\\Documents\\GitHub\\DA6401_Assignment-01\\wandb\\run-20250317_041855-o766frzm\\logs\\debug-core.log"}
+{"time":"2025-03-17T04:18:55.8294283+05:30","level":"INFO","msg":"created new stream","id":"o766frzm"}
+{"time":"2025-03-17T04:18:55.8294283+05:30","level":"INFO","msg":"stream: started","id":"o766frzm"}
+{"time":"2025-03-17T04:18:55.8294283+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"o766frzm"}
+{"time":"2025-03-17T04:18:55.8294283+05:30","level":"INFO","msg":"handler: started","stream_id":"o766frzm"}
+{"time":"2025-03-17T04:18:55.8294283+05:30","level":"INFO","msg":"sender: started","stream_id":"o766frzm"}
+{"time":"2025-03-17T04:18:56.1690678+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-17T04:21:15.7322302+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-17T04:21:15.733265+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-17T04:21:16.7416861+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.3896024,"progress":"550B/550B"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.3896024,"progress":"198B/198B"},{"desc":"uploading config.yaml","runtime_seconds":0.0741704,"progress":"959B/959B"}],"total_operations":3}}
+{"time":"2025-03-17T04:21:17.8619385+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-17T04:21:18.1848357+05:30","level":"INFO","msg":"stream: closing","id":"o766frzm"}
+{"time":"2025-03-17T04:21:18.1848357+05:30","level":"INFO","msg":"handler: closed","stream_id":"o766frzm"}
+{"time":"2025-03-17T04:21:18.1848357+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"o766frzm"}
+{"time":"2025-03-17T04:21:18.1858368+05:30","level":"INFO","msg":"sender: closed","stream_id":"o766frzm"}
+{"time":"2025-03-17T04:21:18.1858368+05:30","level":"INFO","msg":"stream: closed","id":"o766frzm"}

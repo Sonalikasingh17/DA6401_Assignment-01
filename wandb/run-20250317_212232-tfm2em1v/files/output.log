@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "C:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\.conda\Lib\site-packages\wandb\sdk\wandb_config.py", line 165, in __getattr__
+    return self.__getitem__(key)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\.conda\Lib\site-packages\wandb\sdk\wandb_config.py", line 130, in __getitem__
+    return self._items[key]
+           ~~~~~~~~~~~^^^^^
+KeyError: 'loss'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\test.py", line 945, in <module>
+    Results["train_pred_best"], Results["test_pred_best"] = train_and_test()
+                                                            ^^^^^^^^^^^^^^^^
+  File "c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\test.py", line 923, in train_and_test
+    loss = CONFIG.loss
+           ^^^^^^^^^^^
+  File "C:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\.conda\Lib\site-packages\wandb\sdk\wandb_config.py", line 167, in __getattr__
+    raise AttributeError(
+AttributeError: <class 'wandb.sdk.wandb_config.Config'> object has no attribute 'loss'

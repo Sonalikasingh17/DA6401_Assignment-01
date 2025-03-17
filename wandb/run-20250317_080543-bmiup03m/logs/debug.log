@@ -1,0 +1,17 @@
+2025-03-17 08:05:43,295 INFO    Thread-12 (_run_job):20356 [wandb_setup.py:_flush():67] Current SDK version is 0.19.8
+2025-03-17 08:05:43,295 INFO    Thread-12 (_run_job):20356 [wandb_setup.py:_flush():67] Configure stats pid to 20356
+2025-03-17 08:05:43,296 INFO    Thread-12 (_run_job):20356 [wandb_setup.py:_flush():67] Loading settings from C:\Users\singh\.config\wandb\settings
+2025-03-17 08:05:43,296 INFO    Thread-12 (_run_job):20356 [wandb_setup.py:_flush():67] Loading settings from C:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\wandb\settings
+2025-03-17 08:05:43,296 INFO    Thread-12 (_run_job):20356 [wandb_setup.py:_flush():67] Loading settings from environment variables
+2025-03-17 08:05:43,296 INFO    Thread-12 (_run_job):20356 [wandb_init.py:setup_run_log_directory():647] Logging user logs to C:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\wandb\run-20250317_080543-bmiup03m\logs\debug.log
+2025-03-17 08:05:43,305 INFO    Thread-12 (_run_job):20356 [wandb_init.py:setup_run_log_directory():648] Logging internal logs to C:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\wandb\run-20250317_080543-bmiup03m\logs\debug-internal.log
+2025-03-17 08:05:43,305 INFO    Thread-12 (_run_job):20356 [wandb_init.py:init():761] calling init triggers
+2025-03-17 08:05:43,305 INFO    Thread-12 (_run_job):20356 [wandb_init.py:init():766] wandb.init called with sweep_config: {'activation_func': 'RELU', 'batch_size': 32, 'epochs': 5, 'hidden_neurons': 64, 'init_method': 'XAVIER', 'layers': 4, 'learning_rate': 0.0001, 'optimizer': 'MGD', 'weight_decay': 0}
+config: {'max_epochs': 5, 'hidden_layers': 3, 'hidden_neurons': 32, 'weight_decay': 0, 'learning_rate': 0.001, 'optimizer': 'MGD', 'batch_size': 16, 'activation': 'TANH', 'initializer': 'XAVIER', 'loss_function': 'CROSS', '_wandb': {}}
+2025-03-17 08:05:43,305 INFO    Thread-12 (_run_job):20356 [wandb_init.py:init():784] starting backend
+2025-03-17 08:05:43,305 INFO    Thread-12 (_run_job):20356 [wandb_init.py:init():788] sending inform_init request
+2025-03-17 08:05:43,305 INFO    Thread-12 (_run_job):20356 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=spawn, using: spawn
+2025-03-17 08:05:43,308 INFO    Thread-12 (_run_job):20356 [wandb_init.py:init():798] backend started and connected
+2025-03-17 08:05:43,308 INFO    Thread-12 (_run_job):20356 [wandb_run.py:_config_callback():1261] config_cb None None {'activation_func': 'RELU', 'batch_size': 32, 'epochs': 5, 'hidden_neurons': 64, 'init_method': 'XAVIER', 'layers': 4, 'learning_rate': 0.0001, 'optimizer': 'MGD', 'weight_decay': 0}
+2025-03-17 08:05:43,309 INFO    Thread-12 (_run_job):20356 [wandb_init.py:init():891] updated telemetry
+2025-03-17 08:05:43,310 INFO    Thread-12 (_run_job):20356 [wandb_init.py:init():915] communicating run to backend with 90.0 second timeout

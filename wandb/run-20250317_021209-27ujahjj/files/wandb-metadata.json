@@ -1,0 +1,27 @@
+{
+  "os":  "Windows-10-10.0.26100-SP0",
+  "python":  "CPython 3.11.11",
+  "startedAt":  "2025-03-16T20:42:09.262319Z",
+  "program":  "c:\\Users\\singh\\OneDrive\\Documents\\GitHub\\DA6401_Assignment-01\\test.py",
+  "codePath":  "test.py",
+  "email":  "singhsonalika5@gmail.com",
+  "root":  "C:\\Users\\singh\\OneDrive\\Documents\\GitHub\\DA6401_Assignment-01",
+  "host":  "DESKTOP-JJ3VBIC",
+  "executable":  "C:\\Users\\singh\\OneDrive\\Documents\\GitHub\\DA6401_Assignment-01\\.conda\\python.exe",
+  "codePathLocal":  "test.py",
+  "cpu_count":  4,
+  "cpu_count_logical":  8,
+  "disk":  {
+    "/":  {
+      "total":  "403003969536",
+      "used":  "144585318400"
+    }
+  },
+  "memory":  {
+    "total":  "17006346240"
+  },
+  "cpu":  {
+    "count":  4,
+    "countLogical":  8
+  }
+}

@@ -1,0 +1,4 @@
+c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\train.py:10: RuntimeWarning: overflow encountered in exp
+  return np.where(x >= 0, 1 / (1 + np.exp(-x)), np.exp(x) / (1 + np.exp(x)))
+c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\train.py:10: RuntimeWarning: invalid value encountered in divide
+  return np.where(x >= 0, 1 / (1 + np.exp(-x)), np.exp(x) / (1 + np.exp(x)))

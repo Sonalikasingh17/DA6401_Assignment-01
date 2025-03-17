@@ -1,0 +1,29 @@
+Epoch: 0, Loss: 4.685e-02, Training accuracy:0.85, Validation Accuracy: 0.85, Time: 97.74, Learning Rate: 1.000e-04
+Traceback (most recent call last):
+  File "c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\test.py", line 954, in <module>
+    wandb.sklearn.plot_confusion_matrix(Results["train_pred_best"][1], Results["train_pred_best"][2], labels =[0,1,2,3,4,5,6,7,8,9])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\.conda\Lib\site-packages\wandb\sdk\lib\lazyloader.py", line 57, in __getattr__
+    module = self._load()
+             ^^^^^^^^^^^^
+  File "C:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\.conda\Lib\site-packages\wandb\sdk\lib\lazyloader.py", line 32, in _load
+    module = importlib.import_module(self.__name__)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\.conda\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\.conda\Lib\site-packages\wandb\sklearn.py", line 1, in <module>
+    from wandb.integration.sklearn import (
+  File "C:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\.conda\Lib\site-packages\wandb\integration\sklearn\__init__.py", line 3, in <module>
+    from .plot import (
+  File "C:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\.conda\Lib\site-packages\wandb\integration\sklearn\plot\__init__.py", line 3, in <module>
+    from .classifier import calibration_curve as plot_calibration_curve
+  File "C:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\.conda\Lib\site-packages\wandb\integration\sklearn\plot\classifier.py", line 6, in <module>
+    from sklearn import naive_bayes
+ModuleNotFoundError: No module named 'sklearn'

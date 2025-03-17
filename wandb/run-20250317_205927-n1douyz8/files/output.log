@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\test.py", line 1169, in <module>
+    train()
+  File "c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\test.py", line 1144, in train
+    layers=CONFIG.layers,
+           ^^^^^^
+NameError: name 'CONFIG' is not defined

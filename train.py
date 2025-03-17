@@ -7,7 +7,8 @@ from keras.datasets import fashion_mnist
 # Activation functions
 
 def sigmoid(x):
-    return 1.0 / (1 + np.exp(-(x)))
+    return np.where(x >= 0, 1 / (1 + np.exp(-x)), np.exp(x) / (1 + np.exp(x)))
+
 def sigmoid_derivative(x):
     return  (1.0 / (1 + np.exp(-(x))))*(1 -  1.0 / (1 + np.exp(-(x))))
 
@@ -17,9 +18,11 @@ def tanh_derivative(x):
     return 1 - np.tanh(x) ** 2
 
 def relu(x):
-    return np.maximum(0.001, x) 
+    return np.maximum(0, x) 
 def relu_derivative(x):
-    return (x>0)*1 + (x<0)*0.001 
+    return (x>0)*1 
+
+
 
 
 class NeuralNetwork:
@@ -55,7 +58,8 @@ class NeuralNetwork:
                                        "TANH": tanh_derivative,
                                        "RELU": relu_derivative}
 
-        self.initializers = {"XAVIER": self.xavier_initializer,"RANDOM": self.random_initializer}
+        self.initializers = {"XAVIER": self.xavier_initializer,"RANDOM": self.random_initializer,
+                             "HE": self.He_initializer}
 
         self.optimizers = {"SGD": self.sgd,    "MGD": self.mgd,
             "NGD": self.ngd,  "RMSPROP": self.rmsProp, "ADAM": self.adam}
@@ -82,19 +86,30 @@ class NeuralNetwork:
     #  Loss functions
     def mean_squared_error(self, true_labels, predicted_labels):
         return np.mean((true_labels - predicted_labels) ** 2)
+    
 
-    def cross_entropy_loss(self, true_labels, predicted_labels):
+    def cross_entropy_loss(self,true_labels, predicted_labels):
+        e = 1e-10  # Small constant to avoid log(0)
+        predicted_labels = np.clip(predicted_labels, e, 1 - e)  # Avoid log(0)
         return np.mean([-true_labels[i] * np.log(predicted_labels[i]) for i in range(len(predicted_labels))])
+
 
     def l2_regularisation_loss(self, weight_decay):
         return weight_decay * np.sum([np.linalg.norm(self.weights[str(i + 1)]) ** 2 for i in range(len(self.weights))])
     
 
     def compute_accuracy(self, true_labels, predicted_labels, data_size):
-        true_class_labels = [np.argmax(true_labels[:, i]) for i in range(data_size)]
-        predicted_class_labels = [np.argmax(predicted_labels[:, i]) for i in range(data_size)]
-        correct_predictions = sum(1 for i in range(data_size) if true_class_labels[i] == predicted_class_labels[i])
-        return correct_predictions / data_size, true_class_labels, predicted_class_labels
+        true_class_label = []
+        predicted_class_label = []
+        correct_count = 0
+        for i in range(data_size):
+            true_class_label.append(np.argmax(true_labels[:, i]))
+            predicted_class_label.append(np.argmax(predicted_labels[:, i]))
+            if true_class_label[i] == predicted_class_label[i]:
+                correct_count += 1
+        compute_accuracy = correct_count / data_size
+        return compute_accuracy, true_class_label, predicted_class_label
+
 
     def xavier_initializer(self, size):
         in_dim, out_dim = size[1], size[0]
@@ -104,6 +119,12 @@ class NeuralNetwork:
     def random_initializer(self, size):
         in_dim, out_dim = size[1], size[0]
         return np.random.normal(0, 1, size=(out_dim, in_dim))
+    
+    def He_initializer(self,size):
+        in_dim = size[1]
+        out_dim = size[0]
+        He_stddev = np.sqrt(2 / (in_dim))
+        return np.random.normal(0, 1, size=(out_dim, in_dim)) * He_stddev
 
         
     def initialize_network(self, layer_structure):
@@ -203,7 +224,7 @@ class NeuralNetwork:
     
     # Predicts the output for a given input dataset using forward propagation.
     def predict(self, input_batch, length_dataset):
-        predictions = []        
+        predicted_labels = []        
     
         for i in range(length_dataset):
             final_output, activation_outputs, pre_activations = self.forward_propagation(
@@ -211,10 +232,10 @@ class NeuralNetwork:
                 self.weights,
                 self.biases,
         )
-            predictions.append(final_output.reshape(self.num_classes,))
+            predicted_labels.append(final_output.reshape(self.num_classes,))
     
-        predictions = np.array(predictions).transpose()
-        return predictions
+        predicted_labels = np.array(predicted_labels).transpose()
+        return predicted_labels
 
 
     def sgd(self, epochs, length_dataset, learning_rate, weight_decay=0):
@@ -273,10 +294,10 @@ class NeuralNetwork:
 
             elapsed_time = time.time() - start_time
         
-            predictions = self.predict(self.train_data, self.num_train)
+            predicted_labels = self.predict(self.train_data, self.num_train)
         
             training_loss.append(np.mean(batch_loss))
-            training_accuracy.append(self.compute_accuracy(Y_train, predictions, length_dataset)[0])
+            training_accuracy.append(self.compute_accuracy(Y_train, predicted_labels, length_dataset)[0])
             validation_accuracy.append(self.compute_accuracy(self.val_labels, self.predict(self.val_data, self.num_val), self.num_val)[0])
         
             print(
@@ -288,7 +309,7 @@ class NeuralNetwork:
 
             wandb.log({'loss': np.mean(batch_loss),'training_accuracy': training_accuracy[epoch],'validation_accuracy': validation_accuracy[epoch],'epoch': epoch})
 
-        return training_loss, training_accuracy, validation_accuracy, predictions
+        return training_loss, training_accuracy, validation_accuracy, predicted_labels
 
    
     def mgd(self, epochs, length_dataset, batch_size, learning_rate, weight_decay=0):
@@ -370,10 +391,10 @@ class NeuralNetwork:
 
             elapsed_time = time.time() - start_time
 
-            predictions = self.predict(self.train_data, self.num_train)
+            predicted_labels = self.predict(self.train_data, self.num_train)
 
             training_loss.append(np.mean(batch_loss))
-            training_accuracy.append(self.compute_accuracy(Y_train, predictions, length_dataset)[0])
+            training_accuracy.append(self.compute_accuracy(Y_train, predicted_labels, length_dataset)[0])
             validation_accuracy.append(self.compute_accuracy(self.val_labels, self.predict(self.val_data, self.num_val), self.num_val)[0])
 
             print(
@@ -386,7 +407,7 @@ class NeuralNetwork:
             wandb.log({'loss': np.mean(batch_loss),'training_accuracy': training_accuracy[epoch],'validation_accuracy': validation_accuracy[epoch],'epoch': epoch
         })
 
-        return training_loss, training_accuracy, validation_accuracy, predictions
+        return training_loss, training_accuracy, validation_accuracy, predicted_labels
     
     def ngd(self, epochs, length_dataset, batch_size, learning_rate, weight_decay=0):
     
@@ -466,10 +487,10 @@ class NeuralNetwork:
                 bias_updates = {str(l + 1): np.zeros_like(self.biases[str(l + 1)]) for l in range(num_layers - 1)}
         
             elapsed_time = time.time() - start_time
-            predictions = self.predict(self.train_data, self.num_train)
+            predicted_labels = self.predict(self.train_data, self.num_train)
         
             training_loss.append(np.mean(batch_loss))
-            training_accuracy.append(self.compute_accuracy(Y_train, predictions, length_dataset)[0])
+            training_accuracy.append(self.compute_accuracy(Y_train, predicted_labels, length_dataset)[0])
             validation_accuracy.append(self.compute_accuracy(self.val_labels, self.predict(self.val_data, self.num_val), self.num_val)[0])
         
             print(
@@ -481,7 +502,7 @@ class NeuralNetwork:
             wandb.log({'loss': np.mean(batch_loss),'training_accuracy': training_accuracy[epoch],'validation_accuracy': validation_accuracy[epoch],'epoch': epoch
         })
         
-        return training_loss, training_accuracy, validation_accuracy, predictions
+        return training_loss, training_accuracy, validation_accuracy, predicted_labels
 
     
     def rmsProp(self, epochs, length_dataset, batch_size, learning_rate, weight_decay=0): 
@@ -562,10 +583,10 @@ class NeuralNetwork:
                     bias_updates = {str(l + 1): np.zeros_like(self.biases[str(l + 1)]) for l in range(num_layers - 1)}
 
             elapsed_time = time.time() - start_time
-            predictions = self.predict(self.train_data, self.num_train)
+            predicted_labels = self.predict(self.train_data, self.num_train)
 
             training_loss.append(np.mean(batch_loss))
-            training_accuracy.append(self.compute_accuracy(Y_train, predictions, length_dataset)[0])
+            training_accuracy.append(self.compute_accuracy(Y_train, predicted_labels, length_dataset)[0])
             validation_accuracy.append(self.compute_accuracy(self.val_labels, self.predict(self.val_data, self.num_val), self.num_val)[0])
 
             print(
@@ -578,7 +599,7 @@ class NeuralNetwork:
             wandb.log({'loss': np.mean(batch_loss),'training_accuracy': training_accuracy[epoch],'validation_accuracy': validation_accuracy[epoch],'epoch': epoch
                })
 
-        return training_loss, training_accuracy, validation_accuracy, predictions
+        return training_loss, training_accuracy, validation_accuracy, predicted_labels
     
     def adam(self, epochs, length_dataset, batch_size, learning_rate, weight_decay=0):
        
@@ -671,10 +692,10 @@ class NeuralNetwork:
                     bias_updates = {str(l + 1): np.zeros_like(self.biases[str(l + 1)]) for l in range(num_layers - 1)}
 
             elapsed_time = time.time() - start_time
-            predictions = self.predict(self.train_data, self.num_train)
+            predicted_labels = self.predict(self.train_data, self.num_train)
 
             training_loss.append(np.mean(batch_loss))
-            training_accuracy.append(self.compute_accuracy(Y_train, predictions, length_dataset)[0])
+            training_accuracy.append(self.compute_accuracy(Y_train, predicted_labels, length_dataset)[0])
             validation_accuracy.append(self.compute_accuracy(self.val_labels, self.predict(self.val_data, self.num_val), self.num_val)[0])
 
             print(
@@ -687,7 +708,7 @@ class NeuralNetwork:
             wandb.log({'loss': np.mean(batch_loss),'training_accuracy': training_accuracy[epoch],'validation_accuracy': validation_accuracy[epoch],'epoch': epoch
             })
 
-        return training_loss, training_accuracy, validation_accuracy, predictions
+        return training_loss, training_accuracy, validation_accuracy, predicted_labels
     
 
 # Load the datasets  
@@ -695,25 +716,24 @@ class NeuralNetwork:
 
 # Define dataset sizes
 total_train_samples = train_labels.shape[0]
-train_size = int(0.9 * total_train_samples)  # 90% for training
-validation_size = total_train_samples - train_size  # 10% for validation
+train_data = int(0.9 * total_train_samples)  # 90% for training
+validation_size = total_train_samples - train_data  # 10% for validation
 test_size = test_labels.shape[0]
 
-# Shuffle indices to randomize the dataset
-train_indices = np.random.permutation(total_train_samples)
+shuffle_indices  = np.random.choice(train_labels.shape[0], total_train_samples, replace=False)
+shuffle_indices_2 = np.random.choice(test_labels.shape[0], test_size, replace=False)
 
-# Split dataset into training, validation, and test sets
-shuffled_train_images = train_images[train_indices]
-shuffled_train_labels = train_labels[train_indices]
+total_train_images = train_images[shuffle_indices, :]
+total_train_labels = train_labels[shuffle_indices]
 
-X_train = shuffled_train_images[:train_size, :]
-Y_train = shuffled_train_labels[:train_size]
+X_train = total_train_images[:train_data,:]
+Y_train = total_train_labels[:train_data]
 
-X_valid = shuffled_train_images[train_size:, :]
-Y_valid = shuffled_train_labels[train_size:]
+X_valid = total_train_images[train_data:, :]
+Y_valid = total_train_labels[train_data:]    
 
-X_test = test_images
-Y_test = test_labels
+X_test = test_images[shuffle_indices_2, :]
+Y_test = test_labels[shuffle_indices_2]
 
 # Define sweep configuration for hyperparameter tuning
 sweep_config = {
@@ -725,7 +745,7 @@ sweep_config = {
         "epochs": {
             "values": [5, 10]
         },"init_method": {
-            "values": ["RANDOM", "XAVIER"]
+            "values": ["RANDOM", "XAVIER", "HE"]
         },"layers": {
             "values": [2, 3, 4]
         },"hidden_neurons": {
@@ -743,13 +763,14 @@ sweep_config = {
         }
     }
 }
+
 sweep_id = wandb.sweep(sweep_config, project='Fashion_MNIST_Images', entity='singhsonalika5-indian-institute-of-technology-madras')
 
 
 def train():    
         config_defaults = dict(
             max_epochs=5,hidden_layers=3,hidden_neurons=32,weight_decay=0,learning_rate=1e-3,optimizer="MGD",batch_size=16,activation="TANH",
-            initializer="XAVIER",loss_function="CROSS"
+            initializer="HE",loss_function="CROSS"
         )
         
         wandb.init(config=config_defaults)
@@ -763,7 +784,7 @@ def train():
         train_images=train_images,           train_labels=train_labels,
         val_images=X_valid,                  val_labels=Y_valid,
         test_images=X_test,                  test_labels=Y_test,
-        num_test=test_size,                  num_train=train_size,            
+        num_test=test_size,                  num_train=train_data,            
         optimizer=CONFIG.optimizer,          batch_size=CONFIG.batch_size,
         weight_decay=CONFIG.weight_decay,    learning_rate=CONFIG.learning_rate,
         max_epochs=CONFIG.max_epochs,        activation=CONFIG.activation,  
@@ -771,10 +792,14 @@ def train():
         num_val=validation_size
     )
 
-        training_loss, training_accuracy, validation_accuracy, predictions = NN.optimizer(
+        training_loss, training_accuracy, validation_accuracy, predicted_labels = NN.optimizer(
         NN.max_epochs, NN.num_train, NN.batch_size, NN.learning_rate)
-    
-wandb.agent(sweep_id, train, count= 30)
+
+
+if __name__ == "__main__":
+    train()
+
+    wandb.agent(sweep_id, train, count= 1, project='Fashion_MNIST_Images', entity='singhsonalika5-indian-institute-of-technology-madras')
 
 
 

@@ -1,0 +1,16 @@
+{"time":"2025-03-17T01:24:41.9798714+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"C:\\Users\\singh\\OneDrive\\Documents\\GitHub\\DA6401_Assignment-01\\wandb\\run-20250317_012441-l9x51to0\\logs\\debug-core.log"}
+{"time":"2025-03-17T01:24:42.0999181+05:30","level":"INFO","msg":"created new stream","id":"l9x51to0"}
+{"time":"2025-03-17T01:24:42.0999181+05:30","level":"INFO","msg":"stream: started","id":"l9x51to0"}
+{"time":"2025-03-17T01:24:42.0999181+05:30","level":"INFO","msg":"handler: started","stream_id":"l9x51to0"}
+{"time":"2025-03-17T01:24:42.1004699+05:30","level":"INFO","msg":"sender: started","stream_id":"l9x51to0"}
+{"time":"2025-03-17T01:24:42.1004699+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"l9x51to0"}
+{"time":"2025-03-17T01:24:42.4723415+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-17T01:24:42.6873771+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-17T01:24:42.6878824+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-17T01:24:43.6962327+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading requirements.txt","runtime_seconds":0.7031158,"progress":"1.1KB/1.1KB"},{"desc":"uploading wandb-metadata.json","runtime_seconds":0.5007783,"progress":"779B/779B"},{"desc":"updating run config","runtime_seconds":0.0875555}],"total_operations":3}}
+{"time":"2025-03-17T01:24:45.2092124+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-17T01:24:45.5109978+05:30","level":"INFO","msg":"stream: closing","id":"l9x51to0"}
+{"time":"2025-03-17T01:24:45.5109978+05:30","level":"INFO","msg":"handler: closed","stream_id":"l9x51to0"}
+{"time":"2025-03-17T01:24:45.5109978+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"l9x51to0"}
+{"time":"2025-03-17T01:24:45.5109978+05:30","level":"INFO","msg":"sender: closed","stream_id":"l9x51to0"}
+{"time":"2025-03-17T01:24:45.5109978+05:30","level":"INFO","msg":"stream: closed","id":"l9x51to0"}

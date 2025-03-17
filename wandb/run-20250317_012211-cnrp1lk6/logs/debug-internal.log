@@ -1,0 +1,16 @@
+{"time":"2025-03-17T01:22:11.5681057+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"C:\\Users\\singh\\OneDrive\\Documents\\GitHub\\DA6401_Assignment-01\\wandb\\run-20250317_012211-cnrp1lk6\\logs\\debug-core.log"}
+{"time":"2025-03-17T01:22:11.6824691+05:30","level":"INFO","msg":"created new stream","id":"cnrp1lk6"}
+{"time":"2025-03-17T01:22:11.6824691+05:30","level":"INFO","msg":"stream: started","id":"cnrp1lk6"}
+{"time":"2025-03-17T01:22:11.6844725+05:30","level":"INFO","msg":"handler: started","stream_id":"cnrp1lk6"}
+{"time":"2025-03-17T01:22:11.6844725+05:30","level":"INFO","msg":"sender: started","stream_id":"cnrp1lk6"}
+{"time":"2025-03-17T01:22:11.6864777+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"cnrp1lk6"}
+{"time":"2025-03-17T01:22:12.0333906+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-17T01:22:12.1738147+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-17T01:22:12.1743192+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-17T01:22:13.1843685+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading wandb-metadata.json","runtime_seconds":0.8407918,"progress":"779B/779B"},{"desc":"uploading data","runtime_seconds":0.268424},{"desc":"creating run","runtime_seconds":0.2426852}],"total_operations":3}}
+{"time":"2025-03-17T01:22:15.4007072+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-17T01:22:15.7062053+05:30","level":"INFO","msg":"stream: closing","id":"cnrp1lk6"}
+{"time":"2025-03-17T01:22:15.7062053+05:30","level":"INFO","msg":"handler: closed","stream_id":"cnrp1lk6"}
+{"time":"2025-03-17T01:22:15.7062053+05:30","level":"INFO","msg":"sender: closed","stream_id":"cnrp1lk6"}
+{"time":"2025-03-17T01:22:15.7062053+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"cnrp1lk6"}
+{"time":"2025-03-17T01:22:15.7062053+05:30","level":"INFO","msg":"stream: closed","id":"cnrp1lk6"}

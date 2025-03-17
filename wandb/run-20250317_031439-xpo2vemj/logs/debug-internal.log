@@ -1,0 +1,16 @@
+{"time":"2025-03-17T03:14:39.1899152+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"C:\\Users\\singh\\OneDrive\\Documents\\GitHub\\DA6401_Assignment-01\\wandb\\run-20250317_031439-xpo2vemj\\logs\\debug-core.log"}
+{"time":"2025-03-17T03:14:39.3037125+05:30","level":"INFO","msg":"created new stream","id":"xpo2vemj"}
+{"time":"2025-03-17T03:14:39.3037125+05:30","level":"INFO","msg":"stream: started","id":"xpo2vemj"}
+{"time":"2025-03-17T03:14:39.3037125+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"xpo2vemj"}
+{"time":"2025-03-17T03:14:39.3037125+05:30","level":"INFO","msg":"handler: started","stream_id":"xpo2vemj"}
+{"time":"2025-03-17T03:14:39.3037125+05:30","level":"INFO","msg":"sender: started","stream_id":"xpo2vemj"}
+{"time":"2025-03-17T03:14:39.6637217+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-17T03:16:56.9589295+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-17T03:16:56.9594477+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-17T03:16:57.9727375+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.4213299,"progress":"580B/580B"},{"desc":"uploading config.yaml","runtime_seconds":0.1064805,"progress":"963B/963B"}],"total_operations":2}}
+{"time":"2025-03-17T03:16:58.8491217+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-17T03:16:59.1488017+05:30","level":"INFO","msg":"stream: closing","id":"xpo2vemj"}
+{"time":"2025-03-17T03:16:59.1488017+05:30","level":"INFO","msg":"handler: closed","stream_id":"xpo2vemj"}
+{"time":"2025-03-17T03:16:59.1488017+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"xpo2vemj"}
+{"time":"2025-03-17T03:16:59.1488017+05:30","level":"INFO","msg":"sender: closed","stream_id":"xpo2vemj"}
+{"time":"2025-03-17T03:16:59.1488017+05:30","level":"INFO","msg":"stream: closed","id":"xpo2vemj"}

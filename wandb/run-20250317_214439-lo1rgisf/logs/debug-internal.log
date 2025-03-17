@@ -1,0 +1,16 @@
+{"time":"2025-03-17T21:44:39.8207693+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"C:\\Users\\singh\\OneDrive\\Documents\\GitHub\\DA6401_Assignment-01\\wandb\\run-20250317_214439-lo1rgisf\\logs\\debug-core.log"}
+{"time":"2025-03-17T21:44:39.9511863+05:30","level":"INFO","msg":"created new stream","id":"lo1rgisf"}
+{"time":"2025-03-17T21:44:39.9511863+05:30","level":"INFO","msg":"stream: started","id":"lo1rgisf"}
+{"time":"2025-03-17T21:44:39.9511863+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"lo1rgisf"}
+{"time":"2025-03-17T21:44:39.9511863+05:30","level":"INFO","msg":"handler: started","stream_id":"lo1rgisf"}
+{"time":"2025-03-17T21:44:39.9511863+05:30","level":"INFO","msg":"sender: started","stream_id":"lo1rgisf"}
+{"time":"2025-03-17T21:44:40.3217235+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-17T21:44:41.3488969+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-17T21:44:41.3494029+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-17T21:44:42.3564921+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact run-lo1rgisf-confusion_matrix","runtime_seconds":1.1758956999999999,"subtasks":[{"desc":"confusion_matrix.table.json","runtime_seconds":0.0174615,"progress":"1.6KB/1.6KB"}]},{"desc":"uploading artifact run-lo1rgisf-my_bar_chart_id_table","runtime_seconds":1.0365383},{"desc":"uploading media\\table\\my_bar_chart_id_table_1_c0b25ac7ccaa1d0ecac6.table.json","runtime_seconds":0.6638095,"progress":"85B/85B"},{"desc":"uploading output.log","runtime_seconds":0.6638095},{"desc":"uploading config.yaml","runtime_seconds":0.3012975,"progress":"2.1KB/2.1KB"}],"total_operations":5}}
+{"time":"2025-03-17T21:44:45.299672+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-17T21:44:45.8397787+05:30","level":"INFO","msg":"stream: closing","id":"lo1rgisf"}
+{"time":"2025-03-17T21:44:45.8397787+05:30","level":"INFO","msg":"handler: closed","stream_id":"lo1rgisf"}
+{"time":"2025-03-17T21:44:45.8397787+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"lo1rgisf"}
+{"time":"2025-03-17T21:44:45.8418022+05:30","level":"INFO","msg":"sender: closed","stream_id":"lo1rgisf"}
+{"time":"2025-03-17T21:44:45.8426098+05:30","level":"INFO","msg":"stream: closed","id":"lo1rgisf"}

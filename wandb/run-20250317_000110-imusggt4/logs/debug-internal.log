@@ -1,0 +1,16 @@
+{"time":"2025-03-17T00:01:10.6262523+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"C:\\Users\\singh\\OneDrive\\Documents\\GitHub\\DA6401_Assignment-01\\wandb\\run-20250317_000110-imusggt4\\logs\\debug-core.log"}
+{"time":"2025-03-17T00:01:10.7510204+05:30","level":"INFO","msg":"created new stream","id":"imusggt4"}
+{"time":"2025-03-17T00:01:10.7510204+05:30","level":"INFO","msg":"stream: started","id":"imusggt4"}
+{"time":"2025-03-17T00:01:10.7510204+05:30","level":"INFO","msg":"sender: started","stream_id":"imusggt4"}
+{"time":"2025-03-17T00:01:10.7510204+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"imusggt4"}
+{"time":"2025-03-17T00:01:10.7510204+05:30","level":"INFO","msg":"handler: started","stream_id":"imusggt4"}
+{"time":"2025-03-17T00:01:11.1239276+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-17T00:01:11.5651103+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-17T00:01:11.5656167+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-17T00:01:12.5700956+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":0.1716379}],"total_operations":1}}
+{"time":"2025-03-17T00:01:13.3557569+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-17T00:01:13.6580826+05:30","level":"INFO","msg":"stream: closing","id":"imusggt4"}
+{"time":"2025-03-17T00:01:13.6580826+05:30","level":"INFO","msg":"handler: closed","stream_id":"imusggt4"}
+{"time":"2025-03-17T00:01:13.6580826+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"imusggt4"}
+{"time":"2025-03-17T00:01:13.6587321+05:30","level":"INFO","msg":"sender: closed","stream_id":"imusggt4"}
+{"time":"2025-03-17T00:01:13.6592955+05:30","level":"INFO","msg":"stream: closed","id":"imusggt4"}

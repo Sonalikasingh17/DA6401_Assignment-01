@@ -1,0 +1,16 @@
+{"time":"2025-03-17T09:43:14.1855114+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"C:\\Users\\singh\\OneDrive\\Documents\\GitHub\\DA6401_Assignment-01\\wandb\\run-20250317_094314-fh8scmtr\\logs\\debug-core.log"}
+{"time":"2025-03-17T09:43:14.3055466+05:30","level":"INFO","msg":"created new stream","id":"fh8scmtr"}
+{"time":"2025-03-17T09:43:14.3055466+05:30","level":"INFO","msg":"stream: started","id":"fh8scmtr"}
+{"time":"2025-03-17T09:43:14.3055466+05:30","level":"INFO","msg":"sender: started","stream_id":"fh8scmtr"}
+{"time":"2025-03-17T09:43:14.3055466+05:30","level":"INFO","msg":"handler: started","stream_id":"fh8scmtr"}
+{"time":"2025-03-17T09:43:14.3061266+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"fh8scmtr"}
+{"time":"2025-03-17T09:43:14.6733971+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-17T09:48:08.1106036+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-17T09:48:08.111126+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-17T09:48:09.1305811+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.420165,"progress":"550B/550B"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.420165,"progress":"197B/197B"},{"desc":"uploading config.yaml","runtime_seconds":0.1258796,"progress":"958B/958B"}],"total_operations":3}}
+{"time":"2025-03-17T09:48:09.3446526+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-17T09:48:09.6845505+05:30","level":"INFO","msg":"stream: closing","id":"fh8scmtr"}
+{"time":"2025-03-17T09:48:09.6845505+05:30","level":"INFO","msg":"handler: closed","stream_id":"fh8scmtr"}
+{"time":"2025-03-17T09:48:09.6856745+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"fh8scmtr"}
+{"time":"2025-03-17T09:48:09.6856745+05:30","level":"INFO","msg":"sender: closed","stream_id":"fh8scmtr"}
+{"time":"2025-03-17T09:48:09.6874931+05:30","level":"INFO","msg":"stream: closed","id":"fh8scmtr"}

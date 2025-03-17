@@ -1,0 +1,5 @@
+True Labels Shape: (10, 54000)
+Predicted Labels Shape: (10, 54000)
+True Labels Shape: (10, 6000)
+Predicted Labels Shape: (10, 6000)
+Epoch: 0, Loss: 1.049e-01, Training Accuracy: 0.10, Validation Accuracy: 0.78, Time: 60.28, Learning Rate: 1.000e-04

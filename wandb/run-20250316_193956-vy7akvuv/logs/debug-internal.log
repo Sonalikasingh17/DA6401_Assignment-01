@@ -1,0 +1,16 @@
+{"time":"2025-03-16T19:39:56.3083668+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"C:\\Users\\singh\\OneDrive\\Documents\\GitHub\\DA6401_Assignment-01\\wandb\\run-20250316_193956-vy7akvuv\\logs\\debug-core.log"}
+{"time":"2025-03-16T19:39:56.9344644+05:30","level":"INFO","msg":"created new stream","id":"vy7akvuv"}
+{"time":"2025-03-16T19:39:56.9350408+05:30","level":"INFO","msg":"stream: started","id":"vy7akvuv"}
+{"time":"2025-03-16T19:39:56.9350408+05:30","level":"INFO","msg":"handler: started","stream_id":"vy7akvuv"}
+{"time":"2025-03-16T19:39:56.9350408+05:30","level":"INFO","msg":"sender: started","stream_id":"vy7akvuv"}
+{"time":"2025-03-16T19:39:56.9350408+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"vy7akvuv"}
+{"time":"2025-03-16T19:39:57.3623102+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-16T19:43:03.2711883+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-16T19:43:03.2722612+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-16T19:43:04.2783433+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading config.yaml","runtime_seconds":0.0970864,"progress":"962B/962B"}],"total_operations":1}}
+{"time":"2025-03-16T19:43:04.5146458+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-16T19:43:04.8549172+05:30","level":"INFO","msg":"stream: closing","id":"vy7akvuv"}
+{"time":"2025-03-16T19:43:04.8549172+05:30","level":"INFO","msg":"handler: closed","stream_id":"vy7akvuv"}
+{"time":"2025-03-16T19:43:04.8549172+05:30","level":"INFO","msg":"sender: closed","stream_id":"vy7akvuv"}
+{"time":"2025-03-16T19:43:04.8549172+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"vy7akvuv"}
+{"time":"2025-03-16T19:43:04.8554244+05:30","level":"INFO","msg":"stream: closed","id":"vy7akvuv"}

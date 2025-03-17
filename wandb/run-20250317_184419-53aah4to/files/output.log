@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "C:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\.conda\Lib\site-packages\wandb\sdk\wandb_config.py", line 165, in __getattr__
+    return self.__getitem__(key)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\.conda\Lib\site-packages\wandb\sdk\wandb_config.py", line 130, in __getitem__
+    return self._items[key]
+           ~~~~~~~~~~~^^^^^
+KeyError: 'hidden_layers'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\test.py", line 958, in <module>
+    Results["train_pred_best"], Results["test_pred_best"] = train_and_test()
+                                                            ^^^^^^^^^^^^^^^^
+  File "c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\test.py", line 904, in train_and_test
+    wandb.run.name = "hl_" + str(wandb.config.hidden_layers) + "_hn_" + str(wandb.config.hidden_neurons) + "_opt_" + wandb.config.optimizer + "_act_" + wandb.config.activation + "_lr_" + str(wandb.config.learning_rate) + "_bs_"+str(wandb.config.batch_size) + "_init_" + wandb.config.initializer + "_ep_"+ str(wandb.config.max_epochs)+ "_l2_" + str(wandb.config.weight_decay)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\.conda\Lib\site-packages\wandb\sdk\wandb_config.py", line 167, in __getattr__
+    raise AttributeError(
+AttributeError: <class 'wandb.sdk.wandb_config.Config'> object has no attribute 'hidden_layers'

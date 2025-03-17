@@ -1,0 +1,15 @@
+{"time":"2025-03-17T21:22:32.6783622+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"C:\\Users\\singh\\OneDrive\\Documents\\GitHub\\DA6401_Assignment-01\\wandb\\run-20250317_212232-tfm2em1v\\logs\\debug-core.log"}
+{"time":"2025-03-17T21:22:32.7982467+05:30","level":"INFO","msg":"created new stream","id":"tfm2em1v"}
+{"time":"2025-03-17T21:22:32.7982467+05:30","level":"INFO","msg":"stream: started","id":"tfm2em1v"}
+{"time":"2025-03-17T21:22:32.7982467+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"tfm2em1v"}
+{"time":"2025-03-17T21:22:32.7982467+05:30","level":"INFO","msg":"sender: started","stream_id":"tfm2em1v"}
+{"time":"2025-03-17T21:22:32.7982467+05:30","level":"INFO","msg":"handler: started","stream_id":"tfm2em1v"}
+{"time":"2025-03-17T21:22:33.1752444+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-17T21:22:33.7168912+05:30","level":"INFO","msg":"stream: closing","id":"tfm2em1v"}
+{"time":"2025-03-17T21:22:33.7168912+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-17T21:22:33.7173978+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-17T21:22:35.2466834+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-17T21:22:35.5622923+05:30","level":"INFO","msg":"handler: closed","stream_id":"tfm2em1v"}
+{"time":"2025-03-17T21:22:35.5622923+05:30","level":"INFO","msg":"sender: closed","stream_id":"tfm2em1v"}
+{"time":"2025-03-17T21:22:35.5622923+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"tfm2em1v"}
+{"time":"2025-03-17T21:22:35.5628678+05:30","level":"INFO","msg":"stream: closed","id":"tfm2em1v"}

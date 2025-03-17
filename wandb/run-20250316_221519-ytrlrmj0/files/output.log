@@ -1,0 +1,9 @@
+c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\train.py:10: RuntimeWarning: overflow encountered in exp
+  return np.where(x >= 0, 1 / (1 + np.exp(-x)), np.exp(x) / (1 + np.exp(x)))
+c:\Users\singh\OneDrive\Documents\GitHub\DA6401_Assignment-01\train.py:10: RuntimeWarning: invalid value encountered in divide
+  return np.where(x >= 0, 1 / (1 + np.exp(-x)), np.exp(x) / (1 + np.exp(x)))
+Epoch: 0, Loss: 6.734e+01, Training Accuracy: 0.10, Validation Accuracy: 0.10, Time: 47.54, Learning Rate: 1.600e+01
+Epoch: 1, Loss: 3.545e+00, Training Accuracy: 0.10, Validation Accuracy: 0.10, Time: 42.97, Learning Rate: 1.600e+01
+Epoch: 2, Loss: 3.544e+00, Training Accuracy: 0.10, Validation Accuracy: 0.09, Time: 42.98, Learning Rate: 1.600e+01
+Epoch: 3, Loss: 3.548e+00, Training Accuracy: 0.10, Validation Accuracy: 0.11, Time: 34.93, Learning Rate: 1.600e+01
+Epoch: 4, Loss: 3.548e+00, Training Accuracy: 0.10, Validation Accuracy: 0.10, Time: 41.41, Learning Rate: 1.600e+01

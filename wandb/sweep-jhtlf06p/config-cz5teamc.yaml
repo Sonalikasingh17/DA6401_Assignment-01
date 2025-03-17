@@ -1,0 +1,20 @@
+wandb_version: 1
+
+activation_func:
+  value: TANH
+batch_size:
+  value: 16
+hidden_neurons:
+  value: 128
+initializer:
+  value: RANDOM
+layers:
+  value: 4
+learning_rate:
+  value: 0.0001
+max_epochs:
+  value: 5
+optimizer:
+  value: SGD
+weight_decay:
+  value: 0

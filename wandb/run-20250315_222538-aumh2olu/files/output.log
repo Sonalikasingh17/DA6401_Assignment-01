@@ -1,0 +1,11 @@
+Epoch: 0, Loss: 8.922e-02, Training Accuracy: 0.10, Validation Accuracy: 0.81, Time: 42.29, Learning Rate: 1.000e-03
+Epoch: 1, Loss: 5.122e-02, Training Accuracy: 0.10, Validation Accuracy: 0.84, Time: 70.75, Learning Rate: 1.000e-03
+Epoch: 2, Loss: 4.480e-02, Training Accuracy: 0.10, Validation Accuracy: 0.85, Time: 74.32, Learning Rate: 1.000e-03
+Epoch: 3, Loss: 4.140e-02, Training Accuracy: 0.10, Validation Accuracy: 0.86, Time: 66.13, Learning Rate: 1.000e-03
+Epoch: 4, Loss: 3.898e-02, Training Accuracy: 0.10, Validation Accuracy: 0.86, Time: 54.93, Learning Rate: 1.000e-03
+Epoch: 0, Loss: 9.622e-02, Training Accuracy: 0.10, Validation Accuracy: 0.78, Time: 60.96, Learning Rate: 1.000e-03
+Epoch: 1, Loss: 5.335e-02, Training Accuracy: 0.10, Validation Accuracy: 0.83, Time: 58.33, Learning Rate: 1.000e-03
+Epoch: 2, Loss: 4.562e-02, Training Accuracy: 0.10, Validation Accuracy: 0.84, Time: 52.69, Learning Rate: 1.000e-03
+Epoch: 3, Loss: 4.198e-02, Training Accuracy: 0.10, Validation Accuracy: 0.86, Time: 41.54, Learning Rate: 1.000e-03
+Epoch: 4, Loss: 3.981e-02, Training Accuracy: 0.10, Validation Accuracy: 0.87, Time: 42.51, Learning Rate: 1.000e-03
+[34m[1mwandb[0m: [33mWARNING[0m Calling wandb.login() after wandb.init() has no effect.

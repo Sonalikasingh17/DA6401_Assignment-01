@@ -1,23 +1,21 @@
 import numpy as np
 
 
-# Activation Funtions and its derivatives
+# Activation functions and its derivatives
 
+def sigmoid(x):
+    return np.where(x >= 0, 1 / (1 + np.exp(-x)), np.exp(x) / (1 + np.exp(x)))
 
-def sigmoid(z):
-    return 1.0 / (1 + np.exp(-(z)))
-def sigmoid_derivative(z):
-    return  (1.0 / (1 + np.exp(-(z))))*(1 -  1.0 / (1 + np.exp(-(z))))
+def sigmoid_derivative(x):
+    return  (1.0 / (1 + np.exp(-(x))))*(1 -  1.0 / (1 + np.exp(-(x))))
 
-def tanh(z):
-    return np.tanh(z)
-def tanh_derivative(z):
-    return 1 - np.tanh(z) ** 2
+def tanh(x):
+    return np.tanh(x)
+def tanh_derivative(x):
+    return 1 - np.tanh(x) ** 2
 
-def relu(z):
-    return np.maximum(0.001, z) 
-def relu_derivative(z):
-    return (z>0)*1 + (z<0)*0.001 
-
-
+def relu(x):
+    return np.maximum(0, x) 
+def relu_derivative(x):
+    return (x>0)*1 
 

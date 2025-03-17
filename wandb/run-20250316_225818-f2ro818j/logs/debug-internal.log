@@ -1,0 +1,16 @@
+{"time":"2025-03-16T22:58:18.7744664+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"C:\\Users\\singh\\OneDrive\\Documents\\GitHub\\DA6401_Assignment-01\\wandb\\run-20250316_225818-f2ro818j\\logs\\debug-core.log"}
+{"time":"2025-03-16T22:58:18.9054094+05:30","level":"INFO","msg":"created new stream","id":"f2ro818j"}
+{"time":"2025-03-16T22:58:18.906084+05:30","level":"INFO","msg":"stream: started","id":"f2ro818j"}
+{"time":"2025-03-16T22:58:18.906084+05:30","level":"INFO","msg":"handler: started","stream_id":"f2ro818j"}
+{"time":"2025-03-16T22:58:18.9065956+05:30","level":"INFO","msg":"sender: started","stream_id":"f2ro818j"}
+{"time":"2025-03-16T22:58:18.9065956+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"f2ro818j"}
+{"time":"2025-03-16T22:58:19.4194652+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-16T23:03:09.5077347+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-16T23:03:09.5088806+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-16T23:03:10.5273409+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.3925485,"progress":"585B/585B"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.3925485,"progress":"213B/213B"},{"desc":"uploading config.yaml","runtime_seconds":0.0827376,"progress":"959B/959B"}],"total_operations":3}}
+{"time":"2025-03-16T23:03:10.7898976+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-16T23:03:11.129104+05:30","level":"INFO","msg":"stream: closing","id":"f2ro818j"}
+{"time":"2025-03-16T23:03:11.129104+05:30","level":"INFO","msg":"handler: closed","stream_id":"f2ro818j"}
+{"time":"2025-03-16T23:03:11.129104+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"f2ro818j"}
+{"time":"2025-03-16T23:03:11.1300932+05:30","level":"INFO","msg":"sender: closed","stream_id":"f2ro818j"}
+{"time":"2025-03-16T23:03:11.1300932+05:30","level":"INFO","msg":"stream: closed","id":"f2ro818j"}

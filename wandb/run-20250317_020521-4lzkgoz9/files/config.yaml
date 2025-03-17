@@ -1,0 +1,56 @@
+_wandb:
+    value:
+        cli_version: 0.19.8
+        m: []
+        python_version: 3.11.11
+        t:
+            "1":
+                - 2
+                - 3
+                - 55
+            "2":
+                - 2
+                - 3
+                - 55
+            "3":
+                - 2
+                - 14
+                - 16
+                - 17
+                - 23
+                - 55
+            "4": 3.11.11
+            "5": 0.19.8
+            "8":
+                - 3
+                - 5
+            "12": 0.19.8
+            "13": windows-amd64
+activation:
+    value: TANH
+activation_func:
+    value: TANH
+batch_size:
+    value: 64
+epochs:
+    value: 10
+hidden_layers:
+    value: 3
+hidden_neurons:
+    value: 128
+init_method:
+    value: XAVIER
+initializer:
+    value: XAVIER
+layers:
+    value: 4
+learning_rate:
+    value: 0.0001
+loss_function:
+    value: CROSS
+max_epochs:
+    value: 5
+optimizer:
+    value: ADAM
+weight_decay:
+    value: 0.5

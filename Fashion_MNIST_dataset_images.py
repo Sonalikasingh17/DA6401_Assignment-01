@@ -12,6 +12,7 @@ class_names = ["T-shirt", "Trouser", "Pullover", "Dress", "Coat",
 X_train = X_train / 255.0
 X_test = X_test/ 255.0
 
+
 def fashion_MNIST():
 	set_images=[]
 	set_labels=[]

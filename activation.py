@@ -1,7 +1,7 @@
 import numpy as np
 
 # Activation functions and its derivatives
-
+ 
 def sigmoid(x):
     return np.where(x >= 0, 1 / (1 + np.exp(-x)), np.exp(x) / (1 + np.exp(x)))
 

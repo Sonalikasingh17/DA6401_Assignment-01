@@ -1,5 +1,5 @@
 import numpy as np
-
+ 
 # Activation functions and its derivatives
  
 def sigmoid(x):

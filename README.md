@@ -11,7 +11,7 @@ The problem statement involves building and training a Neural Network from scrat
 
 ### The code base now has the following features:
 
-with the notation used in class.
+with the notation used in class. 
 
 A neural network class is implemented to instantiate the neural network object for a specified set of hyperparameters, namely the number of layers, hidden neurons, activation function, optimizer, weight decay, etc.
 
